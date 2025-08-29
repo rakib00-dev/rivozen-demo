@@ -5,8 +5,8 @@ import DumbbellShape from './DumbbellShape';
 import TriangleShape from './TriangleShape';
 
 const Hero = ({
-  title = 'On-Demand Graphic & Web Design',
-  para = 'Get access to our creative team in a few clicks. Simple, fast, and affordable.',
+  title = 'Unlimited graphic design service ',
+  para = 'for a simple subscription monthly flat rate. No Contracts , One Price , On-Demand',
   largeScreenImg = 'md:w-4/5',
   children,
 }) => {

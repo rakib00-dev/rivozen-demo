@@ -34,7 +34,8 @@ const SolutionHomeSection = () => {
           <h2
             className={`font-extrabold text-[1.55rem] text-center w-full mb-4 leading-8 md:text-6xl md:text-start md:w-4/5 md:leading-16`}
           >
-            Design Pro makes scheduling simple
+            Designpro make graphic design simple and easy for you daily graphic
+            needs.
           </h2>
         </motion.div>
 
@@ -65,15 +66,12 @@ const SolutionHomeSection = () => {
             className="p-4 grid gap-2 border border-gray-200 shadow-xl md:my-4 rounded-xl"
           >
             <h2 className="font-bold flex justify-between text-lg">
-              CEO, Founder
-              {/* Mr. Preean */}
+              Unlimited Requests & Revisions {/* Mr. Preean */}
               <FaQuoteRight className="mr-3 mt-1 text-gray-500" />
             </h2>
 
             <p className="text-gray-500">
-              Check out our solutions and contact us if you want to know more
-              about us. Explore our innovative solutions and reach out to us for
-              more information or to discuss how we can help you succeed.
+              Send in as many requests as you like, we'll knock it out!
             </p>
           </motion.div>
           <motion.div
@@ -87,15 +85,13 @@ const SolutionHomeSection = () => {
             className="p-4 grid gap-2 border border-gray-200 shadow-xl my-4 rounded-xl"
           >
             <h2 className="font-bold flex justify-between text-lg">
-              CTO, Co-Founder
-              {/* Mr. Preean */}
+              Flat-Rate Pricing
               <FaQuoteRight className="mr-3 mt-1 text-gray-500" />
             </h2>
 
             <p className="text-gray-500">
-              Explore our solutions and don’t hesitate to contact our team if
-              you have any questions or need more details. We're here to help
-              and guide you toward success.
+              You pay the same price every month, no matter how much you send
+              in!
             </p>
           </motion.div>
         </div>
