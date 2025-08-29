@@ -5,7 +5,21 @@ import DumbbellShape from './DumbbellShape';
 import TriangleShape from './TriangleShape';
 
 const AutoChangeContent = ({
+  mainTitle = 'Simplify the way your design work gets done.',
+  mainPara = `DesignPro’s easy enough for individual users, and powerful enough to
+            meet the needs of enterprise organizations — including 86% of the
+            Fortune 500 companies.`,
   changeAlignment = 'grid-cols-2',
+  fristTitle = 'Professional Designers',
+  firstPara = `Get matched with your personal and professional graphic designer`,
+  secondTitle = 'Source Files Included',
+  secondPara = `Editable Adobe + JPG, PNG, PDF formats included. You own everything we create!`,
+  thirdTitle = 'Flat-Rate Pricing',
+  thirdPara = `You pay the same price every month, no matter how much you send in!`,
+  fourthTitle = 'Unlimited Requests & Revisions',
+  fourthPara = `Send in as many requests as you like, we'll knock it out!`,
+  fifthTitle = 'Daily Output',
+  fifthPara = `Your designer works on your requests every business day`,
   // changeAlignment = 'md:flex md:flex-row-reverse md:gap-10',
 }) => {
   const imagesArr = [
@@ -139,7 +153,18 @@ const AutoChangeContent = ({
     );
   }
 
-  const ChangingCards = () => {
+  const ChangingCards = ({
+    fristTitle,
+    firstPara,
+    secondTitle,
+    secondPara,
+    thirdTitle,
+    thirdPara,
+    fourthTitle,
+    fourthPara,
+    fifthTitle,
+    fifthPara,
+  }) => {
     return (
       <>
         <div className="w-full transition-all top-0">
@@ -180,12 +205,9 @@ const AutoChangeContent = ({
                     : `w-8 -brightness-50 saturate-0`
                 }
               />
-              Connect your calendars
+              {fristTitle}
             </h2>
-            <p className="w-full md:w-4/5">
-              DesignPro connects up to six calendars to automate scheduling with
-              real-time availability.
-            </p>
+            <p className="w-full md:w-4/5">{firstPara}</p>
             <ProgressColors />
           </div>
           <div
@@ -225,13 +247,9 @@ const AutoChangeContent = ({
                     : `w-8 -brightness-50 saturate-0`
                 }
               />
-              Add your availability
+              {secondTitle}
             </h2>
-            <p className="w-full md:w-4/5">
-              Keep invitees informed of your availability. Take control of your
-              calendar with detailed availability settings, scheduling rules,
-              buffers, and more.
-            </p>
+            <p className="w-full md:w-4/5">{secondPara}</p>
             <ProgressColors color="green" />
           </div>
           <div
@@ -271,12 +289,9 @@ const AutoChangeContent = ({
                     : `w-8 -brightness-50 saturate-0`
                 }
               />
-              Connect conferencing tools
+              {thirdTitle}
             </h2>
-            <p className="w-full md:w-4/5">
-              Sync your video conferencing tools and set preferences for
-              in-person meetings or calls.
-            </p>
+            <p className="w-full md:w-4/5">{thirdPara}</p>
             <ProgressColors color="pink" />
           </div>
           <div
@@ -316,12 +331,9 @@ const AutoChangeContent = ({
                     : `w-8 -brightness-50 saturate-0`
                 }
               />
-              Customize your event type
+              {fourthTitle}
             </h2>
-            <p className="w-full md:w-4/5">
-              Choose from pre-built templates or quickly create custom event
-              types for any meeting you need to schedule.
-            </p>
+            <p className="w-full md:w-4/5">{fourthPara}</p>
             <ProgressColors color="purple" />
           </div>
           <div
@@ -361,12 +373,9 @@ const AutoChangeContent = ({
                     : `w-8 -brightness-50 saturate-0`
                 }
               />
-              Share your scheduling link
+              {fifthTitle}
             </h2>
-            <p className="w-full md:w-4/5">
-              Easily book meetings by embedding scheduling links on your
-              website, landing pages, or emails.
-            </p>
+            <p className="w-full md:w-4/5">{fifthPara}</p>
             <ProgressColors color="purple" />
           </div>
         </div>
@@ -422,20 +431,27 @@ const AutoChangeContent = ({
           <h2
             className={`font-extrabold text-[1.55rem] text-center w-full mb-4 leading-8 lg:text-start md:text-6xl md:w-4/5 md:leading-16`}
           >
-            DesignPro makes your work simple
+            {mainTitle}
           </h2>
-          <p className="">
-            DesignPro’s easy enough for individual users, and powerful enough to
-            meet the needs of enterprise organizations — including 86% of the
-            Fortune 500 companies.
-          </p>
+          <p className="">{mainPara}</p>
         </div>
 
         {/* cards */}
         <div
           className={`grid place-items-center md:mx-10 md:${changeAlignment}`}
         >
-          <ChangingCards />
+          <ChangingCards
+            fristTitle={fristTitle}
+            secondTitle={secondTitle}
+            thirdTitle={thirdTitle}
+            fourthTitle={fourthTitle}
+            fifthTitle={fifthTitle}
+            firstPara={firstPara}
+            secondPara={secondPara}
+            thirdPara={thirdPara}
+            fourthPara={fourthPara}
+            fifthPara={fifthPara}
+          />
         </div>
       </div>
     </motion.section>

@@ -154,14 +154,14 @@ const MonthlyCards = () => {
       />
       <HomePagePricing
         price="250"
-        title="Business"
+        title="Most Popular"
         btnColor="bg-black hover:bg-black/80"
         borderColor="gray-900"
         description="Get double the output everyday."
       />
       <HomePagePricing
         price="325"
-        title="Designated Designer"
+        title="Motion Graphics"
         titleSize="text-[19px]"
         borderColor="blue-500"
         description="Collaborate in real time with your designer."
@@ -193,14 +193,14 @@ const QuarterlyCards = () => {
       />
       <HomePagePricing
         price="225"
-        title="Business"
+        title="Most Popular"
         btnColor="bg-black hover:bg-black/80"
         borderColor="gray-900"
         description="Get double the output everyday."
       />
       <HomePagePricing
         price="293"
-        title="Designated Designer"
+        title="Motion Graphics"
         titleSize="text-[19px]"
         borderColor="blue-500"
         description="Collaborate in real time with your designer."
@@ -232,14 +232,14 @@ const AnnuallyCards = () => {
       />
       <HomePagePricing
         price="200"
-        title="Business"
+        title="Most Popular"
         btnColor="bg-black hover:bg-black/80"
         borderColor="gray-900"
         description="Get double the output everyday."
       />
       <HomePagePricing
         price="250"
-        title="Designated Designer"
+        title="Motion Graphics"
         titleSize="text-[19px]"
         borderColor="blue-500"
         description="Collaborate in real time with your designer."

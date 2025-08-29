@@ -47,7 +47,20 @@ const HomePage = () => {
         {/* <NeedDesignerSoon /> */}
         {/* <BetterSolution /> */}
         <HowItWorks />
-        <AutoChangeContent changeAlignment="flex md:flex-row-reverse md:gap-10" />
+        <AutoChangeContent
+          mainTitle="The Ultimate Creative Solution For:"
+          mainPara="This will go in the places on the right hand side the heading and the content and the pictures for the content"
+          changeAlignment="flex md:flex-row-reverse md:gap-10"
+          fristTitle="Marketers"
+          firstPara="whether you have a graphic designer on staff who needs support or you are a one-person show handling the creative on your own, Designpro can help you get to outcomes faster."
+          secondTitle="Agencies"
+          secondPara="Multiply your agency output without multiplying your overhead costs. Designpro is a flexible solution that works with your ever-changing client demands. "
+          thirdTitle="Entrepreneurs"
+          thirdPara="Flat-rate graphic design to help you grow your business. Whether you’re just starting a business or in a growth phase, Designpro is an affordable way to outsource your creative needs."
+          fourthTitle="Photographers"
+          fourthPara="We have our very own photoshop experts ready to edit and make changes to all your photos all with just a few clicks designpro will have your photos edited and ready for customers in a day."
+          fifthTitle="Creative deliverables in days, not weeks"
+        />
         {/* <PowerByTechnology /> */}
         {/* <WhatWeOffer /> */}
         {/* <OurWork /> */}
