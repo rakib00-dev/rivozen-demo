@@ -96,7 +96,7 @@ export function Hero() {
         transition={{ duration: 0.9, ease, delay: 0.45 }}
         className="mx-auto mt-16 max-w-6xl"
       >
-        <div className="relative aspect-[16/8] overflow-hidden rounded-3xl border border-border bg-card">
+        <div className="relative aspect-16/8 overflow-hidden rounded-3xl border border-border bg-card">
           <Image
             src="https://cdn.prod.website-files.com/69b15b68fb5a0ea0e6ef48b2/69f034d0beee479e7ee2414e_Frame%202147223617-p-800.png"
             alt="A collage of design work including app UI, branding and illustration"
@@ -105,6 +105,9 @@ export function Hero() {
             className="object-cover"
           />
         </div>
+        {/* <video height="280" allow="autoplay" className="rounded-lg shadow-2xl bg-center w-full h-full" controls autoplay loop style="opacity: 1; transform: none;">
+          <source src="./assets/videos/saurov.mp4" type="video/mp4"/>
+        </video> */}
       </motion.div>
     </section>
   )
