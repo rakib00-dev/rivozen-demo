@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { ArrowUpRight, Star } from 'lucide-react'
+import Link from 'next/link'
 
 const ease = [0.22, 1, 0.36, 1] as const
 
@@ -17,7 +18,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease }}
-          className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground"
+          className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground"
         >
           <span className="flex">
             {Array.from({ length: 5 }).map((_, i) => (
@@ -69,19 +70,19 @@ export function Hero() {
           transition={{ duration: 0.6, ease, delay: 0.4 }}
           className="mt-8 flex flex-col gap-3 sm:flex-row"
         >
-          <a
+          <Link
             href="#pricing"
-            className="group inline-flex items-center justify-center gap-1.5 rounded-full bg-primary px-7 py-3.5 text-base font-medium text-primary-foreground transition-transform hover:-translate-y-0.5"
+            className="group inline-flex items-center justify-center gap-1.5 rounded-lg bg-primary px-7 py-3.5 text-base font-medium text-primary-foreground transition-transform hover:-translate-y-0.5"
           >
             Get started
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
-          <a
+          </Link>
+          <Link
             href="#work"
-            className="inline-flex items-center justify-center rounded-full border border-border bg-card px-7 py-3.5 text-base font-medium transition-colors hover:bg-secondary"
+            className="inline-flex items-center justify-center rounded-lg border border-border bg-card px-7 py-3.5 text-base font-medium transition-colors hover:bg-secondary"
           >
             See our work
-          </a>
+          </Link>
         </motion.div>
       </div>
 

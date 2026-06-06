@@ -65,10 +65,10 @@ export function Pricing() {
             <span className="font-serif italic">No surprises.</span>
           </h2>
 
-          <div className="mt-8 inline-flex items-center gap-1 rounded-full border border-border bg-card p-1">
+          <div className="mt-8 inline-flex items-center gap-1 rounded-lg border border-border bg-card p-1">
             <button
               onClick={() => setYearly(false)}
-              className={`rounded-full px-5 py-2 text-sm font-medium transition-colors ${
+              className={`rounded-lg px-5 py-2 text-sm font-medium transition-colors ${
                 !yearly
                   ? 'bg-primary text-primary-foreground'
                   : 'text-muted-foreground'
@@ -78,7 +78,7 @@ export function Pricing() {
             </button>
             <button
               onClick={() => setYearly(true)}
-              className={`rounded-full px-5 py-2 text-sm font-medium transition-colors ${
+              className={`rounded-lg px-5 py-2 text-sm font-medium transition-colors ${
                 yearly
                   ? 'bg-primary text-primary-foreground'
                   : 'text-muted-foreground'
@@ -97,7 +97,7 @@ export function Pricing() {
             <Reveal
               key={plan.name}
               delay={i * 0.08}
-              className={`flex flex-col rounded-3xl border p-7 ${
+              className={`flex flex-col rounded-2xl border p-7 ${
                 plan.featured
                   ? 'border-primary bg-primary text-primary-foreground'
                   : 'border-border bg-card'
@@ -146,7 +146,7 @@ export function Pricing() {
 
               <a
                 href="#contact"
-                className={`mt-6 inline-flex items-center justify-center gap-1.5 rounded-full px-6 py-3 text-sm font-medium transition-transform hover:-translate-y-0.5 ${
+                className={`mt-6 inline-flex items-center justify-center gap-1.5 rounded-lg px-6 py-3 text-sm font-medium transition-transform hover:-translate-y-0.5 ${
                   plan.featured
                     ? 'bg-primary-foreground text-primary'
                     : 'bg-primary text-primary-foreground'

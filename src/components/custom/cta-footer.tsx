@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { Reveal } from './reveal'
 import { ArrowUpRight } from 'lucide-react'
 
@@ -51,7 +52,15 @@ export function CtaFooter() {
         <div className="grid grid-cols-2 gap-10 md:grid-cols-5">
           <div className="col-span-2">
             <a href="#top" className="flex items-center gap-2">
-              <span className="h-3 w-3 rounded-full bg-primary" aria-hidden />
+              {/* <span className="h-3 w-3 rounded-full bg-primary" aria-hidden /> */}
+                <Image
+                  src="/rivozen_black.png"
+                  alt="hero section"
+                  width={40}
+                  height={40}
+                  style={{ width: 'auto', height: 'auto' }}
+                  className="w-[38rem]"
+                />
               <span className="text-lg font-semibold tracking-tight">
                 Rivozen
               </span>

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ArrowUpRight } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const links = [
   { label: 'Services', href: '#services' },
@@ -26,7 +27,7 @@ export function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 md:px-6">
       <nav
-        className={`mx-auto flex max-w-6xl items-center justify-between rounded-full border px-5 py-3 transition-colors duration-300 ${
+        className={`mx-auto flex max-w-6xl items-center justify-between rounded-2xl border px-5 py-3 transition-colors duration-300 ${
           scrolled
             ? 'border-border bg-background/80 backdrop-blur-xl'
             : 'border-transparent bg-transparent'
@@ -59,19 +60,19 @@ export function Navbar() {
         </ul>
 
         <div className="hidden items-center gap-3 md:flex">
-          <a
+          <Link
             href="#pricing"
             className="text-sm font-medium text-foreground transition-colors hover:text-primary"
           >
             Log in
-          </a>
-          <a
+          </Link>
+          <Link
             href="#pricing"
-            className="group inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-transform hover:-translate-y-0.5"
+            className="group inline-flex items-center gap-1.5 rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-transform hover:-translate-y-0.5"
           >
             Get started
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
+          </Link>
         </div>
 
         <button
@@ -122,14 +123,14 @@ export function Navbar() {
               ))}
             </ul>
             <div className="absolute inset-x-6 bottom-10">
-              <a
+              <Link
                 href="#pricing"
                 onClick={() => setOpen(false)}
                 className="flex w-full items-center justify-center gap-2 rounded-full bg-background py-4 text-base font-medium text-foreground"
               >
                 Get started
                 <ArrowUpRight className="h-4 w-4" />
-              </a>
+              </Link>
             </div>
           </motion.div>
         )}
