@@ -13,8 +13,9 @@ export function Hero() {
       id="top"
       className="relative overflow-hidden px-4 pt-32 pb-16 md:px-6 md:pt-44"
     >
-      <div className='absolute top-0'>
+      <div className='absolute left-0 top-0'>
         <Image alt='bg-overlay' src={'/bg-gradient.svg'} width={0} height={0} className='w-full h-full'/>
+        <span className='bg-linear-to-b from-primary/10 to-primary/.5 h-full w-svw absolute top-0'></span>
       </div>
       <div className="mx-auto max-w-6xl">
         <motion.div

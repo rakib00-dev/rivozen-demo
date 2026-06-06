@@ -15,20 +15,20 @@ const links = [
 
 export function Navbar() {
   const [open, setOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
+  const [scrolled, setScrolled] = useState(true)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 16)
+    const onScroll = () => setScrolled(window.scrollY > 26)
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 md:px-6">
+    <header className={`${scrolled ? 'fixed': 'absolute'} transition-all duration-300 inset-x-0 top-0 z-50 px-4 pt-4 md:px-6`}>
       <nav
         className={`mx-auto flex max-w-6xl items-center justify-between rounded-2xl border px-5 py-3 transition-colors duration-300 ${
-          scrolled
+          true
             ? 'border-border bg-background/80 backdrop-blur-xl'
             : 'border-transparent bg-transparent'
         }`}
