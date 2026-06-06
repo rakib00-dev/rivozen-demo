@@ -1,0 +1,94 @@
+/* skills section ⬇️ */
+#skills-section {
+  background: var(--secondBgColor);
+}
+
+#skills-wrap {
+  position: relative;
+  top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  width: 85%;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-bottom: 80px;
+}
+
+#skills-wrap .skill-box img {
+  height: 90px;
+  cursor: pointer;
+  animation: skillBox 1s infinite;
+  transition: 0.3s;
+}
+
+/* html */
+#skills-wrap .skill-box:nth-child(1) img {
+  filter: hue-rotate(33deg);
+}
+
+/* css */
+#skills-wrap .skill-box:nth-child(2) img {
+  height: 104px;
+  filter: hue-rotate(181deg);
+}
+
+#skills-wrap .skill-box:nth-child(2) img:hover {
+  transform: scale(1.15);
+}
+
+/* react js */
+#skills-wrap .skill-box:nth-child(3) img {
+  filter: hue-rotate(193deg);
+}
+
+/* tailwind css */
+#skills-wrap .skill-box:nth-child(4) img {
+  filter: hue-rotate(220deg);
+}
+
+/* js */
+#skills-wrap .skill-box:nth-child(5) img {
+  filter: hue-rotate(319deg);
+}
+
+/* git */
+#skills-wrap .skill-box:nth-child(6) img {
+  filter: hue-rotate(45deg);
+}
+
+/* github */
+#skills-wrap .skill-box:nth-child(7) img {
+  border-radius: 50%;
+  background: white;
+  filter: invert(62%) sepia(97%) saturate(453%) hue-rotate(343deg)
+    brightness(78%) contrast(105%);
+}
+
+/* bug */
+#skills-wrap .skill-box:nth-child(8) img {
+  filter: hue-rotate(178deg);
+}
+
+/* photohsop */
+#skills-wrap .skill-box:nth-child(9) img {
+  filter: hue-rotate(189deg);
+}
+
+/* daisyui */
+#skills-wrap .skill-box:last-child img {
+  background-color: white;
+  border: 1px solid rgb(215, 215, 215);
+  border-radius: 8px;
+  padding: 2px;
+  filter: invert(13%) sepia(42%) saturate(364%) hue-rotate(360deg)
+    brightness(91%) contrast(105%);
+}
+
+/* image hover */
+#skills-wrap .skill-box img:hover {
+  transform: scale(1.15);
+  filter: none;
+}
+/* skills section ⬆️ */
