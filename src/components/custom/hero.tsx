@@ -13,12 +13,15 @@ export function Hero() {
       id="top"
       className="relative overflow-hidden px-4 pt-32 pb-16 md:px-6 md:pt-44"
     >
+      <div className='absolute top-0'>
+        <Image alt='bg-overlay' src={'/bg-gradient.svg'} width={0} height={0} className='w-full h-full'/>
+      </div>
       <div className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease }}
-          className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground"
+          className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-4 py-1.5 text-xs md:text-sm text-muted-foreground"
         >
           <span className="flex">
             {Array.from({ length: 5 }).map((_, i) => (
