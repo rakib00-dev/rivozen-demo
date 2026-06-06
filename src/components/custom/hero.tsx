@@ -58,7 +58,7 @@ export function Hero() {
           transition={{ duration: 0.6, ease, delay: 0.32 }}
           className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground"
         >
-          Stride is a subscription-based creative studio powered by talented
+          Rivozen is a subscription-based creative studio powered by talented
           designers and dedicated support. Unlimited requests, one flat monthly
           fee.
         </motion.p>

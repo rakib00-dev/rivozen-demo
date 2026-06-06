@@ -56,7 +56,7 @@ export function Testimonials() {
           </p>
           <h2 className="mt-3 max-w-2xl text-balance text-4xl font-semibold tracking-tight md:text-5xl">
             Why teams choose{' '}
-            <span className="font-serif italic">Stride</span>
+            <span className="font-serif italic">Rivozen</span>
           </h2>
         </Reveal>
 

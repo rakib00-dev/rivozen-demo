@@ -33,7 +33,7 @@ export function Navbar() {
       >
         <a href="#top" className="flex items-center gap-2">
           <span className="h-3 w-3 rounded-full bg-primary" aria-hidden />
-          <span className="text-lg font-semibold tracking-tight">Stride</span>
+          <span className="text-lg font-semibold tracking-tight">Rivozen</span>
         </a>
 
         <ul className="hidden items-center gap-8 md:flex">
@@ -84,7 +84,7 @@ export function Navbar() {
           >
             <div className="flex items-center justify-between px-6 pt-7">
               <span className="text-lg font-semibold text-background">
-                Stride
+                Rivozen
               </span>
               <button
                 onClick={() => setOpen(false)}

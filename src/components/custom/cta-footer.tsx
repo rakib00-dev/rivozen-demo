@@ -53,7 +53,7 @@ export function CtaFooter() {
             <a href="#top" className="flex items-center gap-2">
               <span className="h-3 w-3 rounded-full bg-primary" aria-hidden />
               <span className="text-lg font-semibold tracking-tight">
-                Stride
+                Rivozen
               </span>
             </a>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
@@ -82,7 +82,7 @@ export function CtaFooter() {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border py-6 text-sm text-muted-foreground sm:flex-row">
-          <p>© {new Date().getFullYear()} Stride Studio. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Rivozen Studio. All rights reserved.</p>
           <p>Designed with care, delivered on time.</p>
         </div>
       </div>
