@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ArrowUpRight } from 'lucide-react'
+import Image from 'next/image'
 
 const links = [
   { label: 'Services', href: '#services' },
@@ -32,8 +33,16 @@ export function Navbar() {
         }`}
       >
         <a href="#top" className="flex items-center gap-2">
-          <span className="h-3 w-3 rounded-full bg-primary" aria-hidden />
-          <span className="text-lg font-semibold tracking-tight">Rivozen</span>
+          <span className="h-3 w-3 rounded-full bg-danger" aria-hidden />
+           <Image
+              src="/rivozen_black.png"
+              alt="hero section"
+              width={40}
+              height={40}
+              style={{ width: 'auto', height: 'auto' }}
+              className="w-[38rem]"
+            />
+          <span className="text-lg font-semibold tracking-tight max-md:hidden">Rivozen</span>
         </a>
 
         <ul className="hidden items-center gap-8 md:flex">
