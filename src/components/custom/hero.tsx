@@ -76,7 +76,7 @@ export function Hero() {
         >
           <Link
             href="#pricing"
-            className="group inline-flex items-center justify-center gap-1.5 rounded-lg bg-primary px-7 py-3.5 text-base font-medium text-primary-foreground transition-transform hover:-translate-y-0.5"
+            className="group inline-flex items-center justify-center gap-1.5 rounded-lg bg-primary px-7 py-3.5 text-base font-medium text-secondary-foreground transition-transform hover:-translate-y-0.5"
           >
             Get started
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -98,7 +98,7 @@ export function Hero() {
       >
         <div className="relative aspect-[16/8] overflow-hidden rounded-3xl border border-border bg-card">
           <Image
-            src="/hero-collage.png"
+            src="https://cdn.prod.website-files.com/69b15b68fb5a0ea0e6ef48b2/69f034d0beee479e7ee2414e_Frame%202147223617-p-800.png"
             alt="A collage of design work including app UI, branding and illustration"
             fill
             priority

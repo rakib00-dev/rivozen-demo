@@ -70,7 +70,7 @@ export function Pricing() {
               onClick={() => setYearly(false)}
               className={`rounded-lg px-5 py-2 text-sm font-medium transition-colors ${
                 !yearly
-                  ? 'bg-primary text-primary-foreground'
+                  ? 'bg-primary text-secondary-foreground'
                   : 'text-muted-foreground'
               }`}
             >
@@ -80,12 +80,12 @@ export function Pricing() {
               onClick={() => setYearly(true)}
               className={`rounded-lg px-5 py-2 text-sm font-medium transition-colors ${
                 yearly
-                  ? 'bg-primary text-primary-foreground'
+                  ? 'bg-primary text-secondary-foreground'
                   : 'text-muted-foreground'
               }`}
             >
               Yearly{' '}
-              <span className={yearly ? 'text-primary-foreground/80' : 'text-primary'}>
+              <span className={yearly ? 'text-secondary-foreground/80' : 'text-primary'}>
                 -15%
               </span>
             </button>
@@ -99,14 +99,14 @@ export function Pricing() {
               delay={i * 0.08}
               className={`flex flex-col rounded-2xl border p-7 ${
                 plan.featured
-                  ? 'border-primary bg-primary text-primary-foreground'
+                  ? 'border-primary bg-primary text-secondary-foreground'
                   : 'border-border bg-card'
               }`}
             >
               <div className="flex items-center justify-between">
                 <h3 className="text-lg font-medium">{plan.name}</h3>
                 {plan.featured && (
-                  <span className="rounded-full bg-primary-foreground/15 px-3 py-1 text-xs font-medium">
+                  <span className="rounded-full border-white/50 border bg-primary-foreground/15 px-3 py-1 text-xs font-medium">
                     Most popular
                   </span>
                 )}
@@ -114,7 +114,7 @@ export function Pricing() {
               <p
                 className={`mt-2 text-sm leading-relaxed ${
                   plan.featured
-                    ? 'text-primary-foreground/80'
+                    ? 'text-secondary-foreground/80'
                     : 'text-muted-foreground'
                 }`}
               >
@@ -130,7 +130,7 @@ export function Pricing() {
                     <span
                       className={`text-sm ${
                         plan.featured
-                          ? 'text-primary-foreground/70'
+                          ? 'text-secondary-foreground/70'
                           : 'text-muted-foreground'
                       }`}
                     >
@@ -148,8 +148,8 @@ export function Pricing() {
                 href="#contact"
                 className={`mt-6 inline-flex items-center justify-center gap-1.5 rounded-lg px-6 py-3 text-sm font-medium transition-transform hover:-translate-y-0.5 ${
                   plan.featured
-                    ? 'bg-primary-foreground text-primary'
-                    : 'bg-primary text-primary-foreground'
+                    ? 'bg-secondary-foreground text-secondary'
+                    : 'bg-primary text-secondary-foreground'
                 }`}
               >
                 {plan.monthly ? 'Get started' : 'Book a call'}
@@ -162,13 +162,13 @@ export function Pricing() {
                     <Check
                       className={`mt-0.5 h-4 w-4 shrink-0 ${
                         plan.featured
-                          ? 'text-primary-foreground'
+                          ? 'text-secondary-foreground'
                           : 'text-primary'
                       }`}
                     />
                     <span
                       className={
-                        plan.featured ? 'text-primary-foreground/90' : ''
+                        plan.featured ? 'text-secondary-foreground/90' : ''
                       }
                     >
                       {f}

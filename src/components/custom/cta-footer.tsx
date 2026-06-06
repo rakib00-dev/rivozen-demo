@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { Reveal } from './reveal'
 import { ArrowUpRight } from 'lucide-react'
+import Link from 'next/link'
 
 const cols = [
   {
@@ -22,29 +23,29 @@ const cols = [
 export function CtaFooter() {
   return (
     <footer id="contact" className="px-4 pb-8 md:px-6">
-      <Reveal className="mx-auto max-w-6xl overflow-hidden rounded-3xl bg-primary px-6 py-16 text-center text-primary-foreground md:py-24">
+      <Reveal className="mx-auto max-w-6xl overflow-hidden rounded-3xl bg-primary px-6 py-16 text-center text-secondary-foreground md:py-24">
         <h2 className="mx-auto max-w-3xl text-balance text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
           A full creative team,{' '}
           <span className="font-serif italic">at your fingertips.</span>
         </h2>
-        <p className="mx-auto mt-5 max-w-md text-pretty leading-relaxed text-primary-foreground/80">
+        <p className="mx-auto mt-5 max-w-md text-pretty leading-relaxed text-secondary-foreground/80">
           Start today and get your first design back as soon as tomorrow.
           Pause or cancel anytime.
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <a
+          <Link
             href="#pricing"
-            className="group inline-flex items-center justify-center gap-1.5 rounded-full bg-primary-foreground px-7 py-3.5 text-base font-medium text-primary transition-transform hover:-translate-y-0.5"
+            className="group inline-flex items-center justify-center gap-1.5 rounded-lg bg-secondary-foreground px-7 py-3 text-base font-medium text-secondary transition-transform hover:-translate-y-0.5"
           >
             Get started
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
-          <a
+          </Link>
+          <Link
             href="#pricing"
-            className="inline-flex items-center justify-center rounded-full border border-primary-foreground/30 px-7 py-3.5 text-base font-medium transition-colors hover:bg-primary-foreground/10"
+            className="inline-flex items-center justify-center rounded-lg border border-primary-foreground/30 px-7 py-3 text-base font-medium transition-colors bg-primary-foreground hover:bg-primary-foreground/10"
           >
             Book a call
-          </a>
+          </Link>
         </div>
       </Reveal>
 
