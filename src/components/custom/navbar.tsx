@@ -60,17 +60,17 @@ export function Navbar() {
         </ul>
 
         <div className="hidden items-center gap-3 md:flex">
-          <Link
+          {/* <Link
             href="#pricing"
             className="text-sm font-medium text-foreground transition-colors hover:text-primary"
           >
             Log in
-          </Link>
+          </Link> */}
           <Link
             href="#pricing"
             className="group inline-flex items-center gap-1.5 rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-sercondary-foreground transition-transform hover:-translate-y-0.5"
           >
-            Get started
+            Book A Call
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </Link>
         </div>
@@ -128,7 +128,7 @@ export function Navbar() {
                 onClick={() => setOpen(false)}
                 className="flex w-full items-center justify-center gap-2 rounded-2xl bg-background py-4 text-base font-medium text-foreground"
               >
-                Get started
+                Book A Call
                 <ArrowUpRight className="h-4 w-4" />
               </Link>
             </div>
