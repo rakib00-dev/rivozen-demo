@@ -41,7 +41,7 @@ export function Navbar() {
               width={40}
               height={40}
               style={{ width: 'auto', height: 'auto' }}
-              className="w-[38rem]"
+              className="w-152"
             />
           <span className="text-lg font-semibold tracking-tight max-md:hidden">Rivozen</span>
         </a>
