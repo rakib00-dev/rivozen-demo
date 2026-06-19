@@ -2,6 +2,8 @@ import { Analytics } from '@vercel/analytics/next'
 import type { Metadata } from 'next'
 import { Inter, Instrument_Serif } from 'next/font/google'
 import '../globals.css'
+import { Navbar } from '@/components/custom/navbar'
+import { CtaFooter } from '@/components/custom/cta-footer'
 
 const inter = Inter({
   variable: '--font-sans',
@@ -32,7 +34,9 @@ export default function RootLayout({
       className={`${inter.variable} ${instrumentSerif.variable} bg-background`}
     >
       <body className="font-sans antialiased">
+        <Navbar/>
         {children}
+        <CtaFooter/>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

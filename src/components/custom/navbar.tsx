@@ -7,7 +7,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const links = [
-  { label: 'Services', href: '#services' },
+  { label: 'Services', href: '/services' },
   { label: 'Work', href: '#work' },
   { label: 'Process', href: '#process' },
   { label: 'Pricing', href: '#pricing' },
@@ -33,7 +33,7 @@ export function Navbar() {
             : 'border-transparent bg-transparent'
         }`}
       >
-        <a href="#top" className="flex items-center gap-2">
+        <a href="/" className="flex items-center gap-2">
           <span className="h-3 w-3 rounded-full bg-danger" aria-hidden />
            <Image
               src="/rivozen_black.png"

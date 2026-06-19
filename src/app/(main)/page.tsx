@@ -13,7 +13,7 @@ import { Work } from "@/components/custom/work";
 export default function Page() {
   return (
     <SmoothScroll>
-      <Navbar />
+      {/* <Navbar /> */}
       <main>
         <Hero />
         <Marquee />
@@ -23,7 +23,7 @@ export default function Page() {
         <Process />
         <Testimonials />
         <Pricing />
-        <CtaFooter />
+        {/* <CtaFooter /> */}
       </main>
     </SmoothScroll>
   )
