@@ -8,9 +8,9 @@ import Link from 'next/link'
 
 const links = [
   { label: 'Services', href: '/services' },
-  { label: 'Work', href: '#work' },
-  { label: 'Process', href: '#process' },
-  { label: 'Pricing', href: '#pricing' },
+  { label: 'Work', href: '/work' },
+  { label: 'Process', href: '/process' },
+  { label: 'Pricing', href: '/pricing' },
 ]
 
 export function Navbar() {
@@ -33,7 +33,7 @@ export function Navbar() {
             : 'border-transparent bg-transparent'
         }`}
       >
-        <a href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2">
           <span className="h-3 w-3 rounded-full bg-danger" aria-hidden />
            <Image
               src="/rivozen_black.png"
@@ -44,17 +44,17 @@ export function Navbar() {
               className="w-152"
             />
           <span className="text-lg font-semibold tracking-tight max-md:hidden">Rivozen</span>
-        </a>
+        </Link>
 
         <ul className="hidden items-center gap-8 md:flex">
           {links.map((l) => (
             <li key={l.href}>
-              <a
+              <Link
                 href={l.href}
                 className="text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 {l.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
