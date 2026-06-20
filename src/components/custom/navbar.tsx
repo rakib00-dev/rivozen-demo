@@ -9,7 +9,7 @@ import Link from 'next/link'
 const links = [
   { label: 'Services', href: '/services' },
   { label: 'Work', href: '/work' },
-  { label: 'Process', href: '/process' },
+  { label: 'Package', href: '/package' },
   { label: 'Pricing', href: '/pricing' },
 ]
 
@@ -67,7 +67,7 @@ export function Navbar() {
             Log in
           </Link> */}
           <Link
-            href="#pricing"
+            href="/book-a-call"
             className="group inline-flex items-center gap-1.5 rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-sercondary-foreground transition-transform hover:-translate-y-0.5"
           >
             Book A Call
@@ -124,7 +124,7 @@ export function Navbar() {
             </ul>
             <div className="absolute inset-x-6 bottom-10">
               <Link
-                href="#pricing"
+                href="/book-a-call"
                 onClick={() => setOpen(false)}
                 className="flex w-full items-center justify-center gap-2 rounded-2xl bg-background py-4 text-base font-medium text-foreground"
               >
