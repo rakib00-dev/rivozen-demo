@@ -8,9 +8,10 @@ import Link from 'next/link'
 
 const links = [
   { label: 'Services', href: '/services' },
-  { label: 'Work', href: '/work' },
   { label: 'Package', href: '/package' },
   { label: 'Pricing', href: '/pricing' },
+  { label: 'Why Us', href: '/why-us' },
+  { label: 'Contact', href: '/contact' },
 ]
 
 export function Navbar() {
