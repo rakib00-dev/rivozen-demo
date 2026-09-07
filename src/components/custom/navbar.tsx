@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const links = [
   { label: "Services", href: "/services" },
-  { label: "Package", href: "/package" },
+  // { label: "Package", href: "/package" },
   { label: "Pricing", href: "/pricing" },
   { label: "Why Us", href: "/why-us" },
   { label: "Location", href: "/location" },
