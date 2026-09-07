@@ -1,50 +1,55 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, ArrowUpRight } from 'lucide-react'
-import Image from 'next/image'
-import Link from 'next/link'
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X, ArrowUpRight } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 const links = [
-  { label: 'Services', href: '/services' },
-  { label: 'Package', href: '/package' },
-  { label: 'Pricing', href: '/pricing' },
-  { label: 'Why Us', href: '/why-us' },
-  { label: 'Contact', href: '/contact' },
-]
+  { label: "Services", href: "/services" },
+  { label: "Package", href: "/package" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Why Us", href: "/why-us" },
+  { label: "Location", href: "/location" },
+  { label: "Contact", href: "/contact" },
+];
 
 export function Navbar() {
-  const [open, setOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(true)
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(true);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 26)
-    onScroll()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+    const onScroll = () => setScrolled(window.scrollY > 26);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className={`${scrolled ? 'fixed': 'absolute'} transition-all duration-300 inset-x-0 top-0 z-50 px-4 pt-4 md:px-6`}>
+    <header
+      className={`${scrolled ? "fixed" : "absolute"} transition-all duration-300 inset-x-0 top-0 z-50 px-4 pt-4 md:px-6`}
+    >
       <nav
         className={`mx-auto flex max-w-6xl items-center justify-between rounded-2xl border px-5 py-3 transition-colors duration-300 ${
           true
-            ? 'border-border bg-background/80 backdrop-blur-xl'
-            : 'border-transparent bg-transparent'
+            ? "border-border bg-background/80 backdrop-blur-xl"
+            : "border-transparent bg-transparent"
         }`}
       >
         <Link href="/" className="flex items-center gap-2">
           <span className="h-3 w-3 rounded-full bg-danger" aria-hidden />
-           <Image
-              src="/rivozen_black.png"
-              alt="hero section"
-              width={40}
-              height={40}
-              style={{ width: 'auto', height: 'auto' }}
-              className="w-152"
-            />
-          <span className="text-lg font-semibold tracking-tight max-md:hidden">Rivozen</span>
+          <Image
+            src="/rivozen_black.png"
+            alt="hero section"
+            width={40}
+            height={40}
+            style={{ width: "auto", height: "auto" }}
+            className="w-152"
+          />
+          <span className="text-lg font-semibold tracking-tight max-md:hidden">
+            Rivozen
+          </span>
         </Link>
 
         <ul className="hidden items-center gap-8 md:flex">
@@ -137,5 +142,5 @@ export function Navbar() {
         )}
       </AnimatePresence>
     </header>
-  )
+  );
 }
