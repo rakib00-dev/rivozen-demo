@@ -10,9 +10,12 @@ const links = [
   { label: "Services", href: "/services" },
   // { label: "Package", href: "/package" },
   { label: "Pricing", href: "/pricing" },
+  { label: "Work", href: "/work" },
   { label: "Why Us", href: "/why-us" },
-  { label: "Location", href: "/location" },
   { label: "Contact", href: "/contact" },
+  // { label: "Contact", href: "/contact" },
+  // { label: "Contact", href: "/contact" },
+  // { label: "Locations", href: "/locations" },
 ];
 
 export function Navbar() {
@@ -28,7 +31,7 @@ export function Navbar() {
 
   return (
     <header
-      className={`${scrolled ? "fixed" : "absolute"} transition-all duration-300 inset-x-0 top-0 z-50 px-4 pt-4 md:px-6`}
+      className={`${scrolled ? "fixed" : "absolute"} h-full transition-all duration-300 inset-x-0 top-0 z-50 px-4 pt-4 md:px-6`}
     >
       <nav
         className={`mx-auto flex max-w-6xl items-center justify-between rounded-2xl border px-5 py-3 transition-colors duration-300 ${
@@ -52,6 +55,7 @@ export function Navbar() {
           </span>
         </Link>
 
+        {/* Large screen */}
         <ul className="hidden items-center gap-8 md:flex">
           {links.map((l) => (
             <li key={l.href}>
@@ -90,15 +94,16 @@ export function Navbar() {
         </button>
       </nav>
 
+      {/* Small Screen Menu */}
       <AnimatePresence>
         {open && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-foreground/95 backdrop-blur-md md:hidden"
+            className="fixed overflow-scroll inset-0 z-50 bg-foreground/95 backdrop-blur-md md:hidden"
           >
-            <div className="flex items-center justify-between px-6 pt-7">
+            <div className="sticky top-0 flex items-center justify-between px-6 pt-7">
               <span className="text-lg font-semibold text-background">
                 Rivozen
               </span>
@@ -110,7 +115,18 @@ export function Navbar() {
                 <X className="h-5 w-5" />
               </button>
             </div>
-            <ul className="mt-16 flex flex-col gap-2 px-6">
+            <div className="absolute inset-x-6 -bottom-10">
+              <Link
+                href="/book-a-call"
+                onClick={() => setOpen(false)}
+                className="flex w-full items-center justify-center gap-2 rounded-2xl bg-background py-4 text-base font-medium text-foreground"
+              >
+                Book A Call
+                <ArrowUpRight className="h-4 w-4" />
+              </Link>
+            </div>
+
+            <ul className="h-screen overflow-x-scroll mt-16 flex flex-col gap-2 px-6">
               {links.map((l, i) => (
                 <motion.li
                   key={l.href}
@@ -128,16 +144,6 @@ export function Navbar() {
                 </motion.li>
               ))}
             </ul>
-            <div className="absolute inset-x-6 bottom-10">
-              <Link
-                href="/book-a-call"
-                onClick={() => setOpen(false)}
-                className="flex w-full items-center justify-center gap-2 rounded-2xl bg-background py-4 text-base font-medium text-foreground"
-              >
-                Book A Call
-                <ArrowUpRight className="h-4 w-4" />
-              </Link>
-            </div>
           </motion.div>
         )}
       </AnimatePresence>
