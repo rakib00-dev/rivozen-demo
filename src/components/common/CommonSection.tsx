@@ -17,7 +17,7 @@ const CommonSection = ({
   content: React.ReactElement;
 }) => {
   return (
-    <section id="work" className="px-4 py-20 md:px-6 md:py-28">
+    <section id="work" className="px-4 py-20 md:px-6">
       <div className="mx-auto max-w-6xl">
         <Reveal className="flex flex-wrap items-end justify-between gap-6">
           <div>

@@ -1,4 +1,5 @@
 import { CtaFooter } from "@/components/custom/cta-footer";
+import { FaqSection } from "@/components/custom/Faq";
 import { Hero } from "@/components/custom/hero";
 import { Marquee } from "@/components/custom/marquee";
 import { Navbar } from "@/components/custom/navbar";
@@ -14,17 +15,18 @@ export default function Page() {
   return (
     <SmoothScroll>
       {/* <Navbar /> */}
-      <main>
-        <Hero />
-        <Marquee />
-        <Stats />
-        <Services />
-        <Work />
-        <Process />
-        <Testimonials />
-        <Pricing />
-        {/* <CtaFooter /> */}
-      </main>
+      {/* <main> */}
+      <Hero />
+      <Marquee />
+      <Stats />
+      <Services />
+      <Work />
+      <Process />
+      <Testimonials />
+      <Pricing />
+      <FaqSection />
+      {/* <CtaFooter /> */}
+      {/* </main> */}
     </SmoothScroll>
-  )
+  );
 }
