@@ -8,6 +8,7 @@ function BookCalenderSection() {
         bigHeadingItalic="Big Italic!!"
         smallHeading="Hahahaa"
         content={<div>This the content of the site</div>}
+        arrow
       />
     </div>
   );
