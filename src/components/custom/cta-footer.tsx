@@ -30,7 +30,7 @@ export function CtaFooter() {
       id="contact"
       className={`px-4 pb-8 md:px-6 ${pathname == "/book-a-call" && "bg-black *:text-white pt-10"}`}
     >
-      {!["/book-a-call", "/why-us"].includes(pathname) && (
+      {/* {!["/book-a-call", "/why-us", "/work", "/pricing"].includes(pathname) && (
         <Reveal className="mx-auto max-w-6xl overflow-hidden rounded-3xl bg-primary px-6 py-16 text-center text-secondary-foreground md:py-24">
           <h2 className="mx-auto max-w-3xl text-balance text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
             A full creative team,{" "}
@@ -56,7 +56,7 @@ export function CtaFooter() {
             </Link>
           </div>
         </Reveal>
-      )}
+      )} */}
 
       <div className={`mx-auto mt-16 max-w-6xl`}>
         <div className="grid grid-cols-2 gap-10 md:grid-cols-5">
