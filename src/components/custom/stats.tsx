@@ -1,17 +1,17 @@
-'use client'
+"use client";
 
-import { Reveal } from './reveal'
+import { Reveal } from "./reveal";
 
 const stats = [
-  { value: '150k+', label: 'Designs delivered' },
-  { value: '2,000+', label: 'Customers served' },
-  { value: '4.9/5', label: 'Average rating' },
-  { value: '2018', label: 'Operating since' },
-]
+  { value: "150k+", label: "Designs delivered" },
+  { value: "2,000+", label: "Customers served" },
+  { value: "4.9/5", label: "Average rating" },
+  { value: "2018", label: "Operating since" },
+];
 
 export function Stats() {
   return (
-    <section className="px-4 py-20 md:px-6 md:py-28">
+    <section className="px-4 py-20 md:px-6">
       <div className="mx-auto grid max-w-6xl grid-cols-2 gap-y-10 md:grid-cols-4">
         {stats.map((s, i) => (
           <Reveal key={s.label} delay={i * 0.08} className="text-center">
@@ -25,5 +25,5 @@ export function Stats() {
         ))}
       </div>
     </section>
-  )
+  );
 }

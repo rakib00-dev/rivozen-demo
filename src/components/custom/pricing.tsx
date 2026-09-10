@@ -1,67 +1,67 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { Reveal } from './reveal'
-import { Check, ArrowUpRight } from 'lucide-react'
+import { useState } from "react";
+import { Reveal } from "./reveal";
+import { Check, ArrowUpRight } from "lucide-react";
 
 const plans = [
   {
-    name: 'Standard',
+    name: "Standard",
     monthly: 2995,
     yearly: 2495,
-    desc: 'One request at a time. Perfect for growing teams.',
+    desc: "One request at a time. Perfect for growing teams.",
     features: [
-      'One active request',
-      'Avg. 2-day delivery',
-      'Unlimited brands',
-      'Unlimited revisions',
-      'Source files included',
+      "One active request",
+      "Avg. 2-day delivery",
+      "Unlimited brands",
+      "Unlimited revisions",
+      "Source files included",
     ],
     featured: false,
   },
   {
-    name: 'Pro',
+    name: "Pro",
     monthly: 4995,
     yearly: 4295,
-    desc: 'Two requests at a time. For fast-moving teams.',
+    desc: "Two requests at a time. For fast-moving teams.",
     features: [
-      'Two active requests',
-      'Avg. next-day delivery',
-      'Dedicated designer',
-      'Unlimited brands & revisions',
-      'Motion & illustration',
-      'Priority support',
+      "Two active requests",
+      "Avg. next-day delivery",
+      "Dedicated designer",
+      "Unlimited brands & revisions",
+      "Motion & illustration",
+      "Priority support",
     ],
     featured: true,
   },
   {
-    name: 'Custom',
+    name: "Custom",
     monthly: null,
     yearly: null,
-    desc: 'A scaled creative team built around your workflow.',
+    desc: "A scaled creative team built around your workflow.",
     features: [
-      'Multiple active requests',
-      'Dedicated design team',
-      'Project manager',
-      'Slack collaboration',
-      'Custom onboarding',
+      "Multiple active requests",
+      "Dedicated design team",
+      "Project manager",
+      "Slack collaboration",
+      "Custom onboarding",
     ],
     featured: false,
   },
-]
+];
 
 export function Pricing() {
-  const [yearly, setYearly] = useState(false)
+  const [yearly, setYearly] = useState(false);
 
   return (
-    <section id="pricing" className="px-4 py-20 md:px-6 md:py-28">
+    <section id="pricing" className="px-4 py-20 md:px-6">
       <div className="mx-auto max-w-6xl">
         <Reveal className="text-center">
           <p className="text-sm font-medium uppercase tracking-widest text-primary">
             Pricing
           </p>
           <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
-            One flat fee.{' '}
+            One flat fee.{" "}
             <span className="font-serif italic">No surprises.</span>
           </h2>
 
@@ -70,8 +70,8 @@ export function Pricing() {
               onClick={() => setYearly(false)}
               className={`rounded-lg px-5 py-2 text-sm font-medium transition-colors ${
                 !yearly
-                  ? 'bg-primary text-secondary-foreground'
-                  : 'text-muted-foreground'
+                  ? "bg-primary text-secondary-foreground"
+                  : "text-muted-foreground"
               }`}
             >
               Monthly
@@ -80,12 +80,16 @@ export function Pricing() {
               onClick={() => setYearly(true)}
               className={`rounded-lg px-5 py-2 text-sm font-medium transition-colors ${
                 yearly
-                  ? 'bg-primary text-secondary-foreground'
-                  : 'text-muted-foreground'
+                  ? "bg-primary text-secondary-foreground"
+                  : "text-muted-foreground"
               }`}
             >
-              Yearly{' '}
-              <span className={yearly ? 'text-secondary-foreground/80' : 'text-primary'}>
+              Yearly{" "}
+              <span
+                className={
+                  yearly ? "text-secondary-foreground/80" : "text-primary"
+                }
+              >
                 -15%
               </span>
             </button>
@@ -99,8 +103,8 @@ export function Pricing() {
               delay={i * 0.08}
               className={`flex flex-col rounded-2xl border p-7 ${
                 plan.featured
-                  ? 'border-primary bg-primary text-secondary-foreground'
-                  : 'border-border bg-card'
+                  ? "border-primary bg-primary text-secondary-foreground"
+                  : "border-border bg-card"
               }`}
             >
               <div className="flex items-center justify-between">
@@ -114,8 +118,8 @@ export function Pricing() {
               <p
                 className={`mt-2 text-sm leading-relaxed ${
                   plan.featured
-                    ? 'text-secondary-foreground/80'
-                    : 'text-muted-foreground'
+                    ? "text-secondary-foreground/80"
+                    : "text-muted-foreground"
                 }`}
               >
                 {plan.desc}
@@ -130,8 +134,8 @@ export function Pricing() {
                     <span
                       className={`text-sm ${
                         plan.featured
-                          ? 'text-secondary-foreground/70'
-                          : 'text-muted-foreground'
+                          ? "text-secondary-foreground/70"
+                          : "text-muted-foreground"
                       }`}
                     >
                       /month
@@ -148,11 +152,11 @@ export function Pricing() {
                 href="#contact"
                 className={`mt-6 inline-flex items-center justify-center gap-1.5 rounded-lg px-6 py-3 text-sm font-medium transition-transform hover:-translate-y-0.5 ${
                   plan.featured
-                    ? 'bg-secondary-foreground text-secondary'
-                    : 'bg-primary text-secondary-foreground'
+                    ? "bg-secondary-foreground text-secondary"
+                    : "bg-primary text-secondary-foreground"
                 }`}
               >
-                {plan.monthly ? 'Get started' : 'Book a call'}
+                {plan.monthly ? "Get started" : "Book a call"}
                 <ArrowUpRight className="h-4 w-4" />
               </a>
 
@@ -162,13 +166,13 @@ export function Pricing() {
                     <Check
                       className={`mt-0.5 h-4 w-4 shrink-0 ${
                         plan.featured
-                          ? 'text-secondary-foreground'
-                          : 'text-primary'
+                          ? "text-secondary-foreground"
+                          : "text-primary"
                       }`}
                     />
                     <span
                       className={
-                        plan.featured ? 'text-secondary-foreground/90' : ''
+                        plan.featured ? "text-secondary-foreground/90" : ""
                       }
                     >
                       {f}
@@ -181,5 +185,5 @@ export function Pricing() {
         </div>
       </div>
     </section>
-  )
+  );
 }
