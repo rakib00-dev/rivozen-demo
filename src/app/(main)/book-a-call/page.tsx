@@ -9,6 +9,7 @@ import Cal from "@calcom/embed-react";
 
 import { Button } from "@/components/ui/button";
 import { Reveal, RevealStagger, RevealItem } from "@/components/custom/reveal";
+import { SmoothScroll } from "@/components/custom/smooth-scroll";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -260,50 +261,71 @@ export default function BookCall() {
   };
 
   return (
-    <main className="overflow-hidden">
-      {/* ================================================================== */}
-      {/* HERO                                                               */}
-      {/* ================================================================== */}
+    <SmoothScroll>
+      <main className="overflow-hidden">
+        {/* ================================================================== */}
+        {/* HERO                                                               */}
+        {/* ================================================================== */}
 
-      <section
-        id="top"
-        className="relative overflow-hidden px-4 pb-20 pt-32 md:px-6 md:pb-28 md:pt-44"
-      >
-        {/* Background */}
-        <div className="pointer-events-none absolute left-0 top-0 h-full w-full">
-          <Image
-            alt=""
-            src="/bg-gradient.svg"
-            width={0}
-            height={0}
-            className="h-full w-full object-cover"
-            priority
-          />
+        <section
+          id="top"
+          className="relative overflow-hidden px-4 pb-20 pt-32 md:px-6 md:pb-28 md:pt-44"
+        >
+          {/* Background */}
+          <div className="pointer-events-none absolute left-0 top-0 h-full w-full">
+            <Image
+              alt=""
+              src="/bg-gradient.svg"
+              width={0}
+              height={0}
+              className="h-full w-full object-cover"
+              priority
+            />
 
-          <span className="absolute left-0 top-0 h-full w-svw bg-linear-to-b from-primary/10 to-primary/5" />
-        </div>
+            <span className="absolute left-0 top-0 h-full w-svw bg-linear-to-b from-primary/10 to-primary/5" />
+          </div>
 
-        <div className="relative mx-auto max-w-6xl">
-          <Reveal>
-            {/* Eyebrow */}
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.6,
-                ease,
-              }}
-              className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-4 py-1.5 text-xs text-muted-foreground md:text-sm"
-            >
-              <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-              Book a call
-            </motion.div>
+          <div className="relative mx-auto max-w-6xl">
+            <Reveal>
+              {/* Eyebrow */}
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.6,
+                  ease,
+                }}
+                className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-4 py-1.5 text-xs text-muted-foreground md:text-sm"
+              >
+                <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+                Book a call
+              </motion.div>
 
-            {/* Heading */}
-            <h1 className="mt-6 max-w-5xl text-balance text-5xl font-semibold leading-[0.98] tracking-tight md:text-7xl lg:text-8xl">
-              {["Let's talk about", "your next"].map((word, i) => (
+              {/* Heading */}
+              <h1 className="mt-6 max-w-5xl text-balance text-5xl font-semibold leading-[0.98] tracking-tight md:text-7xl lg:text-8xl">
+                {["Let's talk about", "your next"].map((word, i) => (
+                  <motion.span
+                    key={word}
+                    initial={{
+                      opacity: 0,
+                      y: 24,
+                    }}
+                    animate={{
+                      opacity: 1,
+                      y: 0,
+                    }}
+                    transition={{
+                      duration: 0.7,
+                      ease,
+                      delay: 0.08 * i,
+                    }}
+                    className="mr-3 inline-block"
+                  >
+                    {word}
+                  </motion.span>
+                ))}
+
                 <motion.span
-                  key={word}
                   initial={{
                     opacity: 0,
                     y: 24,
@@ -315,362 +337,345 @@ export default function BookCall() {
                   transition={{
                     duration: 0.7,
                     ease,
-                    delay: 0.08 * i,
+                    delay: 0.24,
                   }}
-                  className="mr-3 inline-block"
+                  className="inline-block font-serif italic text-primary"
                 >
-                  {word}
+                  project.
                 </motion.span>
-              ))}
+              </h1>
 
-              <motion.span
+              {/* Description */}
+              <motion.p
                 initial={{
                   opacity: 0,
-                  y: 24,
+                  y: 16,
                 }}
                 animate={{
                   opacity: 1,
                   y: 0,
                 }}
                 transition={{
-                  duration: 0.7,
+                  duration: 0.6,
                   ease,
-                  delay: 0.24,
+                  delay: 0.32,
                 }}
-                className="inline-block font-serif italic text-primary"
+                className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl"
               >
-                project.
-              </motion.span>
-            </h1>
+                Tell us what you&apos;re working on, where you&apos;re stuck,
+                and what you want to achieve. We&apos;ll explore how Rivozen can
+                help.
+              </motion.p>
 
-            {/* Description */}
-            <motion.p
-              initial={{
-                opacity: 0,
-                y: 16,
-              }}
-              animate={{
-                opacity: 1,
-                y: 0,
-              }}
-              transition={{
-                duration: 0.6,
-                ease,
-                delay: 0.32,
-              }}
-              className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl"
-            >
-              Tell us what you&apos;re working on, where you&apos;re stuck, and
-              what you want to achieve. We&apos;ll explore how Rivozen can help.
-            </motion.p>
-
-            {/* Pills */}
-            <motion.div
-              initial={{
-                opacity: 0,
-                y: 16,
-              }}
-              animate={{
-                opacity: 1,
-                y: 0,
-              }}
-              transition={{
-                duration: 0.6,
-                ease,
-                delay: 0.4,
-              }}
-              className="mt-8 flex flex-wrap gap-3"
-            >
-              <div className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-4 py-2 text-sm">
-                <Clock3 className="h-4 w-4 text-primary" />
-                15-minute call
-              </div>
-
-              <div className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-4 py-2 text-sm">
-                <Video className="h-4 w-4 text-primary" />
-                Video call
-              </div>
-
-              <div className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-4 py-2 text-sm">
-                <Check className="h-4 w-4 text-primary" />
-                No commitment
-              </div>
-            </motion.div>
-
-            {/* CTA */}
-            <motion.div
-              initial={{
-                opacity: 0,
-                y: 16,
-              }}
-              animate={{
-                opacity: 1,
-                y: 0,
-              }}
-              transition={{
-                duration: 0.6,
-                ease,
-                delay: 0.48,
-              }}
-              className="mt-8"
-            >
-              <Button type="button" size="lg" onClick={scrollToBooking}>
-                Choose a time
-                <ArrowUpRight className="ml-1 h-4 w-4" />
-              </Button>
-            </motion.div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* ================================================================== */}
-      {/* BOOKING                                                            */}
-      {/* ================================================================== */}
-
-      <BookingSection />
-
-      {/* ================================================================== */}
-      {/* WHAT HAPPENS                                                       */}
-      {/* ================================================================== */}
-
-      <section className="border-y border-border px-4 py-20 md:px-6 md:py-28">
-        <div className="mx-auto max-w-6xl">
-          <Reveal>
-            <div className="max-w-2xl">
-              <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
-                What happens next
-              </p>
-
-              <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
-                A simple{" "}
-                <span className="font-serif italic text-primary">
-                  conversation.
-                </span>
-              </h2>
-
-              <p className="mt-4 max-w-xl leading-relaxed text-muted-foreground">
-                No complicated process. Just a short conversation to understand
-                where you are and where you want to go.
-              </p>
-            </div>
-          </Reveal>
-
-          <RevealStagger className="mt-12 grid gap-4 md:grid-cols-3">
-            {steps.map((step) => (
-              <RevealItem
-                key={step.number}
-                className="rounded-2xl border border-border bg-card p-6"
+              {/* Pills */}
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  y: 16,
+                }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  duration: 0.6,
+                  ease,
+                  delay: 0.4,
+                }}
+                className="mt-8 flex flex-wrap gap-3"
               >
-                <p className="text-sm font-medium text-primary">
-                  {step.number}
-                </p>
-
-                <h3 className="mt-8 text-xl font-semibold">{step.title}</h3>
-
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  {step.description}
-                </p>
-              </RevealItem>
-            ))}
-          </RevealStagger>
-        </div>
-      </section>
-
-      {/* ================================================================== */}
-      {/* TESTIMONIALS                                                       */}
-      {/* ================================================================== */}
-
-      <section className="px-4 py-20 md:px-6 md:py-28">
-        <div className="mx-auto max-w-6xl">
-          <Reveal>
-            <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
-              Customer reviews
-            </p>
-
-            <h2 className="mt-3 max-w-2xl text-balance text-4xl font-semibold tracking-tight md:text-5xl">
-              Why teams choose{" "}
-              <span className="font-serif italic text-primary">Rivozen</span>
-            </h2>
-          </Reveal>
-
-          <RevealStagger className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {testimonials.map((testimonial) => (
-              <RevealItem
-                key={testimonial.name}
-                className="flex flex-col rounded-2xl border border-border bg-card p-6"
-              >
-                {/* Stars */}
-                <div className="flex gap-1">
-                  {Array.from({ length: 5 }).map((_, index) => (
-                    <svg
-                      key={index}
-                      viewBox="0 0 20 20"
-                      className="h-4 w-4 fill-current text-primary"
-                      aria-hidden="true"
-                    >
-                      <path d="M10 1.5l2.63 5.32 5.87.85-4.25 4.14 1 5.85L10 14.9l-5.25 2.76 1-5.85L1.5 7.67l5.87-.85L10 1.5z" />
-                    </svg>
-                  ))}
+                <div className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-4 py-2 text-sm">
+                  <Clock3 className="h-4 w-4 text-primary" />
+                  15-minute call
                 </div>
 
-                {/* Quote */}
-                <p className="mt-4 flex-1 text-pretty leading-relaxed text-foreground/90">
-                  {testimonial.quote}
-                </p>
-
-                {/* Author */}
-                <div className="mt-6 border-t border-border pt-4">
-                  <p className="text-sm font-medium">{testimonial.name}</p>
-
-                  <p className="mt-1 text-sm text-muted-foreground">
-                    {testimonial.role}
-                  </p>
+                <div className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-4 py-2 text-sm">
+                  <Video className="h-4 w-4 text-primary" />
+                  Video call
                 </div>
-              </RevealItem>
-            ))}
-          </RevealStagger>
-        </div>
-      </section>
 
-      {/* ================================================================== */}
-      {/* FAQ                                                                */}
-      {/* ================================================================== */}
+                <div className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-4 py-2 text-sm">
+                  <Check className="h-4 w-4 text-primary" />
+                  No commitment
+                </div>
+              </motion.div>
 
-      <section className="border-y border-border px-4 py-20 md:px-6 md:py-28">
-        <div className="mx-auto max-w-4xl">
-          <Reveal>
-            <div className="text-center">
-              <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
-                FAQ
-              </p>
+              {/* CTA */}
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  y: 16,
+                }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  duration: 0.6,
+                  ease,
+                  delay: 0.48,
+                }}
+                className="mt-8"
+              >
+                <Button type="button" size="lg" onClick={scrollToBooking}>
+                  Choose a time
+                  <ArrowUpRight className="ml-1 h-4 w-4" />
+                </Button>
+              </motion.div>
+            </Reveal>
+          </div>
+        </section>
 
-              <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
-                Before we{" "}
-                <span className="font-serif italic text-primary">talk.</span>
-              </h2>
+        {/* ================================================================== */}
+        {/* BOOKING                                                            */}
+        {/* ================================================================== */}
 
-              <p className="mx-auto mt-4 max-w-xl leading-relaxed text-muted-foreground">
-                A few quick answers to common questions about the discovery
-                call.
-              </p>
-            </div>
-          </Reveal>
+        <BookingSection />
 
-          <RevealStagger className="mt-12">
-            {faqs.map((faq, index) => {
-              const isOpen = openFaq === index;
+        {/* ================================================================== */}
+        {/* WHAT HAPPENS                                                       */}
+        {/* ================================================================== */}
 
-              return (
-                <RevealItem
-                  key={faq.question}
-                  className="border-b border-border"
-                >
-                  <button
-                    type="button"
-                    onClick={() => setOpenFaq(isOpen ? null : index)}
-                    className="flex w-full items-center justify-between gap-6 py-6 text-left"
-                    aria-expanded={isOpen}
-                  >
-                    <span className="text-base font-medium md:text-lg">
-                      {faq.question}
-                    </span>
-
-                    <motion.span
-                      animate={{
-                        rotate: isOpen ? 180 : 0,
-                      }}
-                      transition={{
-                        duration: 0.2,
-                      }}
-                      className="shrink-0"
-                    >
-                      <ChevronDown className="h-5 w-5 text-muted-foreground" />
-                    </motion.span>
-                  </button>
-
-                  <AnimatePresence initial={false}>
-                    {isOpen && (
-                      <motion.div
-                        initial={{
-                          height: 0,
-                          opacity: 0,
-                        }}
-                        animate={{
-                          height: "auto",
-                          opacity: 1,
-                        }}
-                        exit={{
-                          height: 0,
-                          opacity: 0,
-                        }}
-                        transition={{
-                          duration: 0.25,
-                          ease: "easeInOut",
-                        }}
-                        className="overflow-hidden"
-                      >
-                        <p className="pb-6 pr-10 leading-relaxed text-muted-foreground">
-                          {faq.answer}
-                        </p>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </RevealItem>
-              );
-            })}
-          </RevealStagger>
-        </div>
-      </section>
-
-      {/* ================================================================== */}
-      {/* FINAL CTA                                                          */}
-      {/* ================================================================== */}
-
-      <section className="px-4 py-20 md:px-6 md:py-28">
-        <div className="mx-auto max-w-6xl">
-          <Reveal>
-            <div className="relative overflow-hidden rounded-3xl border border-border bg-muted/40 px-6 py-16 text-center md:px-10 md:py-24">
-              {/* Background */}
-              <div className="pointer-events-none absolute inset-0">
-                <Image
-                  src="/bg-gradient.svg"
-                  alt=""
-                  fill
-                  className="object-cover opacity-60"
-                />
-
-                <div className="absolute inset-0 bg-linear-to-br from-primary/10 via-transparent to-transparent" />
-              </div>
-
-              <div className="relative mx-auto max-w-3xl">
+        <section className="border-y border-border px-4 py-20 md:px-6 md:py-28">
+          <div className="mx-auto max-w-6xl">
+            <Reveal>
+              <div className="max-w-2xl">
                 <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
-                  Ready when you are
+                  What happens next
                 </p>
 
-                <h2 className="mt-4 text-balance text-4xl font-semibold tracking-tight md:text-6xl">
-                  Have something
-                  <span className="block font-serif italic text-primary">
-                    in mind?
+                <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
+                  A simple{" "}
+                  <span className="font-serif italic text-primary">
+                    conversation.
                   </span>
                 </h2>
 
-                <p className="mx-auto mt-5 max-w-xl text-pretty leading-relaxed text-muted-foreground">
-                  Let&apos;s spend 15 minutes talking about it. No pressure, no
-                  complicated process - just a straightforward conversation.
+                <p className="mt-4 max-w-xl leading-relaxed text-muted-foreground">
+                  No complicated process. Just a short conversation to
+                  understand where you are and where you want to go.
+                </p>
+              </div>
+            </Reveal>
+
+            <RevealStagger className="mt-12 grid gap-4 md:grid-cols-3">
+              {steps.map((step) => (
+                <RevealItem
+                  key={step.number}
+                  className="rounded-2xl border border-border bg-card p-6"
+                >
+                  <p className="text-sm font-medium text-primary">
+                    {step.number}
+                  </p>
+
+                  <h3 className="mt-8 text-xl font-semibold">{step.title}</h3>
+
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                    {step.description}
+                  </p>
+                </RevealItem>
+              ))}
+            </RevealStagger>
+          </div>
+        </section>
+
+        {/* ================================================================== */}
+        {/* TESTIMONIALS                                                       */}
+        {/* ================================================================== */}
+
+        <section className="px-4 py-20 md:px-6 md:py-28">
+          <div className="mx-auto max-w-6xl">
+            <Reveal>
+              <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
+                Customer reviews
+              </p>
+
+              <h2 className="mt-3 max-w-2xl text-balance text-4xl font-semibold tracking-tight md:text-5xl">
+                Why teams choose{" "}
+                <span className="font-serif italic text-primary">Rivozen</span>
+              </h2>
+            </Reveal>
+
+            <RevealStagger className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {testimonials.map((testimonial) => (
+                <RevealItem
+                  key={testimonial.name}
+                  className="flex flex-col rounded-2xl border border-border bg-card p-6"
+                >
+                  {/* Stars */}
+                  <div className="flex gap-1">
+                    {Array.from({ length: 5 }).map((_, index) => (
+                      <svg
+                        key={index}
+                        viewBox="0 0 20 20"
+                        className="h-4 w-4 fill-current text-primary"
+                        aria-hidden="true"
+                      >
+                        <path d="M10 1.5l2.63 5.32 5.87.85-4.25 4.14 1 5.85L10 14.9l-5.25 2.76 1-5.85L1.5 7.67l5.87-.85L10 1.5z" />
+                      </svg>
+                    ))}
+                  </div>
+
+                  {/* Quote */}
+                  <p className="mt-4 flex-1 text-pretty leading-relaxed text-foreground/90">
+                    {testimonial.quote}
+                  </p>
+
+                  {/* Author */}
+                  <div className="mt-6 border-t border-border pt-4">
+                    <p className="text-sm font-medium">{testimonial.name}</p>
+
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      {testimonial.role}
+                    </p>
+                  </div>
+                </RevealItem>
+              ))}
+            </RevealStagger>
+          </div>
+        </section>
+
+        {/* ================================================================== */}
+        {/* FAQ                                                                */}
+        {/* ================================================================== */}
+
+        <section className="border-y border-border px-4 py-20 md:px-6 md:py-28">
+          <div className="mx-auto max-w-4xl">
+            <Reveal>
+              <div className="text-center">
+                <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
+                  FAQ
                 </p>
 
-                <div className="mt-8 flex justify-center">
-                  <Button size="lg" type="button" onClick={scrollToBooking}>
-                    Book a call
-                    <ArrowUpRight className="ml-1 h-4 w-4" />
-                  </Button>
+                <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
+                  Before we{" "}
+                  <span className="font-serif italic text-primary">talk.</span>
+                </h2>
+
+                <p className="mx-auto mt-4 max-w-xl leading-relaxed text-muted-foreground">
+                  A few quick answers to common questions about the discovery
+                  call.
+                </p>
+              </div>
+            </Reveal>
+
+            <RevealStagger className="mt-12">
+              {faqs.map((faq, index) => {
+                const isOpen = openFaq === index;
+
+                return (
+                  <RevealItem
+                    key={faq.question}
+                    className="border-b border-border"
+                  >
+                    <button
+                      type="button"
+                      onClick={() => setOpenFaq(isOpen ? null : index)}
+                      className="flex w-full items-center justify-between gap-6 py-6 text-left"
+                      aria-expanded={isOpen}
+                    >
+                      <span className="text-base font-medium md:text-lg">
+                        {faq.question}
+                      </span>
+
+                      <motion.span
+                        animate={{
+                          rotate: isOpen ? 180 : 0,
+                        }}
+                        transition={{
+                          duration: 0.2,
+                        }}
+                        className="shrink-0"
+                      >
+                        <ChevronDown className="h-5 w-5 text-muted-foreground" />
+                      </motion.span>
+                    </button>
+
+                    <AnimatePresence initial={false}>
+                      {isOpen && (
+                        <motion.div
+                          initial={{
+                            height: 0,
+                            opacity: 0,
+                          }}
+                          animate={{
+                            height: "auto",
+                            opacity: 1,
+                          }}
+                          exit={{
+                            height: 0,
+                            opacity: 0,
+                          }}
+                          transition={{
+                            duration: 0.25,
+                            ease: "easeInOut",
+                          }}
+                          className="overflow-hidden"
+                        >
+                          <p className="pb-6 pr-10 leading-relaxed text-muted-foreground">
+                            {faq.answer}
+                          </p>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </RevealItem>
+                );
+              })}
+            </RevealStagger>
+          </div>
+        </section>
+
+        {/* ================================================================== */}
+        {/* FINAL CTA                                                          */}
+        {/* ================================================================== */}
+
+        <section className="px-4 py-20 md:px-6 md:py-28">
+          <div className="mx-auto max-w-6xl">
+            <Reveal>
+              <div className="relative overflow-hidden rounded-3xl border border-border bg-muted/40 px-6 py-16 text-center md:px-10 md:py-24">
+                {/* Background */}
+                <div className="pointer-events-none absolute inset-0">
+                  <Image
+                    src="/bg-gradient.svg"
+                    alt=""
+                    fill
+                    className="object-cover opacity-60"
+                  />
+
+                  <div className="absolute inset-0 bg-linear-to-br from-primary/10 via-transparent to-transparent" />
+                </div>
+
+                <div className="relative mx-auto max-w-3xl">
+                  <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
+                    Ready when you are
+                  </p>
+
+                  <h2 className="mt-4 text-balance text-4xl font-semibold tracking-tight md:text-6xl">
+                    Have something
+                    <span className="block font-serif italic text-primary">
+                      in mind?
+                    </span>
+                  </h2>
+
+                  <p className="mx-auto mt-5 max-w-xl text-pretty leading-relaxed text-muted-foreground">
+                    Let&apos;s spend 15 minutes talking about it. No pressure,
+                    no complicated process - just a straightforward
+                    conversation.
+                  </p>
+
+                  <div className="mt-8 flex justify-center">
+                    <Button size="lg" type="button" onClick={scrollToBooking}>
+                      Book a call
+                      <ArrowUpRight className="ml-1 h-4 w-4" />
+                    </Button>
+                  </div>
                 </div>
               </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-    </main>
+            </Reveal>
+          </div>
+        </section>
+      </main>
+    </SmoothScroll>
   );
 }
 
