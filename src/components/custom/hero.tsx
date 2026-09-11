@@ -1,11 +1,12 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
-import { motion } from 'framer-motion'
-import { ArrowUpRight, Star } from 'lucide-react'
-import Link from 'next/link'
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { ArrowUpRight, Star } from "lucide-react";
+import Link from "next/link";
+import { Reveal } from "./reveal";
 
-const ease = [0.22, 1, 0.36, 1] as const
+export const ease = [0.22, 1, 0.36, 1] as const;
 
 export function Hero() {
   return (
@@ -13,9 +14,15 @@ export function Hero() {
       id="top"
       className="relative overflow-hidden px-4 pt-32 pb-16 md:px-6 md:pt-44"
     >
-      <div className='absolute left-0 top-0'>
-        <Image alt='bg-overlay' src={'/bg-gradient.svg'} width={0} height={0} className='w-full h-full'/>
-        <span className='bg-linear-to-b from-primary/10 to-primary/.5 h-full w-svw absolute top-0'></span>
+      <div className="absolute left-0 top-0">
+        <Image
+          alt="bg-overlay"
+          src={"/bg-gradient.svg"}
+          width={0}
+          height={0}
+          className="w-full h-full"
+        />
+        <span className="bg-linear-to-b from-primary/10 to-primary/.5 h-full w-svw absolute top-0"></span>
       </div>
       <div className="mx-auto max-w-6xl">
         <motion.div
@@ -26,22 +33,19 @@ export function Hero() {
         >
           <span className="flex">
             {Array.from({ length: 5 }).map((_, i) => (
-              <Star
-                key={i}
-                className="h-3.5 w-3.5 fill-primary text-primary"
-              />
+              <Star key={i} className="h-3.5 w-3.5 fill-primary text-primary" />
             ))}
           </span>
           Rated 4.9/5 by 2,000+ teams
         </motion.div>
 
         <h1 className="mt-6 max-w-4xl text-balance text-5xl font-semibold leading-[0.98] tracking-tight md:text-7xl lg:text-8xl">
-          {['On-demand', 'design,', 'without'].map((word, i) => (
+          {["On-demand", "design,", "without"].map((word, i) => (
             <motion.span
               key={i}
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, ease, delay: 0.08 * i }}
+              transition={{ duration: 4.7, ease, delay: 0.68 * i }}
               className="mr-3 inline-block"
             >
               {word}
@@ -90,25 +94,27 @@ export function Hero() {
         </motion.div>
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 40, scale: 0.98 }}
-        animate={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: 0.9, ease, delay: 0.45 }}
-        className="mx-auto mt-16 max-w-6xl"
-      >
-        <div className="relative aspect-16/8 overflow-hidden rounded-3xl border border-border bg-card">
-          <Image
-            src="https://cdn.prod.website-files.com/69b15b68fb5a0ea0e6ef48b2/69f034d0beee479e7ee2414e_Frame%202147223617-p-800.png"
-            alt="A collage of design work including app UI, branding and illustration"
-            fill
-            priority
-            className="object-cover"
-          />
-        </div>
-        {/* <video height="280" allow="autoplay" className="rounded-lg shadow-2xl bg-center w-full h-full" controls autoplay loop style="opacity: 1; transform: none;">
+      <Reveal>
+        <motion.div
+          initial={{ opacity: 0, y: 40, scale: 0.98 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.9, ease, delay: 0.45 }}
+          className="mx-auto mt-16 max-w-6xl"
+        >
+          <div className="relative aspect-16/8 overflow-hidden rounded-3xl border border-border bg-card">
+            <Image
+              src="https://cdn.prod.website-files.com/69b15b68fb5a0ea0e6ef48b2/69f034d0beee479e7ee2414e_Frame%202147223617-p-800.png"
+              alt="A collage of design work including app UI, branding and illustration"
+              fill
+              priority
+              className="object-cover"
+            />
+          </div>
+          {/* <video height="280" allow="autoplay" className="rounded-lg shadow-2xl bg-center w-full h-full" controls autoplay loop style="opacity: 1; transform: none;">
           <source src="./assets/videos/saurov.mp4" type="video/mp4"/>
         </video> */}
-      </motion.div>
+        </motion.div>
+      </Reveal>
     </section>
-  )
+  );
 }
