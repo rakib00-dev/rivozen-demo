@@ -1,3 +1,5 @@
+"use client";
+
 import { CtaFooter } from "@/components/custom/cta-footer";
 import { FaqSection } from "@/components/custom/Faq";
 import { Hero } from "@/components/custom/hero";
@@ -13,24 +15,31 @@ import { Testimonials } from "@/components/custom/testimonials";
 import { Work } from "@/components/custom/work";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Page() {
   return (
     <SmoothScroll>
-      {/* <Navbar /> */}
-      {/* <main> */}
-      <Hero />
-      <Marquee />
-      <Stats />
-      <Services />
-      <Work />
-      <Process />
-      <Testimonials />
-      <Pricing />
-      <FaqSection />
-      <InLineCta />
-      {/* <CtaFooter /> */}
-      {/* </main> */}
+      <motion.main
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 1 }} // Delay matches loader lifetime
+      >
+        {/* <Navbar /> */}
+        {/* <main> */}
+        <Hero />
+        <Marquee />
+        <Stats />
+        <Services />
+        <Work />
+        <Process />
+        <Testimonials />
+        <Pricing />
+        <FaqSection />
+        <InLineCta />
+        {/* <CtaFooter /> */}
+        {/* </main> */}
+      </motion.main>
     </SmoothScroll>
   );
 }
