@@ -148,6 +148,7 @@ function BookingSection() {
                     alt=""
                     fill
                     className="object-cover opacity-60"
+                    loading="eager"
                   />
 
                   <div className="absolute inset-0 bg-linear-to-b from-primary/5 to-transparent" />
@@ -263,7 +264,6 @@ export default function BookCall() {
   return (
     <SmoothScroll>
       <main className="overflow-hidden">
-        
         {/* ================================================================== */}
         {/* HERO                                                               */}
         {/* ================================================================== */}
@@ -281,6 +281,7 @@ export default function BookCall() {
               height={0}
               className="h-full w-full object-cover"
               priority
+              loading="eager"
             />
 
             <span className="absolute left-0 top-0 h-full w-svw bg-linear-to-b from-primary/10 to-primary/5" />
@@ -640,6 +641,7 @@ export default function BookCall() {
                     src="/bg-gradient.svg"
                     alt=""
                     fill
+                    loading="eager"
                     className="object-cover opacity-60"
                   />
 

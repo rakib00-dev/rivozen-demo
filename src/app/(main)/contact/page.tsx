@@ -117,6 +117,7 @@ export default function ContactPage() {
               alt=""
               src="/bg-gradient.svg"
               width={0}
+              loading="eager"
               height={0}
               className="h-full w-full object-cover"
               priority
@@ -219,6 +220,7 @@ export default function ContactPage() {
                       <Image
                         src="/bg-gradient.svg"
                         alt=""
+                        loading="eager"
                         fill
                         className="object-cover opacity-60"
                       />
@@ -545,6 +547,7 @@ export default function ContactPage() {
                   <Image
                     src="/bg-gradient.svg"
                     alt=""
+                    loading="eager"
                     fill
                     className="object-cover opacity-70"
                   />
@@ -685,6 +688,7 @@ export default function ContactPage() {
                   <Image
                     src="/bg-gradient.svg"
                     alt=""
+                    loading="eager"
                     fill
                     className="object-cover opacity-60"
                   />
