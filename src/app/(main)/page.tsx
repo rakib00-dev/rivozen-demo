@@ -25,8 +25,8 @@ export default function Page() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 1 }} // -> Delay matches loader lifetime
       >
-        {/* <Navbar /> */}
         {/* <main> */}
+        {/* <Navbar /> */}
         <Hero />
         <Marquee />
         <Stats />
