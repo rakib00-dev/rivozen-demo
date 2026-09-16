@@ -41,7 +41,11 @@ export function Hero() {
         </motion.div>
 
         <h1 className="mt-6 max-w-4xl text-balance text-5xl font-semibold leading-[0.98] tracking-tight md:text-7xl lg:text-8xl">
-          {["Growth", "solutions", "without"].map((word, i) => (
+          {[
+            "Digital Service Agency",
+            "for Ecommerce Brands",
+            "& Local Businesses",
+          ].map((word, i) => (
             <motion.span
               key={i}
               initial={{ opacity: 0, y: 24 }}
