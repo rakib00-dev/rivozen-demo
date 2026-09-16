@@ -14,7 +14,7 @@ export function Hero() {
       id="top"
       className="relative overflow-hidden px-4 pt-32 pb-16 md:px-6 md:pt-44"
     >
-      <div className="absolute left-0 top-0">
+      <div className="absolute left-0 top-0 z-1">
         <Image
           alt="bg-overlay"
           src={"/bg-gradient.svg"}
@@ -25,7 +25,7 @@ export function Hero() {
         />
         <span className="bg-linear-to-b from-primary/10 to-primary/.5 h-full w-svw absolute top-0"></span>
       </div>
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-6xl relative z-2">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -67,11 +67,12 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease, delay: 0.32 }}
-          className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground"
+          className="relative z-50 mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground"
         >
-          Rivozen is a subscription-based creative studio powered by talented
-          designers and dedicated support. Unlimited requests, one flat monthly
-          fee.
+          Build a stronger online presence, reach the right customers, and turn
+          your digital efforts into real, measurable growth. At Rivozen, we
+          combine strategy, creativity, and performance-driven execution to help
+          businesses grow with confidence.
         </motion.p>
 
         <motion.div
@@ -81,10 +82,10 @@ export function Hero() {
           className="mt-8 flex flex-col gap-3 sm:flex-row"
         >
           <Link
-            href="#pricing"
+            href="/book-a-call"
             className="group inline-flex items-center justify-center gap-1.5 rounded-lg bg-primary px-7 py-3.5 text-base font-medium text-secondary-foreground transition-transform hover:-translate-y-0.5"
           >
-            Get started
+            Get a Free Consultation
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </Link>
           <Link
