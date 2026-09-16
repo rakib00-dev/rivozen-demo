@@ -41,7 +41,7 @@ export function Hero() {
         </motion.div>
 
         <h1 className="mt-6 max-w-4xl text-balance text-5xl font-semibold leading-[0.98] tracking-tight md:text-7xl lg:text-8xl">
-          {["On-demand", "design,", "without"].map((word, i) => (
+          {["Growth", "solutions", "without"].map((word, i) => (
             <motion.span
               key={i}
               initial={{ opacity: 0, y: 24 }}
@@ -58,6 +58,7 @@ export function Hero() {
             transition={{ duration: 0.7, ease, delay: 0.24 }}
             className="inline-block font-serif italic text-primary"
           >
+            {/* the busywork. */}
             the headaches.
           </motion.span>
         </h1>
