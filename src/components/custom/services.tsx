@@ -13,45 +13,52 @@ import {
 } from "lucide-react";
 
 const services = [
-  {
-    icon: Palette,
-    title: "Brand Identity",
-    desc: "Logos, color systems, and complete guidelines that make you unforgettable.",
-  },
+  // {
+  //   icon: Palette,
+  //   title: "Brand Identity",
+  //   desc: "Logos, color systems, and complete guidelines that make you unforgettable.",
+  // },
+
   {
     icon: Monitor,
-    title: "Web & Product",
+    title: "Web Design & Development",
     desc: "Landing pages, marketing sites, and product UI designed to convert.",
   },
   {
-    icon: PenTool,
-    title: "Illustration",
-    desc: "Custom illustrations and icon sets crafted to match your voice.",
-  },
-  {
-    icon: Share2,
-    title: "Social Media",
-    desc: "Scroll-stopping graphics and templates for every channel you run.",
-  },
-  {
-    icon: Film,
-    title: "Motion Graphics",
-    desc: "Animations, explainers, and video edits that bring ideas to life.",
-  },
-  {
     icon: Presentation,
-    title: "Presentations",
-    desc: "Pitch decks and reports that command attention in the room.",
+    title: "SEO",
+    desc: "Search engine optimization that improves rankings, increases relevant organic traffic, and drives sustainable long-term growth.",
   },
   {
     icon: Sparkles,
-    title: "Display Ads",
-    desc: "High-performing ad creative built and resized for every platform.",
+    title: "Paid Advertising",
+    desc: `Google Ads and Meta Ads campaigns built to drive qualified traffic and leads, and increase sales and ROI.`,
   },
   {
+    icon: PenTool,
+    title: "CRO",
+    desc: "key touchpoints-designed to increase conversions and maximize the value of every visitor.",
+  },
+  {
+    icon: Palette,
+    title: "Content & Creative",
+    desc: `Strategic content, engaging visuals, video editing, and creative assets designed to achive your marketing goals.`,
+  },
+  {
+    icon: Share2,
+    title: "Email & SMS Marketing",
+    desc: `Personalized and automated campaigns designed to nurture leads, build stronger customer relationships, increase retention, and drive repeat sales.`,
+  },
+  {
+    icon: Film,
+    title: "Social Media Marketing",
+    desc: `Strategic social media management and targeted campaigns designed to build your brand.`,
+  },
+
+  {
     icon: Layers,
-    title: "Print Design",
-    desc: "Packaging, merch, and editorial layouts, production-ready.",
+    title: "Business Growth Strategy",
+    desc: `A tailored digital marketing roadmap that aligns SEO, paid media, and content with your business goals for focused, sustainable growth.`,
   },
 ];
 
@@ -64,8 +71,8 @@ export function Services() {
             What we do
           </p>
           <h2 className="mt-3 max-w-2xl text-balance text-4xl font-semibold tracking-tight md:text-5xl">
-            One studio for all your{" "}
-            <span className="font-serif italic">creative needs</span>
+            One Agency for All Your Digital{" "}
+            <span className="font-serif italic">Growth Needs</span>
           </h2>
         </Reveal>
 
