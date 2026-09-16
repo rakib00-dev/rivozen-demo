@@ -49,6 +49,12 @@ export function Work() {
               Work we&apos;re{" "}
               <span className="font-serif italic">proud of</span>
             </h2>
+            <p className="mt-5 max-w-2xl text-pretty leading-relaxed text-muted-foreground">
+              A look at the websites, SEO projects, creative work, marketing
+              campaigns, and digital solutions we&apos;ve created at Rivozen -
+              each one built around a business&apos;s specific goals and
+              challenges.
+            </p>
           </div>
 
           <a
