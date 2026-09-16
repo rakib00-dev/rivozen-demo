@@ -74,6 +74,10 @@ export function Services() {
             One Agency for All Your Digital{" "}
             <span className="font-serif italic">Growth Needs</span>
           </h2>
+          <p className=" mt-5 max-w-2xl text-pretty leading-relaxed text-muted-foreground">
+            Rivozen brings essential digital services together to help
+            businesses build, grow, and succeed online.{" "}
+          </p>
         </Reveal>
 
         <RevealStagger className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
