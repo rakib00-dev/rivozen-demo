@@ -1,15 +1,14 @@
-'use client'
+"use client";
 
 const items = [
-  'Brand Identity',
-  'Web Design',
-  'Illustration',
-  'Motion Graphics',
-  'Social Media',
-  'Presentations',
-  'Logo Design',
-  'Print Design',
-]
+  "Brand Identity",
+  "Web Design",
+  "Web Development",
+  "Paid Advertising",
+  "Social Media Marketing",
+  "Content & Creative",
+  "Business Growth Strategy",
+];
 
 export function Marquee() {
   return (
@@ -53,5 +52,5 @@ export function Marquee() {
         }
       `}</style>
     </section>
-  )
+  );
 }

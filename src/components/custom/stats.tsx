@@ -3,10 +3,10 @@
 import { Reveal } from "./reveal";
 
 const stats = [
-  { value: "150k+", label: "Designs delivered" },
-  { value: "2,000+", label: "Customers served" },
-  { value: "4.9/5", label: "Average rating" },
-  { value: "2018", label: "Operating since" },
+  { value: "150+", label: "Projects Delivered" },
+  { value: "80+", label: "Businesses Supported" },
+  { value: "300+", label: "Campaigns Launched" },
+  { value: "5y+", label: "Years of Experience" },
 ];
 
 export function Stats() {
