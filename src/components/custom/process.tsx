@@ -5,23 +5,23 @@ import { Reveal, RevealStagger, RevealItem } from "./reveal";
 const steps = [
   {
     no: "01",
-    title: "Submit your request",
-    desc: "Tell us what you need, share references, and upload your brand assets in seconds.",
+    title: " Free Strategy Consultation",
+    desc: "We take time to understand your business, goals, audience, and current digital presence with no obligation to move forward.",
   },
   {
     no: "02",
-    title: "Designer gets to work",
-    desc: "We match your project with the right designer and begin immediately.",
+    title: "Custom Growth Strategy",
+    desc: "We identify the right digital opportunities and channels, then build a tailored strategy around your business goals and target market.",
   },
   {
     no: "03",
-    title: "Provide feedback",
-    desc: "Leave comments directly on the design. We iterate until it is exactly right.",
+    title: "Execution & Optimization",
+    desc: "Our team puts the plan into action with the right mix of design, marketing, and content, while continuously testing and optimizing for better performance.",
   },
   {
     no: "04",
-    title: "Files are delivered",
-    desc: "Receive final designs in every format you need, ready to ship across channels.",
+    title: "Measurable Results Delivered",
+    desc: "We track key performance metrics and provide transparent reporting on traffic, leads, revenue, and ROI, so you always know what's working.",
   },
 ];
 
