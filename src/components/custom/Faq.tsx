@@ -7,34 +7,45 @@ import { Reveal, RevealStagger, RevealItem } from "./reveal";
 
 const faqs = [
   {
-    question: "How does the design subscription work?",
-    answer:
-      "You get access to a dedicated design team for a flat monthly fee. Simply send us your design requests, and our team works through them one by one, keeping you updated throughout the process.",
+    question: "What digital services does RivoZen offer?",
+    answer: `Rivozen provides a wide range of digital services, including Website Design & Development, SEO, Paid Advertising, Social Media Marketing, Content & Creative, Email & SMS Marketing, Conversion Rate Optimization, and Business Growth Strategy plus additional support as your business evolves.`,
   },
   {
-    question: "How quickly will I receive my designs?",
+    question:
+      "Do you design and develop websites for ecommerce and local businesses?",
     answer:
-      "Most design requests are completed within a few business days. The exact timeline depends on the complexity of the request, but we always aim to keep things moving quickly.",
+      " Yes. We build websites ranging from business websites and landing pages to full ecommerce stores  including platforms like Shopify. Every website is designed to be modern, responsive, and user-friendly, tailored to your business, audience, and goals.",
   },
   {
-    question: "Can I request multiple designs at once?",
+    question: "Is the initial consultation really free?",
     answer:
-      "Yes. You can add as many requests to your queue as you need. We work through them in priority order so you always know what is being worked on next.",
+      "Yes. Your first strategy consultation is completely free, with no obligation to move forward.",
   },
   {
-    question: "What types of design work do you offer?",
+    question: "How much does a Digital Service Agency cost?",
     answer:
-      "We can help with branding, social media graphics, UI/UX design, landing pages, presentations, marketing materials, advertisements, and many other digital design needs.",
+      "Pricing depends on the scope and mix of services your business needs. After understanding your goals, we provide a custom quote based on your specific requirements.",
   },
   {
-    question: "Do I get a dedicated designer?",
+    question: "How long does it take to see SEO and marketing results?",
     answer:
-      "Yes. You will work with a dedicated design team that becomes familiar with your brand, preferences, and workflow, making collaboration easier over time.",
+      "Yes Timelines vary depending on your industry, competition, website, and chosen services. SEO typically takes longer to build momentum, while paid advertising can generate data and traffic much sooner.",
   },
   {
-    question: "Can I cancel my subscription anytime?",
-    answer:
-      "Yes. There are no long-term contracts. You can cancel your subscription whenever you need, and you will continue to have access until the end of your current billing period.",
+    question: "Do you offer both SEO and paid advertising together?",
+    answer: `Yes. We can combine SEO and paid advertising to support both short-term traffic and long-term organic growth.`,
+  },
+  {
+    question: "Will I own my website, content, and ads accounts?",
+    answer: `Yes. Your website, content, and advertising accounts remain yours. We work on your behalf while keeping ownership and access with your business.`,
+  },
+  {
+    question: "Do you work with businesses in specific locations, or globally?",
+    answer: `Yes. We work with ecommerce brands, local businesses, and growing companies both locally and internationally wherever your business needs digital growth. `,
+  },
+  {
+    question: "How do you measure and report results?",
+    answer: `We track relevant metrics such as traffic, leads, conversions, revenue, and ROI, and provide transparent reporting so you can clearly see what's working.`,
   },
 ];
 
@@ -56,13 +67,13 @@ export function FaqSection() {
             </p>
 
             <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
-              Everything you need to{" "}
-              <span className="font-serif italic">know</span>
+              Things you need to <span className="font-serif italic">know</span>
             </h2>
 
             <p className="mx-auto mt-5 max-w-2xl text-pretty leading-relaxed text-muted-foreground">
-              Have questions about our design subscription? Here are some of the
-              most common questions we get from teams.
+              Have questions about choosing a Digital Service Agency? Here are
+              answers to the questions business owners ask us most often at
+              Rivozen.{" "}
             </p>
           </div>
         </Reveal>
