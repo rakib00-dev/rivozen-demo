@@ -40,11 +40,12 @@ export function Hero() {
           Rated 4.9/5 by 2,000+ teams
         </motion.div>
 
-        <h1 className="mt-6 max-w-4xl text-balance text-2xl font-semibold leading-[0.98] tracking-tight md:text-4xl lg:text-6xl">
+        <h1 className="mt-6 max-w-4xl text-balance text-2xl font-semibold leading-[0.98] tracking-tight md:text-4xl lg:text-4xl">
           {[
             "Digital Service Agency",
             "for Ecommerce Brands",
             "& Local Businesses",
+            "Without",
           ].map((word, i) => (
             <motion.span
               key={i}
