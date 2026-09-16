@@ -23,7 +23,7 @@ export default function Page() {
       <motion.main
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 1 }} // -> Delay matches loader lifetime
+        transition={{ duration: 0.6, delay: 1 }} // Delay matches loader lifetime
       >
         {/* <main> */}
         {/* <Navbar /> */}
