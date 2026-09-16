@@ -12,7 +12,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden px-4 pt-32 pb-16 md:px-6 md:pt-44"
+      className="relative overflow-hidden px-4 pt-32 pb-16 md:px-6 md:pt-30"
     >
       <div className="absolute left-0 top-0 z-1">
         <Image
@@ -72,7 +72,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease, delay: 0.32 }}
-          className="relative z-50 mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground"
+          className="relative z-50 mt-6 max-w-xl text-pretty text-sm leading-relaxed text-muted-foreground"
         >
           Build a stronger online presence, reach the right customers, and turn
           your digital efforts into real, measurable growth. At Rivozen, we
