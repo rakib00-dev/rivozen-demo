@@ -40,23 +40,8 @@ export function Hero() {
           Rated 4.9/5 by 2,000+ teams
         </motion.div>
 
-        <h1 className="mt-6 max-w-4xl text-balance text-2xl font-semibold leading-[1.2] tracking-tight md:text-4xl lg:text-5xl">
-          {[
-            "Digital Service Agency",
-            "for Ecommerce Brands",
-            "& Local Businesses",
-            "Without",
-          ].map((word, i) => (
-            <motion.span
-              key={i}
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 4.7, ease, delay: 0.68 * i }}
-              className="mr-3 inline"
-            >
-              {word}
-            </motion.span>
-          ))}
+        <h2 className="mt-6 max-w-4xl text-balance opacity-90 text-2xl font-light leading-[1.2] tracking-tight md:text-4xl lg:text-2xl">
+          Growth Solutions Without{" "}
           <motion.span
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -66,13 +51,40 @@ export function Hero() {
             {/* the busywork. */}
             the headaches.
           </motion.span>
+        </h2>
+
+        <h1 className="mt-2 max-w-4xl text-balance text-2xl font-semibold leading-[1.2] tracking-tight md:text-4xl lg:text-5xl">
+          {[
+            "Digital Service Agency",
+            "for Ecommerce Brands",
+            "& Local Businesses",
+          ].map((word, i) => (
+            <motion.span
+              key={i}
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 4.7, ease, delay: 0.68 * i }}
+              className="mr-3 inline-block"
+            >
+              {word}
+            </motion.span>
+          ))}
+          {/* <motion.span
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease, delay: 0.24 }}
+            className="inline-block font-serif italic text-primary"
+          >
+            {/* the busywork. */}
+          {/* the headaches. */}
+          {/* </motion.span> **/}
         </h1>
 
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease, delay: 0.32 }}
-          className="relative z-50 mt-6 max-w-xl text-pretty md:text-lg leading-relaxed text-muted-foreground"
+          className="relative z-50 mt-3 max-w-2xl text-pretty md:text-lg leading-relaxed text-muted-foreground"
         >
           Build a stronger online presence, reach the right customers, and turn
           your digital efforts into real, measurable growth. At Rivozen, we
