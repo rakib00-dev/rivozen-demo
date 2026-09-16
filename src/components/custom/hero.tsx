@@ -21,6 +21,7 @@ export function Hero() {
           width={0}
           height={0}
           className="w-full h-full"
+          loading="eager"
         />
         <span className="bg-linear-to-b from-primary/10 to-primary/.5 h-full w-svw absolute top-0"></span>
       </div>
