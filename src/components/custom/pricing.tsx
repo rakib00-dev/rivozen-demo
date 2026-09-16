@@ -64,6 +64,10 @@ export function Pricing() {
             One flat fee.{" "}
             <span className="font-serif italic">No surprises.</span>
           </h2>
+          <p className="mx-auto mt-5 max-w-2xl text-pretty leading-relaxed text-muted-foreground">
+            Flexible, transparent pricing that reflects the scope of work your
+            business actually needs with no hidden fees or long-term contracts.
+          </p>
 
           <div className="mt-8 inline-flex items-center gap-1 rounded-lg border border-border bg-card p-1">
             <button
