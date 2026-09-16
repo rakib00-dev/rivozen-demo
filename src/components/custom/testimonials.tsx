@@ -56,7 +56,11 @@ export function Testimonials() {
           </p>
           <h2 className="mt-3 max-w-2xl text-balance text-4xl font-semibold tracking-tight md:text-5xl">
             Why teams choose <span className="font-serif italic">Rivozen</span>
-          </h2>
+          </h2>{" "}
+          <p className="mt-5 max-w-2xl text-pretty leading-relaxed text-muted-foreground">
+            Hear from the businesses and teams we've helped with practical
+            digital solutions, clear communication, and focused execution.
+          </p>
         </Reveal>
 
         <RevealStagger className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
