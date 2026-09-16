@@ -76,8 +76,8 @@ export function CtaFooter() {
               </span>
             </a>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-              On-demand graphic and web design for ambitious brands. Unlimited
-              requests, one flat fee.
+              Full-service digital agency for ecommerce brands and local
+              businesses. Strategy, design, and growth - all under one roof.
             </p>
           </div>
 
