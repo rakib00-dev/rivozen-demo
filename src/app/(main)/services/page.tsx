@@ -31,6 +31,7 @@ const services = [
       "Brand guidelines",
       "Marketing collateral",
     ],
+    bgColor: "bg-[#0000ff38]",
   },
   {
     number: "02",
@@ -44,6 +45,7 @@ const services = [
       "Responsive experiences",
       "Design systems",
     ],
+    bgColor: "bg-[#C4E2FA]",
   },
   {
     number: "03",
@@ -57,6 +59,7 @@ const services = [
       "Wireframes & prototypes",
       "Component systems",
     ],
+    bgColor: "bg-[#DFFBC1]",
   },
   {
     number: "04",
@@ -70,6 +73,7 @@ const services = [
       "Content systems",
       "Ad creative",
     ],
+    bgColor: "bg-[#FDC3C1]",
   },
   {
     number: "05",
@@ -83,6 +87,7 @@ const services = [
       "Animated assets",
       "Visual storytelling",
     ],
+    bgColor: "bg-[#0000ff38]",
   },
 ];
 
@@ -262,11 +267,11 @@ export default function ServicesPage() {
                 return (
                   <RevealItem
                     key={service.title}
-                    className={
-                      index === services.length - 1 ? "md:col-span-2" : ""
-                    }
+                    className={`${index === services.length - 1 ? "md:col-span-2" : ""}`}
                   >
-                    <div className="group h-full rounded-2xl border border-border bg-card p-7 transition-colors hover:bg-muted md:p-8">
+                    <div
+                      className={`group h-full rounded-2xl border border-border p-7 transition-colors hover:bg-muted md:p-8 ${service.bgColor}`}
+                    >
                       <div className="flex items-start justify-between">
                         <div className="flex size-12 items-center justify-center rounded-xl border border-border bg-background">
                           <Icon className="size-5" />
