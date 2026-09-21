@@ -10,6 +10,7 @@ import {
   Presentation,
   Sparkles,
   Layers,
+  Server,
 } from "lucide-react";
 
 const services = [
@@ -60,6 +61,12 @@ const services = [
     title: "Business Growth Strategy",
     desc: `A tailored digital marketing roadmap that aligns SEO, paid media, and content with your business goals for focused, sustainable growth.`,
   },
+
+  {
+    icon: Server,
+    title: "Workflow AI Automation",
+    desc: `A powerful AI automation workflow that integrates smart agents, machine learning, and triggers with your business goals for maximum efficiency and scalable growth.`,
+  },
 ];
 
 export function Services() {
@@ -80,7 +87,7 @@ export function Services() {
           </p>
         </Reveal>
 
-        <RevealStagger className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <RevealStagger className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s) => (
             <RevealItem
               key={s.title}
