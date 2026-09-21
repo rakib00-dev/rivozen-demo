@@ -83,6 +83,21 @@
   --sidebar-accent-foreground: oklch(0.18 0.01 260);
   --sidebar-border: oklch(0.9 0.006 90);
   --sidebar-ring: oklch(0.52 0.22 264);
+
+  /* Accent colors */
+  --primary-purple: #9636e5;
+  --secondary-purple: #e1c3f9;
+  --primary-blue: #39b4fc;
+  --secondary-blue: #c4e2fa;
+  --primary-green: #89d93a;
+  --secondary-green: #dffbc1;
+  --primary-rose: #f6578b;
+  --secondary-rose: #fdc3c1;
+
+  --bg-light-blue: #c4e2fa;
+  --bg-light-blue: #dffbc1;
+  --bg-light-blue: #fdc3c1;
+  --bg-light-blue: #0000ff38;
 }
 
 .dark {
