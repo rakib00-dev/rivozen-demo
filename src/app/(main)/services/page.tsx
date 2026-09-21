@@ -31,7 +31,7 @@ const services = [
       "Brand guidelines",
       "Marketing collateral",
     ],
-    bgColor: "bg-[#0000ff38]",
+    bgColor: "bg-[var(--secondary-purple)]",
   },
   {
     number: "02",
@@ -45,7 +45,7 @@ const services = [
       "Responsive experiences",
       "Design systems",
     ],
-    bgColor: "bg-[#C4E2FA]",
+    bgColor: "bg-[var(--secondary-blue)]",
   },
   {
     number: "03",
@@ -59,7 +59,7 @@ const services = [
       "Wireframes & prototypes",
       "Component systems",
     ],
-    bgColor: "bg-[#DFFBC1]",
+    bgColor: "bg-[var(--secondary-green)]",
   },
   {
     number: "04",
@@ -73,7 +73,7 @@ const services = [
       "Content systems",
       "Ad creative",
     ],
-    bgColor: "bg-[#FDC3C1]",
+    bgColor: "bg-[var(--secondary-rose)]",
   },
   {
     number: "05",
@@ -87,7 +87,7 @@ const services = [
       "Animated assets",
       "Visual storytelling",
     ],
-    bgColor: "bg-[#0000ff38]",
+    bgColor: "bg-[var(--secondary-yellow)]",
   },
 ];
 

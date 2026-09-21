@@ -93,11 +93,39 @@
   --secondary-green: #dffbc1;
   --primary-rose: #f6578b;
   --secondary-rose: #fdc3c1;
+  --primary-yellow: #e1b932;
+  --secondary-yellow: #f6e8bb;
 
   --bg-light-blue: #c4e2fa;
   --bg-light-blue: #dffbc1;
   --bg-light-blue: #fdc3c1;
   --bg-light-blue: #0000ff38;
+
+  --_colors---background--light: #f3f3f4;
+  --text--primary: #07122b;
+  --_colors---neutral--100: #07122b;
+  --background--gray: #f8f8f8;
+  --_colors---brand--light-blue: #0099f6;
+  --colors--pink: #ef457e;
+  --_colors---neutral--50: #838895;
+  --_colors---neutral--30: #b5b8bf;
+  --background--blue: #f2faff;
+  --cta--primary: #0099f6;
+  --outline--gray: white;
+  --_colors---neutral--white: white;
+  --_colors---outline--light: #e6e7ea;
+  --colors--yellow: #ffd44d;
+  --others--blue: #0a32c3;
+  --_colors---outline--light-2: #dbdce0;
+  --_colors---neutral--40: #9ca0aa;
+  --text--white: white;
+  --text--secondary: #6a7180;
+  --_colors---neutral--03: #f8f8f9;
+  --_colors---neutral--35: #a8acb5;
+  --cta--primary-hover: #f2faff;
+  --_technical---overflow: 0;
+  --cta--primary-hover-v2: #e5f5fe;
+  --cta--button-hover: #e0ecf4;
 }
 
 .dark {
