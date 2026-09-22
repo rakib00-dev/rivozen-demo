@@ -22,27 +22,27 @@ const links = [
       },
       {
         label: "Paid Advertising",
-        href: "/paid-advertising",
+        href: "/services/paid-advertising",
       },
       {
         label: "Content & Creative",
-        href: "/content-creative",
+        href: "/services/content-creative",
       },
       {
         label: "Email & SMS Marketing",
-        href: "/email-sms-marketing",
+        href: "/services/email-sms-marketing",
       },
       {
         label: "Social Media Marketing",
-        href: "/social-media-marketing",
+        href: "/services/social-media-marketing",
       },
       {
         label: "Business Growth Strategy",
-        href: "/business-growth-strategy",
+        href: "/services/business-growth-strategy",
       },
       {
         label: "Workflow AI Automation",
-        href: "/workflow-ai-automation",
+        href: "/services/workflow-ai-automation",
       },
     ],
   },
