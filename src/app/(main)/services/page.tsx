@@ -149,11 +149,11 @@ const process = [
 
 const expectations = [
   "Clear communication",
+  "Data driven strategy",
+  "Measurable results",
   "Reliable timelines",
-  "Thoughtful design",
   "Responsive collaboration",
-  "Consistent quality",
-  "Attention to detail",
+  "Transparent reporting",
 ];
 
 const faqs = [
@@ -427,7 +427,7 @@ export default function ServicesPage() {
                     </p>
 
                     <h2 className="mt-4 text-4xl font-semibold tracking-tight md:text-5xl">
-                      A creative partner,
+                      A digital growth partner,{" "}
                       <span className="font-serif italic">
                         {" "}
                         not just a vendor.
@@ -435,10 +435,11 @@ export default function ServicesPage() {
                     </h2>
 
                     <p className="mt-6 leading-relaxed text-muted-foreground">
-                      We care about the reason behind the work, not just how it
-                      looks. Every decision is made to help your brand
-                      communicate more clearly and create a stronger connection
-                      with its audience.
+                      We care about the strategy behind the work, not just how
+                      it looks. Every decision - from web design & development
+                      to SEO, SMM, Content & creative and paid advertising - is
+                      made to help your business grow with confidence and
+                      connect with the right customers.{" "}
                     </p>
 
                     <div className="mt-8 grid gap-4 sm:grid-cols-2">
