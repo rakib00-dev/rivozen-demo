@@ -95,22 +95,22 @@ const problems = [
   {
     title: "Your brand feels inconsistent.",
     solution:
-      "We create a clear visual system so your brand looks and feels intentional everywhere.",
+      "We build a clear brand identity and visual system so your business looks intentional and professional across every channel - web, social, SEO and ads.",
   },
   {
     title: "Your website isn't converting.",
     solution:
-      "We simplify the experience, strengthen the visual hierarchy, and design around the actions that matter.",
+      "We combine web design, development, and CRO to simplify the experience, strengthen your visual hierarchy, and turn more visitors into leads and sales.",
   },
   {
-    title: "Your team needs more creative output.",
+    title: "Your marketing isn't driving growth.",
     solution:
-      "We become an extension of your team, providing reliable creative support without the overhead of a full-time hire.",
+      "We become an extension of your team - running SEO, GEO, AEO, paid advertising, and content & creative campaigns that deliver measurable, sustainable growth.",
   },
   {
     title: "You have a great idea but don't know where to start.",
     solution:
-      "We help turn early ideas into a clear creative direction and a practical path forward.",
+      "We turn early ideas into a clear business growth strategy and a practical roadmap. aligning design, marketing, and execution from day one. ",
   },
 ];
 
@@ -204,18 +204,19 @@ export default function ServicesPage() {
 
             <Reveal delay={0.08}>
               <h1 className="max-w-5xl text-5xl font-semibold leading-[0.98] tracking-tight md:text-7xl lg:text-8xl">
-                Creative work
+                Digital solutions
                 <br />
                 <span className="font-serif italic text-primary">
-                  with purpose.
+                  built to grow.
                 </span>
               </h1>
             </Reveal>
 
             <Reveal delay={0.16}>
               <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-                From brand identity to digital experiences, we help ambitious
-                businesses turn ideas into clear, memorable, and useful design.
+                From digital marketing, web design and development to SEO, paid
+                advertising, and content & creative. we help ecommerce brands
+                and local businesses turn strategy into measurable growth.
               </p>
             </Reveal>
 
@@ -230,8 +231,7 @@ export default function ServicesPage() {
 
                 <Button variant="outline" size="lg">
                   <Link href="/book-a-call">
-                    Talk about your project
-                    <ArrowUpRight />
+                    Book a Free Consultation <ArrowUpRight />
                   </Link>
                 </Button>
               </div>
@@ -323,13 +323,14 @@ export default function ServicesPage() {
 
                   <h2 className="mt-4 text-4xl font-semibold tracking-tight md:text-5xl">
                     Start with the
-                    <span className="font-serif italic"> problem.</span>
+                    <span className="font-serif italic"> Challenge.</span>
                   </h2>
 
                   <p className="mt-5 leading-relaxed text-muted-foreground">
-                    You don't need to know exactly what service you need. Tell
-                    us what's not working and we'll help figure out the creative
-                    solution.
+                    You don't need to know exactly which digital service you
+                    need. Tell us what's holding your growth back, and we'll
+                    help figure out the right strategy. From web design &
+                    development to Digital marketing, SEO and paid advertising.
                   </p>
                 </div>
 
@@ -374,12 +375,12 @@ export default function ServicesPage() {
                 <h2 className="mt-4 text-4xl font-semibold tracking-tight md:text-6xl">
                   Simple process.
                   <br />
-                  <span className="font-serif italic">Strong results.</span>
+                  <span className="font-serif italic">Measurable results.</span>
                 </h2>
 
                 <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-                  No unnecessary complexity. Just a clear process designed to
-                  keep the work moving.
+                  No unnecessary complexity. Just a clear digital strategy
+                  process designed to keep your business growth moving.
                 </p>
               </div>
             </Reveal>
