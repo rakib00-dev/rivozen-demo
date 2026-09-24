@@ -303,9 +303,12 @@ export default function ServicesPage() {
                           <Icon className="size-5" />
                         </div>
 
-                        <span className="text-sm text-muted-foreground">
+                        <Link
+                          href={""}
+                          className="text-sm text-muted-foreground"
+                        >
                           {service.number}
-                        </span>
+                        </Link>
                       </div>
 
                       <h3 className="mt-7 text-2xl font-semibold">
