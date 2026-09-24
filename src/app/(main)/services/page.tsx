@@ -160,23 +160,49 @@ const faqs = [
   {
     question: "Do you work with startups and small teams?",
     answer:
-      "Absolutely. Rivozen is designed to work with ambitious teams of different sizes, especially businesses that need high-quality creative work without building a large internal design team.",
+      "Yes. We work with startups, small teams, and growing businesses across ecommerce and local industries - building digital strategies that fit your budget and scale as you grow. ",
   },
   {
     question: "Can I hire Rivozen for a single project?",
     answer:
-      "Yes. We offer both ongoing creative support and focused one-off projects depending on what you need.",
+      "Yes. Whether you need a one-off website, brand identity, or marketing campaign, or ongoing support across SEO, GEO, AEO, paid advertising, and content, we can work with you from strategy to final delivery. ",
   },
   {
     question: "Can you work with an existing brand?",
     answer:
-      "Yes. We can work within an established brand system, improve it where needed, or evolve it into something more cohesive.",
+      "Absolutely. We can refresh your current brand identity, improve your website design, or build on your existing marketing to drive better, measurable results.",
   },
   {
     question: "How does the process start?",
     answer:
-      "The easiest way to start is with a short conversation. We'll learn about your goals, understand what you need, and recommend the best way to move forward.",
+      "It starts with a free strategy consultation, where we learn about your business, audience, and goals - with no obligation to move forward.",
   },
+  {
+    question: "What digital services does Rivozen offer?",
+    answer:
+      "We offer Web Design & Development, SEO, Paid Advertising, CRO, Content & Creative, Email & SMS Marketing, Social Media Marketing, and Business Growth Strategy - all under one roof. ",
+  },
+  {
+    question: "Do you offer both SEO and paid advertising together?",
+    answer:
+      "Yes. We often combine SEO and paid advertising to drive both long-term organic growth and immediate, qualified traffic and leads.",
+  },
+  {
+    question: "How long does it take to see SEO and marketing results?",
+    answer:
+      "Paid advertising can generate leads within days, while SEO typically shows measurable improvements in rankings and organic traffic within 3–6 months, depending on your industry and competition. ",
+  },
+  {
+    question: "Will I own my website, content, and ad accounts?",
+    answer:
+      "Yes. You retain full ownership of your website, content, source files, and advertising accounts - there's no vendor lock-in.",
+  },
+  {
+    question: "Do you work with businesses in specific locations, or globally?",
+    answer:
+      "We work with ecommerce brands and local businesses both locally and globally, adapting our strategy to your specific market and audience.",
+  },
+  // { question: "", answer: "" },
 ];
 
 export default function ServicesPage() {
