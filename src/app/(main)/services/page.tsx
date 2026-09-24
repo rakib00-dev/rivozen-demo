@@ -470,8 +470,8 @@ export default function ServicesPage() {
                 </p>
 
                 <h2 className="mt-4 text-4xl font-semibold tracking-tight md:text-6xl">
-                  The right setup for
-                  <span className="font-serif italic"> your needs.</span>
+                  The right setup for{" "}
+                  <span className="font-serif italic">your online growth.</span>
                 </h2>
               </div>
             </Reveal>
@@ -484,13 +484,14 @@ export default function ServicesPage() {
                   </div>
 
                   <h3 className="mt-6 text-2xl font-semibold">
-                    Ongoing Creative Support
+                    Ongoing Digital Support{" "}
                   </h3>
 
                   <p className="mt-3 leading-relaxed text-muted-foreground">
-                    A flexible design partner for teams that need consistent
-                    creative output without the cost and complexity of building
-                    an internal team.
+                    A flexible growth partner for businesses that need
+                    consistent SEO, AEO, GEO, design & development and marketing
+                    support - without the cost and complexity of building an
+                    internal team.
                   </p>
 
                   <Link
@@ -510,12 +511,12 @@ export default function ServicesPage() {
                   </div>
 
                   <h3 className="mt-6 text-2xl font-semibold">
-                    One-off Projects
+                    One-off Projects{" "}
                   </h3>
 
                   <p className="mt-3 leading-relaxed text-muted-foreground">
-                    Need a website, brand identity, campaign, or specific
-                    creative project? We can work with you from concept to final
+                    Need a website, brand identity, or a specific marketing
+                    campaign? We can work with you from strategy to final
                     delivery.
                   </p>
 
