@@ -119,31 +119,31 @@ const process = [
     number: "01",
     title: "Understand",
     description:
-      "We learn about your business, audience, goals, and the problem we're solving.",
+      "We learn about your business, audience, goals, and current digital presence. No obligation to move forward.",
   },
   {
     number: "02",
     title: "Strategize",
     description:
-      "We define the creative direction, priorities, and approach before making anything.",
+      "We build a tailored growth strategy identifying the right channels, from SEO to paid advertising, based on your business goals and target market.",
   },
   {
     number: "03",
     title: "Create",
     description:
-      "We turn the strategy into thoughtful design with a focus on clarity and impact.",
+      "We turn strategy into execution - website design, branding, and content built with a focus on clarity, conversion, and impact.",
   },
   {
     number: "04",
     title: "Refine",
     description:
-      "We collaborate, gather feedback, and refine the work until everything feels right.",
+      "We collaborate, test, and optimize continuously refining performance across design & development, marketing, and content until everything delivers results.",
   },
   {
     number: "05",
     title: "Deliver",
     description:
-      "You receive polished final assets and everything needed to move forward confidently.",
+      "You get transparent reporting on traffic, leads, Sales and ROI polished final assets and a clear path to sustainable growth. ",
   },
 ];
 
