@@ -688,14 +688,14 @@ export default function ServicesPage() {
               </p>
 
               <h2 className="mx-auto mt-4 max-w-3xl text-4xl font-semibold tracking-tight md:text-6xl">
-                Have a project?
-                <br />
+                Ready to grow? <br />
                 <span className="font-serif italic">Let's make it happen.</span>
               </h2>
 
               <p className="mx-auto mt-6 max-w-xl text-muted-foreground">
-                Tell us what you're working on and we'll figure out the best way
-                to help.
+                Tell us what you're working on website, SEO, paid advertising,
+                or a full growth strategy and we'll figure out the best way to
+                help, with no long-term contracts required.
               </p>
 
               <div className="mt-8 flex flex-wrap justify-center gap-3">
