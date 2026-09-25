@@ -11,10 +11,25 @@ export const ease = [0.22, 1, 0.36, 1] as const;
 
 interface CommonHeroSection {
   smallHeading: string;
-  bigHeading: string;
+  bigHeading: string[];
+  bigHeadingItalic: string;
+  paragraph: string;
+  primaryBtn: string;
+  primaryBtnLink: string;
+  secondaryBtn: string;
+  secondaryBtnLink: string;
 }
 
-export default function CommonHeroSection({}: CommonHeroSection) {
+export default function CommonHeroSection({
+  smallHeading = "Get in touch",
+  bigHeading = ["Have a", "project"],
+  bigHeadingItalic = "in mind?",
+  paragraph = `Tell us a little about what you&apos;re building, what you need, and where you want to go. We&apos;ll take it from there.`,
+  primaryBtn = "Start a conversation",
+  primaryBtnLink = "/contact",
+  secondaryBtn = "Book A Call",
+  secondaryBtnLink = "/book-a-call",
+}: CommonHeroSection) {
   return (
     <section
       id="top"
@@ -45,27 +60,50 @@ export default function CommonHeroSection({}: CommonHeroSection) {
             className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-4 py-1.5 text-xs text-muted-foreground md:text-sm"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-            Get in touch
+            {smallHeading}
           </motion.div>
 
           <h1 className="mt-6 max-w-5xl text-balance text-5xl font-semibold leading-[0.98] tracking-tight md:text-7xl lg:text-8xl">
-            {["Have a", "project", "in mind?"].map((word, i) => (
+            {bigHeading.map((word, i) => (
               <motion.span
                 key={word}
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{
+                  opacity: 0,
+                  y: 24,
+                }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                }}
                 transition={{
                   duration: 0.7,
                   ease,
                   delay: 0.08 * i,
                 }}
-                className={`mr-3 inline-block ${
-                  i === 2 ? "font-serif italic text-primary" : ""
-                }`}
+                className="mr-3 inline-block"
               >
                 {word}
               </motion.span>
             ))}
+
+            <motion.span
+              initial={{
+                opacity: 0,
+                y: 24,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 0.7,
+                ease,
+                delay: 0.24,
+              }}
+              className="inline-block font-serif italic text-primary"
+            >
+              {bigHeadingItalic}
+            </motion.span>
           </h1>
 
           <motion.p
@@ -78,8 +116,7 @@ export default function CommonHeroSection({}: CommonHeroSection) {
             }}
             className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground"
           >
-            Tell us a little about what you&apos;re building, what you need, and
-            where you want to go. We&apos;ll take it from there.
+            {paragraph}
           </motion.p>
 
           <motion.div
@@ -92,19 +129,25 @@ export default function CommonHeroSection({}: CommonHeroSection) {
             }}
             className="mt-8 flex flex-col gap-3 sm:flex-row"
           >
-            <Button type="button" size="lg" variant={"btn"} onClick={() => {}}>
-              Start a conversation
+            <Button
+              href={primaryBtnLink}
+              type="button"
+              size="lg"
+              variant={"btn"}
+              onClick={() => {}}
+            >
+              {primaryBtn}
               <ArrowUpRight className="ml-1 h-4 w-4" />
             </Button>
 
             <Button
-              // href="/book-a-call"
+              href={secondaryBtnLink}
               type="button"
               // size="lg"
               variant="btn_outline"
               // asChild={false}
             >
-              Book a call
+              {secondaryBtn}
               {/* <ArrowUpRight className="ml-1 h-4 w-4" /> */}
             </Button>
           </motion.div>
