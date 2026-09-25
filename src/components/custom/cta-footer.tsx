@@ -28,7 +28,7 @@ export function CtaFooter() {
   return (
     <footer
       id="contact"
-      className={`px-4 pb-8 md:px-6 ${pathname == "/book-a-call" && "bg-black *:text-white pt-10"}`}
+      className={`px-4 pb-8 md:px-6 font-[arial] ${pathname == "/book-a-call" && "bg-black *:text-white pt-10"}`}
     >
       {/* {!["/book-a-call", "/why-us", "/work", "/pricing"].includes(pathname) && (
         <Reveal className="mx-auto max-w-6xl overflow-hidden rounded-3xl bg-primary px-6 py-16 text-center text-secondary-foreground md:py-24">

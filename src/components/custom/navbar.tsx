@@ -134,7 +134,7 @@ export function Navbar() {
     <header
       className={`${
         scrolled ? "fixed" : "absolute"
-      } inset-x-0 top-0 z-50 px-4 pt-4 transition-all duration-300 md:px-6`}
+      } inset-x-0 top-0 z-50 px-4 pt-4 transition-all duration-300 md:px-6 font-[arial]`}
     >
       <nav
         className={`mx-auto flex max-w-6xl items-center justify-between rounded-2xl border px-5 py-3 transition-colors duration-300 ${
