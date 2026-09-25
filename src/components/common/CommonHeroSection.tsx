@@ -32,6 +32,7 @@ export default function CommonHeroSection({}: CommonHeroSection) {
         <span className="absolute left-0 top-0 h-full w-svw bg-linear-to-b from-primary/10 to-primary/5" />
       </div>
 
+      {/* main contents */}
       <div className="relative mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
