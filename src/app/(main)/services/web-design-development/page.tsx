@@ -1,3 +1,9 @@
+import PageWebsiteHero from "@/components/custom/services/website/PageWebsiteHero";
+
 export default function WebDesignPage() {
-  return <>Contents needs to be added</>;
+  return (
+    <>
+      <PageWebsiteHero  />
+    </>
+  );
 }

@@ -1,6 +1,6 @@
 import CommonSection from "@/components/common/CommonSection";
 
-export default function WebsitePageHero(second) {
+export default function PageWebsiteHero() {
   return (
     <>
       <CommonSection
