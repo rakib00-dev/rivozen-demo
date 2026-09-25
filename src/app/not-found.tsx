@@ -8,7 +8,7 @@ export default function NotFound() {
   return (
     <main>
       <Navbar />
-      <div className="flex justify-center items-center font-[arial] flex-col h-[100vh]">
+      <div className="flex justify-center items-center font-[arial] flex-col h-screen">
         <div className="flex justify-center items-center h-full text-center flex-col">
           <h2 className="font-bold text-5xl ">404 - Page Not Found</h2>
           <p className="pb-2 text-md pt-0.5">
