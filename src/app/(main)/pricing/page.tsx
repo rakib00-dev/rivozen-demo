@@ -571,7 +571,7 @@ export default function PricingPage() {
             </Reveal>
 
             <Reveal className="mt-12 overflow-hidden rounded-2xl border border-border bg-card">
-              <div className="min-w-[720px]">
+              <div className="min-w-180">
                 <div className="grid grid-cols-4 border-b border-border bg-muted/40">
                   <div className="p-5 text-sm font-medium">Features</div>
 

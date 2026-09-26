@@ -398,7 +398,7 @@ export default function ServicesPage() {
             <Reveal>
               <div className="overflow-hidden rounded-3xl border border-border bg-card">
                 <div className="grid lg:grid-cols-2">
-                  <div className="relative min-h-[420px]">
+                  <div className="relative min-h-105">
                     <Image
                       src="/work-brand.png"
                       alt="Rivozen brand identity work"
