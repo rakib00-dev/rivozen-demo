@@ -17,8 +17,8 @@ interface CommonHeroSection {
   paragraph: string;
   primaryBtn: string;
   primaryBtnLink: string;
-  secondaryBtn: string;
-  secondaryBtnLink: string;
+  secondaryBtn?: string;
+  secondaryBtnLink?: string;
   Children?: React.ReactNode;
 }
 
@@ -36,7 +36,7 @@ export default function CommonHeroSection({
   return (
     <section
       id="top"
-      className="relative overflow-hidden px-4 pt-32 pb-20 md:px-6 md:pt-44 md:pb-28"
+      className="relative overflow-hidden px-4 pt-32 pb-20 md:px-6 md:pt-40 md:pb-28"
     >
       {/* Background */}
       <div className="pointer-events-none absolute left-0 top-0 h-full w-full">
@@ -160,16 +160,18 @@ export default function CommonHeroSection({
               <ArrowUpRight className="ml-1 h-4 w-4" />
             </Button>
 
-            <Button
-              href={secondaryBtnLink}
-              type="button"
-              // size="lg"
-              variant="btn_outline"
-              // asChild={false}
-            >
-              {secondaryBtn}
-              {/* <ArrowUpRight className="ml-1 h-4 w-4" /> */}
-            </Button>
+            {secondaryBtn && (
+              <Button
+                href={secondaryBtnLink}
+                type="button"
+                // size="lg"
+                variant="btn_outline"
+                // asChild={false}
+              >
+                {secondaryBtn}
+                {/* <ArrowUpRight className="ml-1 h-4 w-4" /> */}
+              </Button>
+            )}
           </motion.div>
         </div>
       </Reveal>

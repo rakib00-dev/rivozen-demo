@@ -10,6 +10,7 @@ import Cal from "@calcom/embed-react";
 import { Button } from "@/components/ui/button";
 import { Reveal, RevealStagger, RevealItem } from "@/components/custom/reveal";
 import { SmoothScroll } from "@/components/custom/smooth-scroll";
+import CommonHeroSection from "@/components/common/CommonHeroSection";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -268,165 +269,47 @@ export default function BookCall() {
         {/* HERO                                                               */}
         {/* ================================================================== */}
 
-        <section
-          id="top"
-          className="relative overflow-hidden px-4 pb-20 pt-32 md:px-6 md:pb-28 md:pt-44"
-        >
-          {/* Background */}
-          <div className="pointer-events-none absolute left-0 top-0 h-full w-full">
-            <Image
-              alt=""
-              src="/bg-gradient.svg"
-              width={0}
-              height={0}
-              className="h-full w-full object-cover"
-              priority
-              loading="eager"
-            />
+        <CommonHeroSection
+          smallHeading="Book a call"
+          bigHeading={["Let's talk about", "your next"]}
+          bigHeadingItalic="project."
+          paragraph="Tell us what you're working on, where you're stuck, and what you want to achieve. We'll explore how Rivozen can help."
+          Children={
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 16,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 0.6,
+                ease,
+                delay: 0.4,
+              }}
+              className="flex flex-wrap gap-3"
+            >
+              <div className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-4 py-2 text-sm">
+                <Clock3 className="h-4 w-4 text-primary" />
+                15-minute call
+              </div>
 
-            <span className="absolute left-0 top-0 h-full w-svw bg-linear-to-b from-primary/10 to-primary/5" />
-          </div>
+              <div className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-4 py-2 text-sm">
+                <Video className="h-4 w-4 text-primary" />
+                Video call
+              </div>
 
-          <div className="relative mx-auto max-w-6xl">
-            <Reveal>
-              {/* Eyebrow */}
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.6,
-                  ease,
-                }}
-                className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-4 py-1.5 text-xs text-muted-foreground md:text-sm"
-              >
-                <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-                Book a call
-              </motion.div>
-
-              {/* Heading */}
-              <h1 className="mt-6 max-w-5xl text-balance text-5xl font-semibold leading-[0.98] tracking-tight md:text-7xl lg:text-8xl">
-                {["Let's talk about", "your next"].map((word, i) => (
-                  <motion.span
-                    key={word}
-                    initial={{
-                      opacity: 0,
-                      y: 24,
-                    }}
-                    animate={{
-                      opacity: 1,
-                      y: 0,
-                    }}
-                    transition={{
-                      duration: 0.7,
-                      ease,
-                      delay: 0.08 * i,
-                    }}
-                    className="mr-3 inline-block"
-                  >
-                    {word}
-                  </motion.span>
-                ))}
-
-                <motion.span
-                  initial={{
-                    opacity: 0,
-                    y: 24,
-                  }}
-                  animate={{
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  transition={{
-                    duration: 0.7,
-                    ease,
-                    delay: 0.24,
-                  }}
-                  className="inline-block font-serif italic text-primary"
-                >
-                  project.
-                </motion.span>
-              </h1>
-
-              {/* Description */}
-              <motion.p
-                initial={{
-                  opacity: 0,
-                  y: 16,
-                }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                transition={{
-                  duration: 0.6,
-                  ease,
-                  delay: 0.32,
-                }}
-                className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl"
-              >
-                Tell us what you&apos;re working on, where you&apos;re stuck,
-                and what you want to achieve. We&apos;ll explore how Rivozen can
-                help.
-              </motion.p>
-
-              {/* Pills */}
-              <motion.div
-                initial={{
-                  opacity: 0,
-                  y: 16,
-                }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                transition={{
-                  duration: 0.6,
-                  ease,
-                  delay: 0.4,
-                }}
-                className="mt-8 flex flex-wrap gap-3"
-              >
-                <div className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-4 py-2 text-sm">
-                  <Clock3 className="h-4 w-4 text-primary" />
-                  15-minute call
-                </div>
-
-                <div className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-4 py-2 text-sm">
-                  <Video className="h-4 w-4 text-primary" />
-                  Video call
-                </div>
-
-                <div className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-4 py-2 text-sm">
-                  <Check className="h-4 w-4 text-primary" />
-                  No commitment
-                </div>
-              </motion.div>
-
-              {/* CTA */}
-              <motion.div
-                initial={{
-                  opacity: 0,
-                  y: 16,
-                }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                transition={{
-                  duration: 0.6,
-                  ease,
-                  delay: 0.48,
-                }}
-                className="mt-8"
-              >
-                <Button type="button" size="lg" onClick={scrollToBooking}>
-                  Choose a time
-                  <ArrowUpRight className="ml-1 h-4 w-4" />
-                </Button>
-              </motion.div>
-            </Reveal>
-          </div>
-        </section>
+              <div className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-4 py-2 text-sm">
+                <Check className="h-4 w-4 text-primary" />
+                No commitment
+              </div>
+            </motion.div>
+          }
+          primaryBtn="Choose a time"
+          primaryBtnLink="#booking"
+        ></CommonHeroSection>
 
         {/* ================================================================== */}
         {/* BOOKING                                                            */}
