@@ -1,9 +1,10 @@
 "use client";
 
+import React from "react";
 import Image from "next/image";
+
 import { motion } from "framer-motion";
-import { ArrowUpRight, Star } from "lucide-react";
-import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import { Reveal } from "../custom/reveal";
 import { Button } from "../ui/button";
 
@@ -18,6 +19,7 @@ interface CommonHeroSection {
   primaryBtnLink: string;
   secondaryBtn: string;
   secondaryBtnLink: string;
+  Children?: React.ReactNode;
 }
 
 export default function CommonHeroSection({
@@ -29,6 +31,7 @@ export default function CommonHeroSection({
   primaryBtnLink = "/contact",
   secondaryBtn = "Book A Call",
   secondaryBtnLink = "/book-a-call",
+  Children,
 }: CommonHeroSection) {
   return (
     <section
@@ -122,6 +125,18 @@ export default function CommonHeroSection({
             {paragraph}
           </motion.p>
 
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.6,
+              ease,
+              delay: 0.4,
+            }}
+            className="mt-8 flex flex-col gap-3 sm:flex-row"
+          >
+            {Children}
+          </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}

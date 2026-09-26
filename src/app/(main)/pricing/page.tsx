@@ -17,6 +17,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Reveal, RevealStagger, RevealItem } from "@/components/custom/reveal";
 import { SmoothScroll } from "@/components/custom/smooth-scroll";
+import CommonHeroSection from "@/components/common/CommonHeroSection";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -442,126 +443,17 @@ export default function PricingPage() {
     <SmoothScroll>
       <main className="overflow-hidden">
         {/* HERO */}
-        <section className="relative overflow-hidden px-4 pb-20 pt-32 md:px-6 md:pb-28 md:pt-44">
-          <div className="pointer-events-none absolute inset-0">
-            <Image
-              src="/bg-gradient.svg"
-              alt=""
-              fill
-              priority
-              className="object-cover"
-            />
-
-            <div className="absolute inset-0 bg-linear-to-b from-primary/10 to-primary/5" />
-          </div>
-
-          <div className="relative mx-auto max-w-6xl">
-            <Reveal>
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease }}
-                className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-4 py-1.5 text-xs text-muted-foreground md:text-sm"
-              >
-                <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-                Pricing
-              </motion.div>
-
-              <h1 className="mt-6 max-w-5xl text-balance text-5xl font-semibold leading-[0.98] tracking-tight md:text-7xl lg:text-8xl">
-                {["Simple pricing.", "Serious"].map((word, index) => (
-                  <motion.span
-                    key={word}
-                    initial={{ opacity: 0, y: 24 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{
-                      duration: 0.7,
-                      ease,
-                      delay: 0.08 * index,
-                    }}
-                    className="mr-3 inline-block"
-                  >
-                    {word}
-                  </motion.span>
-                ))}
-
-                <motion.span
-                  initial={{ opacity: 0, y: 24 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{
-                    duration: 0.7,
-                    ease,
-                    delay: 0.24,
-                  }}
-                  className="inline-block font-serif italic text-primary"
-                >
-                  creative work.
-                </motion.span>
-              </h1>
-
-              <motion.p
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.6,
-                  ease,
-                  delay: 0.32,
-                }}
-                className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl"
-              >
-                One flat monthly fee for ongoing creative support. No confusing
-                quotes, no surprise fees, and no unnecessary complexity.
-              </motion.p>
-
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.6,
-                  ease,
-                  delay: 0.4,
-                }}
-                className="mt-8 flex flex-wrap gap-3"
-              >
-                <div className="rounded-md border border-border bg-card px-4 py-2 text-sm">
-                  Flexible plans
-                </div>
-
-                <div className="rounded-md border border-border bg-card px-4 py-2 text-sm">
-                  Unlimited revisions
-                </div>
-
-                <div className="rounded-md border border-border bg-card px-4 py-2 text-sm">
-                  No surprises
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.6,
-                  ease,
-                  delay: 0.48,
-                }}
-                className="mt-8 flex flex-wrap gap-3"
-              >
-                <Button type="button" size="lg" onClick={scrollToPlans}>
-                  View plans
-                  <ArrowUpRight className="ml-1 h-4 w-4" />
-                </Button>
-
-                <Button
-                  type="button"
-                  size="lg"
-                  variant="outline"
-                  onClick={goToBooking}
-                >
-                  Talk to us
-                </Button>
-              </motion.div>
-            </Reveal>
-          </div>
-        </section>
+        <CommonHeroSection
+          smallHeading="Pricing"
+          bigHeading={["Simple pricing.", "Serious"]}
+          bigHeadingItalic="creative work."
+          paragraph="One flat monthly fee for ongoing creative support. No confusing quotes, no surprise fees, and no unnecessary complexity."
+          Children={<HeroChildren />}
+          primaryBtn="View plans"
+          primaryBtnLink="#plans"
+          secondaryBtn="Talk to us"
+          secondaryBtnLink="/book-a-call"
+        />
 
         {/* PRICING */}
         <PriceCards />
@@ -937,3 +829,30 @@ function ComparisonValue({ value }: { value: string | boolean }) {
     </div>
   );
 }
+
+const HeroChildren = () => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.6,
+        ease,
+        delay: 0.4,
+      }}
+      className="mt-8 flex flex-wrap gap-3"
+    >
+      <div className="rounded-md border border-border bg-card px-4 py-2 text-sm">
+        Flexible plans
+      </div>
+
+      <div className="rounded-md border border-border bg-card px-4 py-2 text-sm">
+        Unlimited revisions
+      </div>
+
+      <div className="rounded-md border border-border bg-card px-4 py-2 text-sm">
+        No surprises
+      </div>
+    </motion.div>
+  );
+};
