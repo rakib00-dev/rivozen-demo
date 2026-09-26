@@ -70,6 +70,7 @@ export function CtaFooter() {
                 height={40}
                 style={{ width: "auto", height: "auto" }}
                 className="w-152"
+                loading="eager"
               />
               <span className="text-lg font-semibold tracking-tight">
                 Rivozen
