@@ -15,6 +15,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Reveal, RevealStagger, RevealItem } from "@/components/custom/reveal";
 import { SmoothScroll } from "@/components/custom/smooth-scroll";
+import CommonHeroSection from "@/components/common/CommonHeroSection";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -133,131 +134,41 @@ export default function WhyUs() {
     <SmoothScroll>
       <main className="overflow-hidden">
         {/* HERO */}
-        <section className="relative overflow-hidden px-4 pb-20 pt-32 md:px-6 md:pb-28 md:pt-44">
-          <div className="pointer-events-none absolute inset-0">
-            <Image
-              src="/bg-gradient.svg"
-              alt=""
-              fill
-              priority
-              className="object-cover"
-            />
 
-            <div className="absolute inset-0 bg-linear-to-b from-primary/10 to-primary/5" />
-          </div>
+        <CommonHeroSection
+          smallHeading="Why Rivozen"
+          bigHeading={["More than", "a design"]}
+          bigHeadingItalic="partner."
+          paragraph="We combine thoughtful design, clear communication, and focused execution to help ambitious businesses turn ideas into work that matters."
+          Children={
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.6,
+                ease,
+                delay: 0.4,
+              }}
+              className="flex flex-wrap gap-3"
+            >
+              <div className="rounded-md border border-border bg-card px-4 py-2 text-sm">
+                Strategy first
+              </div>
 
-          <div className="relative mx-auto max-w-6xl">
-            <Reveal>
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease }}
-                className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-4 py-1.5 text-xs text-muted-foreground md:text-sm"
-              >
-                <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-                Why Rivozen
-              </motion.div>
+              <div className="rounded-md border border-border bg-card px-4 py-2 text-sm">
+                Design driven
+              </div>
 
-              <h1 className="mt-6 max-w-5xl text-balance text-5xl font-semibold leading-[0.98] tracking-tight md:text-7xl lg:text-8xl">
-                {["More than", "a design"].map((word, index) => (
-                  <motion.span
-                    key={word}
-                    initial={{ opacity: 0, y: 24 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{
-                      duration: 0.7,
-                      ease,
-                      delay: 0.08 * index,
-                    }}
-                    className="mr-3 inline-block"
-                  >
-                    {word}
-                  </motion.span>
-                ))}
-
-                <motion.span
-                  initial={{ opacity: 0, y: 24 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{
-                    duration: 0.7,
-                    ease,
-                    delay: 0.24,
-                  }}
-                  className="inline-block font-serif italic text-primary"
-                >
-                  partner.
-                </motion.span>
-              </h1>
-
-              <motion.p
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.6,
-                  ease,
-                  delay: 0.32,
-                }}
-                className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl"
-              >
-                We combine thoughtful design, clear communication, and focused
-                execution to help ambitious businesses turn ideas into work that
-                matters.
-              </motion.p>
-
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.6,
-                  ease,
-                  delay: 0.4,
-                }}
-                className="mt-8 flex flex-wrap gap-3"
-              >
-                <div className="rounded-md border border-border bg-card px-4 py-2 text-sm">
-                  Strategy first
-                </div>
-
-                <div className="rounded-md border border-border bg-card px-4 py-2 text-sm">
-                  Design driven
-                </div>
-
-                <div className="rounded-md border border-border bg-card px-4 py-2 text-sm">
-                  Built to last
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.6,
-                  ease,
-                  delay: 0.48,
-                }}
-                className="mt-8 flex flex-wrap gap-3"
-              >
-                <Button
-                  type="button"
-                  size="lg"
-                  onClick={scrollToDifferentiators}
-                >
-                  Why choose us
-                  <ArrowUpRight className="ml-1 h-4 w-4" />
-                </Button>
-
-                <Button
-                  type="button"
-                  size="lg"
-                  variant="outline"
-                  onClick={goToBooking}
-                >
-                  Book a call
-                </Button>
-              </motion.div>
-            </Reveal>
-          </div>
-        </section>
+              <div className="rounded-md border border-border bg-card px-4 py-2 text-sm">
+                Built to last
+              </div>
+            </motion.div>
+          }
+          primaryBtn="Why choose us"
+          primaryBtnLink="#difference"
+          secondaryBtn="Book a call"
+          secondaryBtnLink="/book-a-call"
+        />
 
         {/* DIFFERENTIATORS */}
         <section
