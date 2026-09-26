@@ -17,6 +17,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Reveal, RevealItem, RevealStagger } from "@/components/custom/reveal";
 import { SmoothScroll } from "@/components/custom/smooth-scroll";
+import CommonHeroSection from "@/components/common/CommonHeroSection";
 
 const services = [
   {
@@ -210,60 +211,17 @@ export default function ServicesPage() {
     <SmoothScroll>
       <main className="overflow-hidden">
         {/* Hero */}
-        <section className="relative overflow-hidden px-4 pt-32 pb-16 md:px-6 md:pt-44 md:pb-24">
-          <Image
-            src="/bg-gradient.svg"
-            alt=""
-            fill
-            priority
-            className="pointer-events-none object-cover opacity-70"
-          />
 
-          <div className="absolute inset-0 bg-linear-to-b from-primary/10 to-primary/5" />
-
-          <div className="relative mx-auto max-w-6xl">
-            <Reveal>
-              <div className="mb-6 inline-flex rounded-md border border-border bg-card px-4 py-1.5 text-xs text-muted-foreground md:text-sm">
-                What we do
-              </div>
-            </Reveal>
-
-            <Reveal delay={0.08}>
-              <h1 className="max-w-5xl text-5xl font-semibold leading-[0.98] tracking-tight md:text-7xl lg:text-8xl">
-                Digital solutions
-                <br />
-                <span className="font-serif italic text-primary">
-                  built to grow.
-                </span>
-              </h1>
-            </Reveal>
-
-            <Reveal delay={0.16}>
-              <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-                From digital marketing, web design and development to SEO, paid
-                advertising, and content & creative. we help ecommerce brands
-                and local businesses turn strategy into measurable growth.
-              </p>
-            </Reveal>
-
-            <Reveal delay={0.24}>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <Button size="lg">
-                  <Link href="#services">
-                    Explore services
-                    <ArrowRight />
-                  </Link>
-                </Button>
-
-                <Button variant="outline" size="lg">
-                  <Link href="/book-a-call">
-                    Book a Free Consultation <ArrowUpRight />
-                  </Link>
-                </Button>
-              </div>
-            </Reveal>
-          </div>
-        </section>
+        <CommonHeroSection
+          smallHeading="What we do"
+          bigHeading={["Digital", "solutions"]}
+          bigHeadingItalic="built to grow."
+          paragraph="From digital marketing, web design and development to SEO, paid advertising, and content & creative. we help ecommerce brands and local businesses turn strategy into measurable growth."
+          primaryBtn="Explore Services"
+          primaryBtnLink="#services"
+          secondaryBtn="Book a Free Consultation"
+          secondaryBtnLink="/book-a-call"
+        />
 
         {/* Services */}
         <section id="services" className="px-4 py-20 md:px-6 md:py-28">
