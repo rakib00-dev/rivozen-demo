@@ -173,3 +173,11 @@
     @apply font-sans;
   }
 }
+
+/* small heading green ball animation */
+.greenBallAnimation {
+  content: "";
+  /* animation: infinite; */
+  @apply opacity-65 rounded-full
+    bg-primary animate-pulse transition duration-300;
+}
