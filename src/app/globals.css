@@ -178,6 +178,6 @@
 .greenBallAnimation {
   content: "";
   /* animation: infinite; */
-  @apply opacity-65 rounded-full
+  @apply opacity-70 rounded-full
     bg-primary animate-pulse transition duration-300;
 }

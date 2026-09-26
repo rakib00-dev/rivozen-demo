@@ -64,7 +64,7 @@ export default function CommonHeroSection({
           >
             <span className="relative grid place-items-center h-3 w-3">
               <span className="absolute h-1.5 w-1.5 rounded-full bg-primary z-5"></span>
-              <span className="absolute h-3.5 w-3.5 rounded-full bg-primary opacity-50 z-2 greenBallAnimation"></span>
+              <span className="absolute h-3.5 w-3.5 rounded-full bg-primary z-2 greenBallAnimation"></span>
             </span>
             {smallHeading}
           </motion.div>
@@ -125,18 +125,20 @@ export default function CommonHeroSection({
             {paragraph}
           </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.6,
-              ease,
-              delay: 0.4,
-            }}
-            className="mt-8 flex flex-col gap-3 sm:flex-row"
-          >
-            {Children}
-          </motion.div>
+          {Children && (
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.6,
+                ease,
+                delay: 0.4,
+              }}
+              className="mt-8 flex flex-col gap-3 sm:flex-row"
+            >
+              {Children}
+            </motion.div>
+          )}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}

@@ -7,6 +7,7 @@ import { ArrowRight, ArrowUpRight, Check, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal, RevealItem, RevealStagger } from "@/components/custom/reveal";
 import { SmoothScroll } from "@/components/custom/smooth-scroll";
+import CommonHeroSection from "@/components/common/CommonHeroSection";
 
 const projects = [
   {
@@ -100,61 +101,16 @@ export default function WorkPage() {
     <SmoothScroll>
       <main className="overflow-hidden">
         {/* Hero */}
-        <section className="relative overflow-hidden px-4 pt-32 pb-16 md:px-6 md:pt-44 md:pb-24">
-          <Image
-            src="/bg-gradient.svg"
-            alt=""
-            fill
-            priority
-            className="pointer-events-none object-cover opacity-70"
-          />
-
-          <div className="absolute inset-0 bg-linear-to-b from-primary/10 to-primary/5" />
-
-          <div className="relative mx-auto max-w-6xl">
-            <Reveal>
-              <div className="mb-6 inline-flex rounded-md border border-border bg-card px-4 py-1.5 text-xs text-muted-foreground md:text-sm">
-                Selected work
-              </div>
-            </Reveal>
-
-            <Reveal delay={0.08}>
-              <h1 className="max-w-5xl text-5xl font-semibold leading-[0.98] tracking-tight md:text-7xl lg:text-8xl">
-                Work that makes
-                <br />
-                <span className="font-serif italic text-primary">
-                  brands matter.
-                </span>
-              </h1>
-            </Reveal>
-
-            <Reveal delay={0.16}>
-              <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-                A selection of identities, digital experiences, and creative
-                systems built to help ambitious brands stand out and move
-                forward.
-              </p>
-            </Reveal>
-
-            <Reveal delay={0.24}>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <Button size="lg">
-                  <Link href="#featured-work">
-                    Explore our work
-                    <ArrowRight />
-                  </Link>
-                </Button>
-
-                <Button variant="outline" size="lg">
-                  <Link href="/book-a-call">
-                    Start a project
-                    <ArrowUpRight />
-                  </Link>
-                </Button>
-              </div>
-            </Reveal>
-          </div>
-        </section>
+        <CommonHeroSection
+          smallHeading="Selected work"
+          bigHeading={["Work that", "makes"]}
+          bigHeadingItalic="brands matter."
+          paragraph="A selection of identities, digital experiences, and creative systems built to help ambitious brands stand out and move forward."
+          primaryBtn="Explore our work"
+          primaryBtnLink="#featured-work"
+          secondaryBtn="Start a project"
+          secondaryBtnLink="/book-a-call"
+        />
 
         {/* Categories */}
         <section className="border-y border-border bg-muted/30 px-4 py-5 md:px-6">
