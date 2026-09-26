@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import { Reveal } from "./reveal";
 import { Check, ArrowUpRight } from "lucide-react";
