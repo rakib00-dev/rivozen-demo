@@ -26,7 +26,7 @@ export default function NotFound() {
             <div className="flex flex-col items-start pt-2">
               <Link
                 href="/"
-                className="group inline-flex items-center justify-center gap-1.5 rounded-lg text-primary px-7 py-3.5 text-base font-medium bg-secondary-foreground transition-transform hover:-translate-y-0.5"
+                className="group inline-flex items-center justify-center gap-1.5 rounded-lg bg-primary px-7 py-3.5 text-base font-medium text-secondary-foreground transition-transform hover:-translate-y-0.5"
               >
                 Return Home
                 <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-0.5 " />
