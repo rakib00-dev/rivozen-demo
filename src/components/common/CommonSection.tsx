@@ -3,7 +3,7 @@ import { Reveal, RevealStagger, RevealItem } from "../custom/reveal";
 import { ArrowUpRight } from "lucide-react";
 import React from "react";
 
-// TODO: Have to add for all section type like right side link, section header content position etc.
+// TODO: Have to add for all section type like right side link, section header content position etc. 2nd
 const CommonSection = ({
   smallHeading = "Small Heading",
   bigHeading = "Here is your big heading",
