@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { Reveal, RevealStagger, RevealItem } from "../custom/reveal";
+import { Reveal, RevealStagger } from "../custom/reveal";
 import { ArrowUpRight } from "lucide-react";
 import React from "react";
 
