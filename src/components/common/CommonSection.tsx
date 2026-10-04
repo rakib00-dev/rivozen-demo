@@ -2,6 +2,14 @@ import { Reveal, RevealStagger } from "../custom/reveal";
 import { ArrowUpRight } from "lucide-react";
 import React from "react";
 
+interface CommonSection {
+  smallHeading: string;
+  bigHeading: string;
+  bigHeadingItalic: string;
+  arrow?: boolean;
+  content: React.ReactElement;
+}
+
 // TODO: Have to add for all section type like right side link, section header content position etc.
 const CommonSection = ({
   smallHeading = "Small Heading",
@@ -9,13 +17,7 @@ const CommonSection = ({
   bigHeadingItalic = "Italic Part",
   arrow = false,
   content,
-}: {
-  smallHeading: string;
-  bigHeading: string;
-  bigHeadingItalic: string;
-  arrow?: boolean;
-  content: React.ReactElement;
-}) => {
+}: CommonSection) => {
   return (
     <section id="work" className="px-4 py-20 md:px-6">
       <div className="mx-auto max-w-6xl">
