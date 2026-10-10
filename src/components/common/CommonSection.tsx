@@ -11,6 +11,7 @@ interface CommonSection {
 }
 
 // TODO: Have to add for all section type like right side link, section header content position etc.
+
 const CommonSection = ({
   smallHeading = "Small Heading",
   bigHeading = "Here is your big heading",
