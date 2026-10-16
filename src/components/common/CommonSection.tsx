@@ -2,10 +2,24 @@ import { Reveal, RevealStagger } from "../custom/reveal";
 import { ArrowUpRight } from "lucide-react";
 import React from "react";
 
+const HeadingAlignLeft = "place-items-start text-left";
+const HeadingAlignCenter = "place-items-center text-center";
+const HeadingAlignRight = "place-items-end text-right";
+
+type HeadingAlignType = "left" | "center" | "right";
+
+const headingAlignClasses: Record<HeadingAlignType, string> = {
+  left: "place-items-start text-left",
+  center: "place-items-center text-center",
+  right: "place-items-end text-right",
+};
+
 interface CommonSection {
   smallHeading: string;
   bigHeading: string;
   bigHeadingItalic: string;
+  HeadingAlign?: HeadingAlignType;
+  paragraph?: string;
   arrow?: boolean;
   content: React.ReactElement;
 }
@@ -16,14 +30,16 @@ const CommonSection = ({
   smallHeading = "Small Heading",
   bigHeading = "Here is your big heading",
   bigHeadingItalic = "Italic Part",
+  HeadingAlign = "left",
+  paragraph = `Every Rivozen plan is built around quality work, responsive collaboration, and a process that keeps your team moving.`,
   arrow = false,
   content,
 }: CommonSection) => {
   return (
     <section id="work" className="px-4 py-20 md:px-6">
       <div className="mx-auto max-w-6xl">
-        <Reveal className="flex flex-wrap items-end justify-between gap-6">
-          <div>
+        <Reveal className="grid place-items-center gap-6">
+          <div className={`grid w-full ${headingAlignClasses[HeadingAlign]}`}>
             <p className="text-sm font-medium uppercase tracking-widest text-primary">
               {smallHeading}
             </p>
@@ -31,6 +47,12 @@ const CommonSection = ({
               {bigHeading}{" "}
               <span className="font-serif italic">{bigHeadingItalic}</span>
             </h2>
+
+            {paragraph && (
+              <p className="mt-4 max-w-xl leading-relaxed text-muted-foreground">
+                {paragraph}
+              </p>
+            )}
           </div>
           {arrow && (
             <a
@@ -43,7 +65,7 @@ const CommonSection = ({
           )}
         </Reveal>
 
-        <RevealStagger className="mt-12 grid grid-cols-1 gap-4 lg:grid-cols-12">
+        <RevealStagger className="mt-12 grid grid-cols-1 gap-4 lg:grid-cols-3">
           {content}
         </RevealStagger>
       </div>
