@@ -1,4 +1,5 @@
 import CommonHeroSection from "@/components/common/CommonHeroSection";
+import TwoSideCommonSection from "@/components/common/TwoSideCommonSection";
 
 export default function PageWebsiteHero() {
   return (
@@ -13,6 +14,8 @@ export default function PageWebsiteHero() {
         secondaryBtn="Book A Call"
         secondaryBtnLink="/book-a-call"
       />
+
+      <TwoSideCommonSection />
     </>
   );
 }

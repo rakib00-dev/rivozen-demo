@@ -1,25 +1,26 @@
-import Image from "next/image";
+"use client";
+
 import { Reveal } from "../custom/reveal";
 import { motion } from "framer-motion";
 import { ease } from "../custom/hero";
-import { Button } from "../ui/button";
+import Image from "next/image";
 
 interface TwoSideCommonSection {
-  smallHeading: string;
-  bigHeading: string[];
-  bigHeadingItalic: string;
-  paragraph: string;
-  primaryBtn: string;
-  primaryBtnLink: string;
+  smallHeading?: string;
+  bigHeading?: string;
+  bigHeadingItalic?: string;
+  paragraph?: string;
+  primaryBtn?: string;
+  primaryBtnLink?: string;
   secondaryBtn?: string;
   secondaryBtnLink?: string;
   Children?: React.ReactNode;
 }
 
 export default function TwoSideCommonSection({
-  smallHeading = "Get in touch",
-  bigHeading = ["Have a", "project"],
-  bigHeadingItalic = "in mind?",
+  smallHeading = "Your Digital Storefront",
+  bigHeading = "Make your first impression count, on every",
+  bigHeadingItalic = "every screen",
   paragraph = `Tell us a little about what you&apos;re building, what you need, and where you want to go. We&apos;ll take it from there.`,
   primaryBtn = "Start a conversation",
   primaryBtnLink = "/contact",
@@ -33,22 +34,9 @@ export default function TwoSideCommonSection({
       className="relative overflow-hidden px-4 pt-32 pb-20 md:px-6 md:pt-40 md:pb-28"
     >
       {/* Background */}
-      <div className="pointer-events-none absolute left-0 top-0 h-full w-full">
-        <Image
-          alt=""
-          src="/bg-gradient.svg"
-          width={0}
-          loading="eager"
-          height={0}
-          className="h-full w-full object-cover"
-          priority
-        />
-
-        <span className="absolute left-0 top-0 h-full w-svw bg-linear-to-b from-primary/10 to-primary/5" />
-      </div>
 
       {/* main contents */}
-      <Reveal delay={1.7}>
+      <Reveal delay={0.5} className="grid grid-cols-2">
         <div className="relative mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -63,28 +51,10 @@ export default function TwoSideCommonSection({
             {smallHeading}
           </motion.div>
 
-          <h1 className="mt-6 max-w-5xl text-balance text-5xl font-semibold leading-[0.98] tracking-tight md:text-7xl lg:text-8xl">
-            {bigHeading.map((word, i) => (
-              <motion.span
-                key={word}
-                initial={{
-                  opacity: 0,
-                  y: 24,
-                }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                transition={{
-                  duration: 0.7,
-                  ease,
-                  delay: 0.08 * i,
-                }}
-                className="mr-3 inline-block"
-              >
-                {word}
-              </motion.span>
-            ))}
+          <h1 className="mt-3 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
+            <motion.span className="mr-3 inline-block">
+              {bigHeading}
+            </motion.span>
 
             <motion.span
               initial={{
@@ -100,7 +70,7 @@ export default function TwoSideCommonSection({
                 ease,
                 delay: 0.24,
               }}
-              className="inline-block font-serif italic text-primary"
+              className="inline-block font-serif italic"
             >
               {bigHeadingItalic}
             </motion.span>
@@ -114,7 +84,7 @@ export default function TwoSideCommonSection({
               ease,
               delay: 0.32,
             }}
-            className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground"
+            className="mt-5 max-w-md leading-relaxed text-muted-foreground"
           >
             {paragraph}
           </motion.p>
@@ -133,6 +103,17 @@ export default function TwoSideCommonSection({
               {Children}
             </motion.div>
           )}
+        </div>
+
+        <div className="relative min-h-[300px] w-full overflow-hidden rounded-xl md:min-h-[450px]">
+          <Image
+            src="/work-brand.png"
+            alt="Showcase of our work and services"
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover"
+          />
         </div>
       </Reveal>
     </section>
