@@ -64,6 +64,10 @@ export default function WebDesignPage() {
                   <span className="font-serif italic"> in action.</span>
                 </h2>
               </div>
+              <Button variant={"link"} href="/work">
+                See More{" "}
+                <ArrowUpRight className="size-5 transition-transform group-hover:rotate-45" />
+              </Button>
             </div>
           </Reveal>
 

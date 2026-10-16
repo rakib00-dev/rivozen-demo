@@ -36,7 +36,10 @@ export default function TwoSideCommonSection({
       {/* Background */}
       <div className="mx-auto max-w-6xl">
         {/* main contents */}
-        <Reveal delay={0.5} className="flex justify-center max-md:gap-5">
+        <Reveal
+          delay={0.5}
+          className="flex justify-center max-md:flex-col max-md:gap-5"
+        >
           <div className="relative mx-auto max-w-6xl">
             <motion.div
               initial={{ opacity: 0, y: 16 }}

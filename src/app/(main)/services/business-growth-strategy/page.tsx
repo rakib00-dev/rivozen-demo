@@ -67,6 +67,10 @@ export default function BusinessGrowthStrategy() {
                   <span className="font-serif italic"> in action.</span>
                 </h2>
               </div>
+              <Button variant={"link"} href="/work">
+                See More{" "}
+                <ArrowUpRight className="size-5 transition-transform group-hover:rotate-45" />
+              </Button>
             </div>
           </Reveal>
 
@@ -151,7 +155,7 @@ export default function BusinessGrowthStrategy() {
 
       {/* cta */}
 
-      <CommonCta />
+      <CommonCta currentColor={1} />
     </>
   );
 }
