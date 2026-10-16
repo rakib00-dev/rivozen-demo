@@ -151,7 +151,7 @@ export default function ContentCreative() {
 
       {/* cta */}
 
-      <CommonCta />
+      <CommonCta currentColor={2} />
     </>
   );
 }

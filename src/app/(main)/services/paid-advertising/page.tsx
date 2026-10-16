@@ -151,7 +151,7 @@ export default function PaidAdvertising() {
 
       {/* cta */}
 
-      <CommonCta />
+      <CommonCta currentColor={4} />
     </>
   );
 }

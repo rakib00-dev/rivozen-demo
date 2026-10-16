@@ -151,7 +151,7 @@ export default function SEO() {
 
       {/* cta */}
 
-      <CommonCta />
+      <CommonCta currentColor={5} />
     </>
   );
 }

@@ -3,11 +3,17 @@ import { Reveal } from "../custom/reveal";
 import { ArrowUpRight } from "lucide-react";
 import { allColorsArray } from "@/utils/ColorsArray";
 
-function CommonCta() {
+type colorRange = 0 | 1 | 2 | 3 | 4 | 5 | 6;
+
+interface CommonCta {
+  currentColor?: colorRange;
+}
+
+function CommonCta({ currentColor = 0 }) {
   return (
     <footer id="contact" className={`px-4 pb-8 md:px-6 `}>
       <Reveal
-        className={`mx-auto max-w-6xl overflow-hidden rounded-3xl bg-[${allColorsArray[0].bgColor}] px-6 py-16 text-center text-secondary-foreground md:py-24`}
+        className={`mx-auto max-w-6xl overflow-hidden rounded-3xl bg-[${allColorsArray[currentColor].bgColor}] px-6 py-16 text-center text-secondary-foreground md:py-24`}
       >
         <h2 className="mx-auto max-w-3xl text-balance text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
           Your Growth Team{" "}

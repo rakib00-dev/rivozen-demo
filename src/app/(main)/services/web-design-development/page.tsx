@@ -25,9 +25,7 @@ export default function WebDesignPage() {
   return (
     <>
       <PageWebsiteHero />
-
       <TwoSideCommonSection />
-
       {/* cards section */}
       <CommonSection
         smallHeading="Built For Modern Teams"
@@ -36,7 +34,6 @@ export default function WebDesignPage() {
         HeadingAlign="center"
         content={<Cards />}
       />
-
       {/* Selected Work */}
       <section className="px-4 py-20 md:px-6 md:py-28 ">
         <div className="mx-auto max-w-6xl bg-white p-15 rounded-2xl">
@@ -123,7 +120,6 @@ export default function WebDesignPage() {
           </RevealStagger>
         </div>
       </section>
-
       {/* Process Section */}
       <CommonProcessSection
         bigHeading="Design made easy, from brief to"
@@ -131,7 +127,6 @@ export default function WebDesignPage() {
         paragraph=""
         processList={process}
       />
-
       {/* clients reviews */}
       <CommonSection
         smallHeading="Customers stories"
@@ -140,7 +135,6 @@ export default function WebDesignPage() {
         HeadingAlign="center"
         content={<ClientsReviewsCards />}
       />
-
       {/* faq section */}
       <CommonFaqSection
         bigHeading="Common questions you"
@@ -148,10 +142,8 @@ export default function WebDesignPage() {
         paragraph=""
         faqList={faqs}
       />
-
       {/* cta */}
-
-      <CommonCta />
+      <CommonCta currentColor={0} />{" "}
     </>
   );
 }

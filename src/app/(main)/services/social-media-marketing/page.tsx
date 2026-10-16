@@ -151,7 +151,7 @@ export default function SocialMediaMarketing() {
 
       {/* cta */}
 
-      <CommonCta />
+      <CommonCta currentColor={0} />
     </>
   );
 }

@@ -151,7 +151,7 @@ export default function WorkflowAIAutomation() {
 
       {/* cta */}
 
-      <CommonCta />
+      <CommonCta currentColor={5} />
     </>
   );
 }

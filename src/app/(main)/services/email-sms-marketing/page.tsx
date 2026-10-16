@@ -151,7 +151,7 @@ export default function EmailSmsMarketing() {
 
       {/* cta */}
 
-      <CommonCta />
+      <CommonCta currentColor={3} />
     </>
   );
 }
