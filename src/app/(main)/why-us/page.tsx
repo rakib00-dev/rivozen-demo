@@ -139,7 +139,7 @@ export default function WhyUs() {
           smallHeading="Why Rivozen"
           bigHeading={["More than", "a digital"]}
           bigHeadingItalic="partner."
-          paragraph="We combine thoughtful design, clear communication, and focused execution to help ambitious businesses turn ideas into work that matters."
+          paragraph="At Rivozen, we combine thoughtful design, clear communication, and focused execution to deliver custom digital solutions that help ecommerce brands and local businesses move forward with confidence."
           Children={
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -156,11 +156,11 @@ export default function WhyUs() {
               </div>
 
               <div className="rounded-md border border-border bg-card px-4 py-2 text-sm">
-                Design driven
+                Conversion Focused
               </div>
 
               <div className="rounded-md border border-border bg-card px-4 py-2 text-sm">
-                Built to last
+                Results Measured
               </div>
             </motion.div>
           }
