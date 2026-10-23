@@ -137,7 +137,7 @@ export default function WhyUs() {
 
         <CommonHeroSection
           smallHeading="Why Rivozen"
-          bigHeading={["More than", "a design"]}
+          bigHeading={["More than", "a digital"]}
           bigHeadingItalic="partner."
           paragraph="We combine thoughtful design, clear communication, and focused execution to help ambitious businesses turn ideas into work that matters."
           Children={
