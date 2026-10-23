@@ -40,7 +40,7 @@ export default function TwoSideCommonSection({
         {/* main contents */}
         <Reveal
           delay={0.5}
-          className="flex justify-center max-md:flex-col max-md:gap-5"
+          className="flex justify-center items-center max-md:flex-col max-md:gap-5"
         >
           <div className="relative mx-auto max-w-6xl">
             <motion.div
@@ -105,13 +105,12 @@ export default function TwoSideCommonSection({
               </motion.div>
             )}
           </div>
-
-          <div className="relative mx-auto aspect-square w-full max-w-[300px] overflow-hidden rounded-xl md:max-w-[450px]">
-            {Children ? (
-              <RevealStagger className="grid gap-3 sm:grid-cols-2">
-                {Children}
-              </RevealStagger>
-            ) : (
+          {Children ? (
+            <RevealStagger className="grid gap-3 sm:grid-cols-2">
+              {Children}
+            </RevealStagger>
+          ) : (
+            <div className="relative mx-auto aspect-square w-full max-w-[300px] overflow-hidden rounded-xl md:max-w-[450px]">
               <Image
                 src="/work-brand.png"
                 alt="Showcase of our work and services"
@@ -119,8 +118,8 @@ export default function TwoSideCommonSection({
                 sizes="(max-width: 768px) 280px, 350px"
                 className="object-cover"
               />
-            )}
-          </div>
+            </div>
+          )}
         </Reveal>
       </div>{" "}
     </section>
