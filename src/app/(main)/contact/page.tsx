@@ -170,10 +170,10 @@ export default function ContactPage() {
                             <p className="text-sm font-medium">Email</p>
 
                             <a
-                              href="mailto:hello@rivozen.com"
+                              href="mailto:info@rivozen.com"
                               className="mt-1 block text-sm text-muted-foreground transition-colors hover:text-foreground"
                             >
-                              hello@rivozen.com
+                              info@rivozen.com
                             </a>
                           </div>
                         </div>
