@@ -17,6 +17,7 @@ import { Reveal, RevealStagger, RevealItem } from "@/components/custom/reveal";
 import { SmoothScroll } from "@/components/custom/smooth-scroll";
 import CommonHeroSection from "@/components/common/CommonHeroSection";
 import CommonSection from "@/components/common/CommonSection";
+import CommonProcessSection from "@/components/common/CommonProcessSection";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -181,31 +182,39 @@ export default function WhyUs() {
           content={<Cards />}
         />
 
-        <section
-          id="difference"
-          className="scroll-mt-24 border-y border-border px-4 py-20 md:px-6 md:py-28"
-        >
-          <div className="mx-auto max-w-6xl">
-            <Reveal>
-              <div className="max-w-2xl">
-                <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary"></p>
-
-                <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
-                  The difference is in the{" "}
-                  <span className="font-serif italic text-primary">
-                    details.
-                  </span>
-                </h2>
-
-                <p className="mt-4 max-w-xl leading-relaxed text-muted-foreground">
-                  Good work is important. But how you get there matters too.
-                  We've built our process around making collaboration easier,
-                  clearer, and more effective.
-                </p>
-              </div>
-            </Reveal>
-          </div>
-        </section>
+        <CommonProcessSection
+          smallHeading="Our Approach"
+          bigHeading="A Smarter Approach to "
+          bigHeadingItalic="Digital Growth"
+          paragraph="Good digital work starts with understanding. We take a clear, thoughtful approach to every project from understanding your goals to building solutions that create lasting value."
+          processList={[
+            {
+              title: "Understand",
+              solution:
+                "We learn about your business, audience, goals, and challenges before deciding on the right direction.",
+            },
+            {
+              title: "Plan",
+              solution:
+                "We turn insights into a clear strategy, prioritizing the actions that can make the biggest difference.",
+            },
+            {
+              title: "Build",
+              solution:
+                "We bring the strategy to life through thoughtful design, reliable technology, and focused digital execution.",
+            },
+            {
+              title: "Optimize",
+              solution:
+                "We review performance, identify opportunities, and continuously refine the work to help your business move forward.",
+            },
+            {
+              title: "Grow",
+              solution:
+                "The goal isn’t simply to complete a project. It’s to build a stronger digital foundation for continued growth.",
+            },
+          ]}
+        />
 
         {/* APPROACH */}
         <section className="px-4 py-20 md:px-6 md:py-28">

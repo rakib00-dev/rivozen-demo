@@ -50,7 +50,9 @@ export default function CommonProcessSection({
                     <span className="text-sm text-primary">0{index + 1}</span>
 
                     <div>
-                      <h3 className="text-xl font-semibold">{problem.title}</h3>
+                      <h3 className="text-xl capitalize font-semibold">
+                        {problem.title}
+                      </h3>
 
                       <p className="mt-2 leading-relaxed text-muted-foreground">
                         {problem.solution}
