@@ -16,6 +16,7 @@ import { Button } from "@/components/ui/button";
 import { Reveal, RevealStagger, RevealItem } from "@/components/custom/reveal";
 import { SmoothScroll } from "@/components/custom/smooth-scroll";
 import CommonHeroSection from "@/components/common/CommonHeroSection";
+import CommonSection from "@/components/common/CommonSection";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -23,44 +24,44 @@ const differentiators = [
   {
     number: "01",
     icon: Target,
-    title: "Design with purpose",
+    title: "Strategy Before Execution",
     description:
-      "We don't create things just to look good. Every design decision is made to support your brand, audience, and business goals.",
+      "We start with your goals, audience, and challenges before deciding what to do. Every action has a clear purpose.",
   },
   {
     number: "02",
     icon: Zap,
-    title: "Fast, focused execution",
+    title: "Solutions Built Around You",
     description:
-      "We keep things moving without sacrificing quality. Less unnecessary back-and-forth and more time spent creating meaningful work.",
+      "From websites and SEO to paid advertising and creative services, we create solutions that fit your business instead of forcing you into a fixed formula.",
   },
   {
     number: "03",
     icon: Users,
-    title: "A creative partner",
+    title: "Clear & Honest Communication",
     description:
-      "You get more than someone who completes tasks. We become an extension of your team and think alongside you.",
+      "You always know what we’re working on, why it matters, and what comes next. No confusing jargon or unnecessary complexity.",
   },
   {
     number: "04",
     icon: Sparkles,
-    title: "Built around your brand",
+    title: "Focused on Meaningful Growth",
     description:
-      "We take the time to understand your identity, audience, and goals so the final work feels uniquely yours.",
+      "We focus on work that supports real business goals, better visibility, stronger customer experiences, and more opportunities to grow.",
   },
   {
     number: "05",
     icon: MessageCircle,
-    title: "Clear communication",
+    title: "One Partner, Multiple Solutions",
     description:
-      "You shouldn't have to wonder what's happening with your project. We keep communication simple, direct, and transparent.",
+      "Instead of managing multiple specialists, you can bring your digital needs together with one reliable partner.",
   },
   {
     number: "06",
     icon: Check,
-    title: "Quality without the overhead",
+    title: "Built for Long-Term Value",
     description:
-      "Professional creative work without unnecessary layers, complicated processes, or endless meetings.",
+      "We focus on creating digital assets and strategies that continue to support your business beyond a single campaign or project.",
   },
 ];
 
@@ -171,6 +172,15 @@ export default function WhyUs() {
         />
 
         {/* DIFFERENTIATORS */}
+        <CommonSection
+          smallHeading="What Makes Us Different"
+          bigHeading="What Makes "
+          bigHeadingItalic="Rivozen Different?"
+          paragraph="We don’t believe in one size fits all solutions. Every business has different goals, challenges, and opportunities so we take the time to understand what matters and build our approach around it."
+          HeadingAlign="left"
+          content={<Cards />}
+        />
+
         <section
           id="difference"
           className="scroll-mt-24 border-y border-border px-4 py-20 md:px-6 md:py-28"
@@ -178,9 +188,7 @@ export default function WhyUs() {
           <div className="mx-auto max-w-6xl">
             <Reveal>
               <div className="max-w-2xl">
-                <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
-                  What makes us different
-                </p>
+                <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary"></p>
 
                 <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
                   The difference is in the{" "}
@@ -196,37 +204,6 @@ export default function WhyUs() {
                 </p>
               </div>
             </Reveal>
-
-            <RevealStagger className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {differentiators.map((item) => {
-                const Icon = item.icon;
-
-                return (
-                  <RevealItem
-                    key={item.number}
-                    className="group rounded-2xl border border-border bg-card p-6 transition-colors hover:bg-muted/40 md:p-7"
-                  >
-                    <div className="flex items-start justify-between">
-                      <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10">
-                        <Icon className="h-5 w-5 text-primary" />
-                      </div>
-
-                      <span className="text-sm text-muted-foreground">
-                        {item.number}
-                      </span>
-                    </div>
-
-                    <h3 className="mt-8 text-xl font-semibold tracking-tight">
-                      {item.title}
-                    </h3>
-
-                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                      {item.description}
-                    </p>
-                  </RevealItem>
-                );
-              })}
-            </RevealStagger>
           </div>
         </section>
 
@@ -431,3 +408,38 @@ export default function WhyUs() {
     </SmoothScroll>
   );
 }
+
+const Cards = () => {
+  return (
+    <>
+      {differentiators.map((item) => {
+        const Icon = item.icon;
+
+        return (
+          <RevealItem
+            key={item.number}
+            className="group rounded-2xl border border-border bg-card p-6 transition-colors hover:bg-muted/40 md:p-7"
+          >
+            <div className="flex items-start justify-between">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10">
+                <Icon className="h-5 w-5 text-primary" />
+              </div>
+
+              <span className="text-sm text-muted-foreground">
+                {item.number}
+              </span>
+            </div>
+
+            <h3 className="mt-8 text-xl font-semibold tracking-tight">
+              {item.title}
+            </h3>
+
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              {item.description}
+            </p>
+          </RevealItem>
+        );
+      })}
+    </>
+  );
+};
