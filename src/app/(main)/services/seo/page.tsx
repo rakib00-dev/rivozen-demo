@@ -1,3 +1,4 @@
+"use client";
 import PageWebsiteHero from "@/components/custom/services/website/PageWebsiteHero";
 import CommonSection from "@/components/common/CommonSection";
 import TwoSideCommonSection from "@/components/common/TwoSideCommonSection";
