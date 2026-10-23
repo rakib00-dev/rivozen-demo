@@ -18,6 +18,9 @@ import { SmoothScroll } from "@/components/custom/smooth-scroll";
 import CommonHeroSection from "@/components/common/CommonHeroSection";
 import CommonSection from "@/components/common/CommonSection";
 import CommonProcessSection from "@/components/common/CommonProcessSection";
+import TwoSideCommonSection from "@/components/common/TwoSideCommonSection";
+import { allColorsArray } from "@/utils/ColorsArray";
+import CommonCta from "@/components/common/CommonCta";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -182,6 +185,7 @@ export default function WhyUs() {
           content={<Cards />}
         />
 
+        {/* APPROACH */}
         <CommonProcessSection
           smallHeading="Our Approach"
           bigHeading="A Smarter Approach to "
@@ -216,160 +220,56 @@ export default function WhyUs() {
           ]}
         />
 
-        {/* APPROACH */}
-        <section className="px-4 py-20 md:px-6 md:py-28">
-          <div className="mx-auto max-w-6xl">
-            <Reveal>
-              <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
-                <div>
-                  <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
-                    Our approach
-                  </p>
-
-                  <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
-                    Simple process.
-                    <span className="block font-serif italic text-primary">
-                      Better work.
-                    </span>
-                  </h2>
-
-                  <p className="mt-5 max-w-md leading-relaxed text-muted-foreground">
-                    We don't believe great projects need complicated processes.
-                    Our approach keeps things focused from the first
-                    conversation to the final delivery.
-                  </p>
-                </div>
-
-                <RevealStagger className="grid gap-3">
-                  {steps.map((step) => (
-                    <RevealItem
-                      key={step.number}
-                      className="group flex gap-5 rounded-2xl border border-border bg-card p-5 md:p-6"
-                    >
-                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-medium text-primary">
-                        {step.number}
-                      </span>
-
-                      <div>
-                        <h3 className="font-semibold">{step.title}</h3>
-
-                        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                          {step.description}
-                        </p>
-                      </div>
-                    </RevealItem>
-                  ))}
-                </RevealStagger>
-              </div>
-            </Reveal>
-          </div>
-        </section>
-
         {/* EXPECTATIONS */}
-        <section className="border-y border-border bg-muted/20 px-4 py-20 md:px-6 md:py-28">
-          <div className="mx-auto max-w-6xl">
-            <Reveal>
-              <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center">
-                <div>
-                  <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
-                    What you can expect
-                  </p>
-
-                  <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
-                    Working together should feel{" "}
-                    <span className="font-serif italic text-primary">
-                      easy.
-                    </span>
-                  </h2>
-
-                  <p className="mt-5 max-w-xl leading-relaxed text-muted-foreground">
-                    From the first conversation to the final handoff, we aim to
-                    make every part of the experience straightforward and
-                    collaborative.
-                  </p>
-                </div>
-
-                <RevealStagger className="grid gap-3 sm:grid-cols-2">
-                  {[
-                    "Clear communication",
-                    "Reliable timelines",
-                    "Thoughtful design",
-                    "Responsive collaboration",
-                    "Consistent quality",
-                    "Attention to detail",
-                  ].map((item) => (
-                    <RevealItem
-                      key={item}
-                      className="flex items-center gap-3 rounded-xl border border-border bg-card p-4"
-                    >
-                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10">
-                        <Check className="h-4 w-4 text-primary" />
-                      </div>
-
-                      <span className="text-sm font-medium">{item}</span>
-                    </RevealItem>
-                  ))}
-                </RevealStagger>
-              </div>
-            </Reveal>
-          </div>
-        </section>
-
-        {/* TESTIMONIALS */}
-        <section className="px-4 py-20 md:px-6 md:py-28">
-          <div className="mx-auto max-w-6xl">
-            <Reveal>
-              <div className="max-w-2xl">
-                <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
-                  Client perspective
-                </p>
-
-                <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
-                  Don't just take our{" "}
-                  <span className="font-serif italic text-primary">
-                    word for it.
-                  </span>
-                </h2>
-              </div>
-            </Reveal>
-
-            <RevealStagger className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {testimonials.map((testimonial) => (
+        <TwoSideCommonSection
+          smallHeading="What you can expect"
+          bigHeading="What You Can Expect"
+          bigHeadingItalic="From Rivozen"
+          paragraph="Working with Rivozen means having a digital partner that values clarity, consistency, and quality at every stage of the project."
+          Children={
+            <>
+              {[
+                "Clear communication",
+                "Thoughtful Solutions",
+                "Reliable Timelines",
+                "Consistent Quality",
+                "Responsive Collaboration",
+                "Focused Execution",
+              ].map((item) => (
                 <RevealItem
-                  key={testimonial.name}
-                  className="flex flex-col rounded-2xl border border-border bg-card p-6"
+                  key={item}
+                  className="flex items-center gap-3 rounded-xl border border-border bg-card p-4"
                 >
-                  <div className="flex gap-1">
-                    {Array.from({ length: 5 }).map((_, index) => (
-                      <svg
-                        key={index}
-                        viewBox="0 0 20 20"
-                        className="h-4 w-4 fill-current text-primary"
-                        aria-hidden="true"
-                      >
-                        <path d="M10 1.5l2.63 5.32 5.87.85-4.25 4.14 1 5.85L10 14.9l-5.25 2.76 1-5.85L1.5 7.67l5.87-.85L10 1.5z" />
-                      </svg>
-                    ))}
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10">
+                    <Check className="h-4 w-4 text-primary" />
                   </div>
 
-                  <p className="mt-4 flex-1 text-pretty leading-relaxed text-foreground/90">
-                    {testimonial.quote}
-                  </p>
-
-                  <div className="mt-6 border-t border-border pt-4">
-                    <p className="text-sm font-medium">{testimonial.name}</p>
-
-                    <p className="mt-1 text-sm text-muted-foreground">
-                      {testimonial.role}
-                    </p>
-                  </div>
+                  <span className="text-sm font-medium">{item}</span>
                 </RevealItem>
               ))}
-            </RevealStagger>
-          </div>
-        </section>
+            </>
+          }
+        />
+
+        {/* TESTIMONIALS */}
+        <CommonSection
+          smallHeading="Client perspective"
+          bigHeading="What Our Clients Say About Working "
+          bigHeadingItalic="With Rivozen 👇"
+          HeadingAlign="center"
+          content={<ClientsReviewsCards />}
+        />
 
         {/* CTA */}
+        <CommonCta
+          bigHeading="Have a Digital Project in Mind? Let’s"
+          bigHeadingItalic="Make It Happen."
+          paragraph="Tell us what you’re working on, and let’s build the right digital solution with Rivozen."
+          currentColor={0}
+          secondaryBtn="Contact"
+          secondaryBtnLink="/contact"
+        />
+
         <section className="px-4 pb-20 md:px-6 md:pb-28">
           <div className="mx-auto max-w-6xl">
             <Reveal>
@@ -449,6 +349,61 @@ const Cards = () => {
           </RevealItem>
         );
       })}
+    </>
+  );
+};
+
+const ClientsReviewsCards = () => {
+  const testimonials = [
+    {
+      quote:
+        "Rivozen understood the direction immediately and turned it into something much stronger than we imagined.",
+      name: "Sarah Mitchell",
+      role: "Founder, Northwind",
+    },
+    {
+      quote:
+        "The process was clear, fast, and collaborative. Every detail felt intentional.",
+      name: "Daniel Brooks",
+      role: "Product Lead, Flowstate",
+    },
+    {
+      quote:
+        "We finally have a visual identity that feels consistent across everything we do.",
+      name: "Maya Chen",
+      role: "Creative Director, Bloom Co.",
+    },
+  ];
+
+  return (
+    <>
+      {" "}
+      {testimonials.map((testimonial, i) => (
+        <RevealItem key={testimonial.name}>
+          <div
+            className={`h-full rounded-2xl border border-border bg-[${allColorsArray[i].bgColor}] p-6`}
+          >
+            <div className="flex gap-1">
+              {Array.from({ length: 5 }).map((_, index) => (
+                <span key={index} className={"font-bold"}>
+                  ★
+                </span>
+              ))}
+            </div>
+
+            <p className="mt-6 leading-relaxed text-muted-foreground">
+              “{testimonial.quote}”
+            </p>
+
+            <div className="mt-8 border-t border-border pt-5">
+              <p className="font-medium">{testimonial.name}</p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                {testimonial.role}
+              </p>
+            </div>
+          </div>
+        </RevealItem>
+      ))}
     </>
   );
 };
