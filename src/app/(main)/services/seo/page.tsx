@@ -239,7 +239,7 @@ const ClientsReviewsCards = () => {
       {testimonials.map((testimonial, i) => (
         <RevealItem key={testimonial.name}>
           <div
-            className={`h-full rounded-2xl border border-border bg-[${allColorsArray[i]?.bgColor}] p-6`}
+            className={`h-full rounded-2xl border border-border bg-[${allColorsArray[i].bgColor}] p-6`}
           >
             <div className="flex gap-1">
               {Array.from({ length: 5 }).map((_, index) => (
