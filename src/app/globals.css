@@ -87,12 +87,14 @@
   /* Accent colors */
   --primary-purple: #9636e5;
   --secondary-purple: #e1c3f9;
+  --primary-red: #e53636;
+  --secondary-red: #f9c3c3;
   --primary-blue: #39b4fc;
   --secondary-blue: #c4e2fa;
   --primary-green: #89d93a;
   --secondary-green: #dffbc1;
   --primary-rose: #f6578b;
-  --secondary-rose: #fdc3c1;
+  --secondary-rose: #fdc1e2;
   --primary-yellow: #e1b932;
   --secondary-yellow: #f6e8bb;
 

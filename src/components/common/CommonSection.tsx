@@ -21,6 +21,7 @@ interface CommonSection {
   HeadingAlign?: HeadingAlignType;
   paragraph?: string;
   arrow?: boolean;
+  contentClass?: string;
   content: React.ReactElement;
 }
 
@@ -32,6 +33,7 @@ const CommonSection = ({
   bigHeadingItalic = "Italic Part",
   HeadingAlign = "left",
   paragraph = `Every Rivozen plan is built around quality work, responsive collaboration, and a process that keeps your team moving.`,
+  contentClass,
   arrow = false,
   content,
 }: CommonSection) => {
@@ -65,7 +67,13 @@ const CommonSection = ({
           )}
         </Reveal>
 
-        <RevealStagger className="mt-12 grid grid-cols-1 gap-4 lg:grid-cols-3">
+        <RevealStagger
+          className={
+            contentClass
+              ? `${contentClass}`
+              : `mt-12 grid grid-cols-1 gap-4 lg:grid-cols-3`
+          }
+        >
           {content}
         </RevealStagger>
       </div>

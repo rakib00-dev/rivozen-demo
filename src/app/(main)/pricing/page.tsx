@@ -10,6 +10,8 @@ import {
   MessageCircle,
   Palette,
   RefreshCw,
+  Sparkles,
+  Target,
   Users,
   Zap,
 } from "lucide-react";
@@ -19,6 +21,7 @@ import { Reveal, RevealStagger, RevealItem } from "@/components/custom/reveal";
 import { SmoothScroll } from "@/components/custom/smooth-scroll";
 import CommonHeroSection from "@/components/common/CommonHeroSection";
 import CommonSection from "@/components/common/CommonSection";
+import { allColorsArray } from "@/utils/ColorsArray";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -266,24 +269,11 @@ function PriceCards() {
         bigHeading="Choose the Right Digital "
         bigHeadingItalic="Service Package"
         paragraph="Simple, flexible pricing. Explore Rivozen’s digital service packages and choose the right fit for your business goals."
+        contentClass="mt-12 grid gap-4"
         content={
           <>
             {" "}
             <Reveal className="text-center">
-              <p className="text-sm font-medium uppercase tracking-widest text-primary">
-                Plans & pricing
-              </p>
-
-              <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
-                Choose the right level of{" "}
-                <span className="font-serif italic text-primary">support.</span>
-              </h2>
-
-              <p className="mx-auto mt-4 max-w-2xl text-pretty leading-relaxed text-muted-foreground">
-                Simple monthly pricing with no complicated contracts. Choose the
-                plan that matches the pace and scale of your creative needs.
-              </p>
-
               <div className="mt-8 inline-flex items-center gap-1 rounded-lg border border-border bg-card p-1">
                 <button
                   type="button"
@@ -528,54 +518,14 @@ export default function PricingPage() {
         <PriceCards />
 
         {/* INCLUDED */}
-        <section className="px-4 py-20 md:px-6 md:py-28">
-          <div className="mx-auto max-w-6xl">
-            <Reveal>
-              <div className="max-w-2xl">
-                <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
-                  What&apos;s included
-                </p>
-
-                <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
-                  Everything you need to{" "}
-                  <span className="font-serif italic text-primary">
-                    keep creating.
-                  </span>
-                </h2>
-
-                <p className="mt-4 max-w-xl leading-relaxed text-muted-foreground">
-                  Every Rivozen plan is built around quality work, responsive
-                  collaboration, and a process that keeps your team moving.
-                </p>
-              </div>
-            </Reveal>
-
-            <RevealStagger className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {included.map((item) => {
-                const Icon = item.icon;
-
-                return (
-                  <RevealItem
-                    key={item.title}
-                    className="rounded-2xl border border-border bg-card p-6"
-                  >
-                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10">
-                      <Icon className="h-5 w-5 text-primary" />
-                    </div>
-
-                    <h3 className="mt-7 text-lg font-semibold tracking-tight">
-                      {item.title}
-                    </h3>
-
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                      {item.description}
-                    </p>
-                  </RevealItem>
-                );
-              })}
-            </RevealStagger>
-          </div>
-        </section>
+        <CommonSection
+          smallHeading="What's included"
+          bigHeading="Everything Your Business Needs "
+          bigHeadingItalic="to Move Forward"
+          paragraph="Every Rivozen package combines practical digital services, clear communication, and flexible support."
+          HeadingAlign="left"
+          content={<Cards />}
+        />
 
         {/* HOW IT WORKS */}
         <section className="border-y border-border bg-muted/20 px-4 py-20 md:px-6 md:py-28">
@@ -923,5 +873,83 @@ const HeroChildren = () => {
         No surprises
       </div>
     </motion.div>
+  );
+};
+
+const Cards = () => {
+  return (
+    <>
+      {[
+        {
+          number: "01",
+          icon: Target,
+          title: "Full-Service Digital Support",
+          description:
+            "From web design and SEO, GEO, AEO to Meta Ads, Google Ads, and digital marketing.",
+        },
+        {
+          number: "02",
+          icon: Zap,
+          title: "Unlimited Revisions",
+          description:
+            "Keep refining your work until it feels right and meets your goals.",
+        },
+        {
+          number: "03",
+          icon: Users,
+          title: "Fast Turnaround",
+          description:
+            "Stay productive with focused delivery times and a streamlined workflow.",
+        },
+        {
+          number: "04",
+          icon: Sparkles,
+          title: "Clear Communication",
+          description:
+            "Simple, direct communication without unnecessary meetings or complexity.",
+        },
+        {
+          number: "05",
+          icon: MessageCircle,
+          title: "Flexible Collaboration",
+          description:
+            "Work with Rivozen as an extension of your existing team.",
+        },
+        {
+          number: "06",
+          icon: Check,
+          title: "Source Files Included",
+          description:
+            "Get full access to design files, assets, and deliverables.",
+        },
+      ].map((item, i) => {
+        const Icon = item.icon;
+        console.log({ i, color: allColorsArray[i]?.bgColor });
+        return (
+          <RevealItem
+            key={item.number}
+            className={`group rounded-2xl border border-border bg-[${allColorsArray[i]?.bgColor}] p-6 transition-colors hover:bg-muted/40 md:p-7`}
+          >
+            <div className="flex items-start justify-between">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10">
+                <Icon className="h-5 w-5 text-black" />
+              </div>
+
+              <span className="text-sm text-muted-foreground">
+                {item.number}
+              </span>
+            </div>
+
+            <h3 className="mt-8 text-xl font-semibold tracking-tight">
+              {item.title}
+            </h3>
+
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              {item.description}
+            </p>
+          </RevealItem>
+        );
+      })}
+    </>
   );
 };
