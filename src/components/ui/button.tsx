@@ -9,7 +9,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-primary text-primary-foreground text-sm h-8 px-2.5 hover:bg-primary/80",
+          "bg-primary text-secondary-foreground text-sm h-8 px-2.5 hover:bg-primary/80",
         // Your custom btn variant with the exact padding, text size, and hover transform
         btn: "group bg-primary text-secondary-foreground px-7 py-3.5 text-base transition-transform hover:-translate-y-0.5 [&_svg]:transition-transform [&_svg]:group-hover:translate-x-0.5 [&_svg]:group-hover:-translate-y-0.5",
         outline:
