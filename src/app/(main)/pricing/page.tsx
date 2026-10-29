@@ -23,6 +23,9 @@ import CommonHeroSection from "@/components/common/CommonHeroSection";
 import CommonSection from "@/components/common/CommonSection";
 import { allColorsArray } from "@/utils/ColorsArray";
 import CommonProcessSection from "@/components/common/CommonProcessSection";
+import OneOffProjects from "@/components/custom/pricingPage/OneOffProjects";
+import CommonFaqSection from "@/components/common/CommonFaqSection";
+import CommonCta from "@/components/common/CommonCta";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -200,15 +203,6 @@ const comparisons = [
     pro: false,
     custom: true,
   },
-];
-
-const oneOffProjects = [
-  "Website Design & Development",
-  "Paid Advertising",
-  "SEO Optimization",
-  "Lead Generation",
-  "Content & Creative",
-  "AI Workflow Automation",
 ];
 
 const faqs = [
@@ -583,202 +577,72 @@ export default function PricingPage() {
         />
 
         {/* ONE-OFF PROJECTS */}
-        <section className="border-y border-border px-4 py-20 md:px-6 md:py-28">
-          <div className="mx-auto max-w-6xl">
-            <Reveal>
-              <div className="relative overflow-hidden rounded-3xl border border-border bg-card p-7 md:p-10 lg:p-14">
-                <div className="pointer-events-none absolute inset-0">
-                  <Image
-                    src="/bg-gradient.svg"
-                    alt=""
-                    fill
-                    className="object-cover opacity-40"
-                  />
-
-                  <div className="absolute inset-0 bg-linear-to-br from-primary/5 via-transparent to-transparent" />
-                </div>
-
-                <div className="relative grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:gap-20">
-                  <div>
-                    <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
-                      One-off projects
-                    </p>
-
-                    <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
-                      Not Looking for an{" "}
-                      <span className="font-serif italic text-primary">
-                        Ongoing Plan?
-                      </span>
-                    </h2>
-
-                    <p className="mt-5 max-w-md leading-relaxed text-muted-foreground">
-                      No problem. Rivozen also offers flexible project-based
-                      support when a monthly digital service package isn’t the
-                      right fit.
-                    </p>
-
-                    <div className="mt-7">
-                      <Button
-                        type="button"
-                        variant={"btn"}
-                        href="/book-a-call#booking"
-                      >
-                        Discuss a project
-                        <ArrowUpRight className="ml-1 h-4 w-4" />
-                      </Button>
-                    </div>
-                  </div>
-
-                  <RevealStagger className="grid gap-3 sm:grid-cols-2">
-                    {oneOffProjects.map((project, i) => (
-                      <RevealItem
-                        key={project}
-                        className={`flex items-center gap-3 rounded-xl border border-border bg-[${allColorsArray[i]?.bgColor}] p-4 backdrop-blur-sm`}
-                      >
-                        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#000]/20">
-                          <Check className="h-4 w-4 text-black" />
-                        </div>
-
-                        <span className="text-sm font-medium">{project}</span>
-                      </RevealItem>
-                    ))}
-                  </RevealStagger>
-                </div>
-              </div>
-            </Reveal>
-          </div>
-        </section>
+        <OneOffProjects />
 
         {/* FAQ */}
-        <section className="px-4 py-20 md:px-6 md:py-28">
-          <div className="mx-auto max-w-4xl">
-            <Reveal>
-              <div className="text-center">
-                <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
-                  FAQ
-                </p>
-
-                <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
-                  Questions about{" "}
-                  <span className="font-serif italic text-primary">
-                    pricing?
-                  </span>
-                </h2>
-
-                <p className="mx-auto mt-4 max-w-xl leading-relaxed text-muted-foreground">
-                  Everything you need to know before choosing a plan.
-                </p>
-              </div>
-            </Reveal>
-
-            <RevealStagger className="mt-12">
-              {faqs.map((faq, index) => {
-                const isOpen = openFaq === index;
-
-                return (
-                  <RevealItem
-                    key={faq.question}
-                    className="border-b border-border"
-                  >
-                    <button
-                      type="button"
-                      onClick={() => setOpenFaq(isOpen ? null : index)}
-                      className="flex w-full items-center justify-between gap-6 py-6 text-left"
-                      aria-expanded={isOpen}
-                    >
-                      <span className="text-base font-medium md:text-lg">
-                        {faq.question}
-                      </span>
-
-                      <motion.span
-                        animate={{
-                          rotate: isOpen ? 180 : 0,
-                        }}
-                        transition={{ duration: 0.2 }}
-                        className="shrink-0"
-                      >
-                        <ChevronDown className="h-5 w-5 text-muted-foreground" />
-                      </motion.span>
-                    </button>
-
-                    <AnimatePresence initial={false}>
-                      {isOpen && (
-                        <motion.div
-                          initial={{
-                            height: 0,
-                            opacity: 0,
-                          }}
-                          animate={{
-                            height: "auto",
-                            opacity: 1,
-                          }}
-                          exit={{
-                            height: 0,
-                            opacity: 0,
-                          }}
-                          transition={{
-                            duration: 0.25,
-                            ease: "easeInOut",
-                          }}
-                          className="overflow-hidden"
-                        >
-                          <p className="pb-6 pr-10 leading-relaxed text-muted-foreground">
-                            {faq.answer}
-                          </p>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </RevealItem>
-                );
-              })}
-            </RevealStagger>
-          </div>
-        </section>
+        <CommonFaqSection
+          smallHeading="FAQ"
+          bigHeading="Questions About Pricing & Digital"
+          bigHeadingItalic="Service Packages?"
+          paragraph="Everything you need to know before choosing a Rivozen package or requesting custom pricing."
+          faqList={[
+            {
+              question: `What’s included in Rivozen’s digital service packages?`,
+              answer:
+                "Each package includes a selected range of digital services based on your chosen plan, such as SEO, paid advertising, website development, lead generation, and digital marketing support.",
+            },
+            {
+              question: "How much do Rivozen’s digital service packages cost?",
+              answer:
+                "Pricing depends on the level of support and services you need. Explore our digital service packages or contact Rivozen for custom pricing based on your business goals.",
+            },
+            {
+              question: "Can I get a custom package for my business?",
+              answer:
+                "Yes. Rivozen can create a custom digital service package based on your goals, priorities, required services, and level of support.",
+            },
+            {
+              question:
+                "Do you offer one-off projects without a monthly package?",
+              answer:
+                "Yes. Rivozen offers project-based support for specific needs such as website development, SEO, paid advertising, lead generation, content and creative, and AI workflow automation.",
+            },
+            {
+              question: "Can I change or upgrade my package later?",
+              answer:
+                "Yes. Your needs can change as your business grows. You can discuss adjusting your services or moving to a package that better fits your current goals.",
+            },
+            {
+              question: "Which services can I combine in a package?",
+              answer:
+                "You can combine relevant services based on your business needs, including SEO, paid advertising, website development, lead generation, content and creative, and digital marketing.",
+            },
+            {
+              question:
+                "Can Rivozen handle SEO, paid advertising, and website development together?",
+              answer:
+                "Yes. Rivozen provides multiple digital services under one flexible setup, allowing you to combine SEO, paid advertising, website development, and other services when needed.",
+            },
+            {
+              question: "How does the Rivozen onboarding process work?",
+              answer:
+                "Getting started is simple. Choose a package or request custom pricing, share your goals and requirements, and Rivozen will help determine the right services and next steps.",
+            },
+            {
+              question: "How can I get a custom digital marketing quote?",
+              answer:
+                "Simply contact Rivozen and share your business goals, required services, and project details. We’ll review your needs and provide a tailored pricing option.",
+            },
+          ]}
+        />
 
         {/* FINAL CTA */}
-        <section className="px-4 pb-20 md:px-6 md:pb-28">
-          <div className="mx-auto max-w-6xl">
-            <Reveal>
-              <div className="relative overflow-hidden rounded-3xl border border-border bg-muted/40 px-6 py-16 text-center md:px-10 md:py-24">
-                <div className="pointer-events-none absolute inset-0">
-                  <Image
-                    src="/bg-gradient.svg"
-                    alt=""
-                    fill
-                    className="object-cover opacity-60"
-                  />
-
-                  <div className="absolute inset-0 bg-linear-to-br from-primary/10 via-transparent to-transparent" />
-                </div>
-
-                <div className="relative mx-auto max-w-3xl">
-                  <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
-                    Let&apos;s work together
-                  </p>
-
-                  <h2 className="mt-4 text-balance text-4xl font-semibold tracking-tight md:text-6xl">
-                    Not sure which plan is
-                    <span className="block font-serif italic text-primary">
-                      right for you?
-                    </span>
-                  </h2>
-
-                  <p className="mx-auto mt-5 max-w-xl text-pretty leading-relaxed text-muted-foreground">
-                    Tell us what you&apos;re working on and we&apos;ll help you
-                    figure out the best way to work together.
-                  </p>
-
-                  <div className="mt-8 flex justify-center">
-                    <Button type="button" size="lg" onClick={goToBooking}>
-                      Book a 15-minute call
-                      <ArrowUpRight className="ml-1 h-4 w-4" />
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </Reveal>
-          </div>
-        </section>
+        <CommonCta
+          key={"cta[pricing_page]"}
+          bigHeading="Not sure which plan is "
+          bigHeadingItalic="right for you?"
+          paragraph="Tell us what you’re working on, and RivoZen will help you find the right way to work together."
+        />
       </main>
     </SmoothScroll>
   );
