@@ -10,6 +10,8 @@ interface CommonCta {
   bigHeading?: string;
   bigHeadingItalic?: string;
   paragraph?: string;
+  primaryBtn?: string;
+  primaryBtnLink?: string;
   secondaryBtn?: string;
   secondaryBtnLink?: string;
   secondaryBtnState?: boolean;
@@ -20,6 +22,8 @@ function CommonCta({
   bigHeading = "Your Growth Team",
   bigHeadingItalic = "One Call Away.",
   paragraph = "Get a free strategy consultation and discover how Rivozen&apos;s digital solutions can help your business grow - with no long-term contracts required.",
+  primaryBtn = "Get a Free Consultation",
+  primaryBtnLink = "/book-a-call",
   secondaryBtn = "Why Us",
   secondaryBtnLink = "/why-us",
   secondaryBtnState = true,
@@ -38,10 +42,10 @@ function CommonCta({
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Link
-            href="/book-a-call"
+            href={primaryBtnLink}
             className="group inline-flex items-center justify-center gap-1.5 rounded-lg bg-secondary-foreground px-7 py-3 text-base font-medium text-secondary transition-transform hover:-translate-y-0.5"
           >
-            Get a Free Consultation
+            {primaryBtn}
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </Link>
 

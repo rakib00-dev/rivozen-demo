@@ -11,12 +11,20 @@ import {
   Mail,
   Clock3,
   MapPin,
+  Target,
+  Zap,
+  Users,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Reveal, RevealStagger, RevealItem } from "@/components/custom/reveal";
 import { SmoothScroll } from "@/components/custom/smooth-scroll";
 import CommonHeroSection from "@/components/common/CommonHeroSection";
+import CommonSection from "@/components/common/CommonSection";
+import { allColorsArray } from "@/utils/ColorsArray";
+import CommonCta from "@/components/common/CommonCta";
+import { FaqSection } from "@/components/custom/Faq";
+import CommonFaqSection from "@/components/common/CommonFaqSection";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -111,7 +119,7 @@ export default function ContactPage() {
           smallHeading="Get in touch"
           bigHeading={["Have a", "project"]}
           bigHeadingItalic="in mind?"
-          paragraph="Tell us a little about what you're building, what you need, and where you want to go. We'll take it from there."
+          paragraph="Tell us what you're working on, what you need, and where you want to take your business. The Rivozen team will take it from there."
           primaryBtn="Start a conversation"
           primaryBtnLink="#contact-form"
           secondaryBtn="Book a call"
@@ -155,9 +163,9 @@ export default function ContactPage() {
                       </h2>
 
                       <p className="mt-4 max-w-md leading-relaxed text-muted-foreground">
-                        Have an idea, a project, or a design challenge? Send us
-                        a message and we&apos;ll get back to you with the next
-                        steps.
+                        Have an idea, a project, or a growth challenge in mind?
+                        Tell Rivozen what you&apos;re looking to achieve, and
+                        we&apos;ll get back to you with the right next steps.
                       </p>
 
                       <div className="mt-10 space-y-7">
@@ -216,7 +224,8 @@ export default function ContactPage() {
 
                         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                           If you&apos;d rather talk through your project, you
-                          can book a 15-minute discovery call.
+                          can book a 15-minute discovery call with our Rivozen
+                          team.
                         </p>
 
                         <Link
@@ -410,235 +419,147 @@ export default function ContactPage() {
         {/* WHAT HAPPENS NEXT                                                 */}
         {/* ================================================================ */}
 
-        <section className="border-y border-border px-4 py-20 md:px-6 md:py-28">
-          <div className="mx-auto max-w-6xl">
-            <Reveal>
-              <div className="max-w-2xl">
-                <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
-                  What happens next
-                </p>
-
-                <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
-                  From your message to{" "}
-                  <span className="font-serif italic">the next step.</span>
-                </h2>
-
-                <p className="mt-4 max-w-xl leading-relaxed text-muted-foreground">
-                  No complicated process. Just a straightforward conversation
-                  about what you&apos;re building.
-                </p>
-              </div>
-            </Reveal>
-
-            <RevealStagger className="mt-12 grid gap-4 md:grid-cols-3">
-              {nextSteps.map((step) => (
-                <RevealItem
-                  key={step.number}
-                  className="rounded-2xl border border-border bg-card p-6"
-                >
-                  <p className="text-sm font-medium text-primary">
-                    {step.number}
-                  </p>
-
-                  <h3 className="mt-8 text-xl font-semibold">{step.title}</h3>
-
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                    {step.description}
-                  </p>
-                </RevealItem>
-              ))}
-            </RevealStagger>
-          </div>
-        </section>
-
-        {/* ================================================================ */}
-        {/* BOOK A CALL                                                       */}
-        {/* ================================================================ */}
-
-        <section className="px-4 py-20 md:px-6 md:py-28">
-          <div className="mx-auto max-w-6xl">
-            <Reveal>
-              <div className="relative overflow-hidden rounded-3xl border border-border bg-card">
-                <div className="absolute inset-0">
-                  <Image
-                    src="/bg-gradient.svg"
-                    alt=""
-                    loading="eager"
-                    fill
-                    className="object-cover opacity-70"
-                  />
-
-                  <div className="absolute inset-0 bg-linear-to-br from-primary/10 via-transparent to-transparent" />
-                </div>
-
-                <div className="relative px-6 py-16 text-center md:px-10 md:py-20">
-                  <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
-                    Prefer to talk?
-                  </p>
-
-                  <h2 className="mx-auto mt-4 max-w-3xl text-balance text-4xl font-semibold tracking-tight md:text-6xl">
-                    Sometimes it&apos;s easier to{" "}
-                    <span className="font-serif italic text-primary">
-                      talk.
-                    </span>
-                  </h2>
-
-                  <p className="mx-auto mt-5 max-w-xl leading-relaxed text-muted-foreground">
-                    Book a 15-minute discovery call and tell us what you&apos;re
-                    working on. No pressure, just a conversation.
-                  </p>
-
-                  <div className="mt-8 flex justify-center">
-                    <Button
-                      type="button"
-                      size="lg"
-                      onClick={() => {
-                        window.location.href = "/book-a-call";
-                      }}
-                    >
-                      Book a 15-minute call
-                      <ArrowUpRight className="ml-1 h-4 w-4" />
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </Reveal>
-          </div>
-        </section>
+        <CommonSection
+          key={"contact_page"}
+          smallHeading="What happens next"
+          bigHeading="From Your Message to The"
+          bigHeadingItalic="Right Next Step"
+          paragraph="No complicated process. Just a clear conversation about your business, your goals, and how RivoZen can help."
+          HeadingAlign="left"
+          content={<Cards />}
+        />
 
         {/* ================================================================ */}
         {/* FAQ                                                               */}
         {/* ================================================================ */}
 
-        <section className="px-4 py-20 md:px-6 md:py-28">
-          <div className="mx-auto max-w-4xl">
-            <Reveal>
-              <div className="text-center">
-                <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
-                  FAQ
-                </p>
-
-                <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
-                  A few quick answers.
-                </h2>
-
-                <p className="mx-auto mt-4 max-w-xl leading-relaxed text-muted-foreground">
-                  Everything you need to know before getting in touch.
-                </p>
-              </div>
-            </Reveal>
-
-            <RevealStagger className="mt-12">
-              {faqs.map((faq, index) => {
-                const isOpen = openFaq === index;
-
-                return (
-                  <RevealItem
-                    key={faq.question}
-                    className="border-b border-border"
-                  >
-                    <button
-                      type="button"
-                      onClick={() => setOpenFaq(isOpen ? null : index)}
-                      className="flex w-full items-center justify-between gap-6 py-6 text-left"
-                      aria-expanded={isOpen}
-                    >
-                      <span className="text-base font-medium md:text-lg">
-                        {faq.question}
-                      </span>
-
-                      <motion.span
-                        animate={{
-                          rotate: isOpen ? 180 : 0,
-                        }}
-                        transition={{ duration: 0.2 }}
-                        className="shrink-0"
-                      >
-                        <ChevronDown className="h-5 w-5 text-muted-foreground" />
-                      </motion.span>
-                    </button>
-
-                    <AnimatePresence initial={false}>
-                      {isOpen && (
-                        <motion.div
-                          initial={{
-                            height: 0,
-                            opacity: 0,
-                          }}
-                          animate={{
-                            height: "auto",
-                            opacity: 1,
-                          }}
-                          exit={{
-                            height: 0,
-                            opacity: 0,
-                          }}
-                          transition={{
-                            duration: 0.25,
-                            ease: "easeInOut",
-                          }}
-                          className="overflow-hidden"
-                        >
-                          <p className="pb-6 pr-10 leading-relaxed text-muted-foreground">
-                            {faq.answer}
-                          </p>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </RevealItem>
-                );
-              })}
-            </RevealStagger>
-          </div>
-        </section>
+        <CommonFaqSection
+          smallHeading="FAQ"
+          bigHeading="A Few Questions and "
+          bigHeadingItalic="Answered"
+          paragraph="Everything you need to know before reaching out to Rivozen."
+          key={"FAQ[contact_page]"}
+          faqList={[
+            {
+              question: "How Do I Get Started with RivoZen?",
+              answer:
+                "Simply fill out the contact form or book a 15-minute discovery call. Tell us a little about your business and what you’re looking to achieve, and we’ll take it from there.",
+            },
+            {
+              question: " Is the Initial Consultation Free?",
+              answer:
+                "Yes. The initial consultation is completely free, with no obligation to move forward.",
+            },
+            {
+              question: "How Quickly Will I Hear Back After Contacting You?",
+              answer:
+                "We aim to respond within 24 hours on business days. Response times may vary depending on the nature of your inquiry.",
+            },
+            {
+              question: "What Should I Include in My Message?",
+              answer:
+                "Share a little about your business, your goals, the challenge you’re facing, and the type of help you’re looking for. You don’t need to have everything figured out.",
+            },
+            {
+              question: "What Happens After I Submit the Contact Form?",
+              answer:
+                "We’ll review your message and follow up if we need any additional information. If your project is a good fit, we’ll discuss the next steps together.",
+            },
+            {
+              question: "Can I Book a Call Instead of Filling Out the Form?",
+              answer:
+                "Absolutely. If you prefer a direct conversation, you can book a 15-minute discovery call and talk through your project with our team.",
+            },
+            {
+              question: "I’m Not Sure Which Service I Need. Can You Help?",
+              answer:
+                "Of course. You can start by telling us about your goals or challenges. We’ll help you explore which digital solutions may be the right fit for your business.",
+            },
+            {
+              question:
+                "Can I Contact RivoZen About an Existing Project or Website?",
+              answer:
+                "Yes. Whether you’re starting something new or looking to improve an existing website, campaign, or digital setup, you can reach out and tell us what you’re working with.",
+            },
+            {
+              question: "Do You Work with Businesses Outside Your Local Area?",
+              answer:
+                "Yes. RivoZen can work remotely with businesses in different locations, making it possible to collaborate regardless of where your business is based.",
+            },
+          ]}
+        />
 
         {/* ================================================================ */}
-        {/* FINAL CTA                                                         */}
+        {/* BOOK A CALL                                                       */}
         {/* ================================================================ */}
 
-        <section className="px-4 pb-24 md:px-6 md:pb-32">
-          <div className="mx-auto max-w-6xl">
-            <Reveal>
-              <div className="relative overflow-hidden rounded-3xl border border-border bg-muted/40 px-6 py-16 text-center md:px-10 md:py-24">
-                <div className="pointer-events-none absolute inset-0">
-                  <Image
-                    src="/bg-gradient.svg"
-                    alt=""
-                    loading="eager"
-                    fill
-                    className="object-cover opacity-60"
-                  />
-                </div>
-
-                <div className="relative mx-auto max-w-3xl">
-                  <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
-                    Get started
-                  </p>
-
-                  <h2 className="mt-4 text-balance text-4xl font-semibold tracking-tight md:text-6xl">
-                    Good things start with a{" "}
-                    <span className="font-serif italic text-primary">
-                      conversation.
-                    </span>
-                  </h2>
-
-                  <p className="mx-auto mt-5 max-w-xl leading-relaxed text-muted-foreground">
-                    Tell us what you&apos;re working on and let&apos;s figure
-                    out where to take it.
-                  </p>
-
-                  <div className="mt-8 flex justify-center">
-                    <Button type="button" size="lg" onClick={scrollToContact}>
-                      Start a conversation
-                      <ArrowUpRight className="ml-1 h-4 w-4" />
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </Reveal>
-          </div>
-        </section>
+        <CommonCta
+          bigHeading="Let’s Talk About "
+          bigHeadingItalic="What’s Next"
+          paragraph="Have a project, growth goal, or digital challenge to discuss? Book a 15-minute discovery call with Rivozen and tell us what you’re working on. No pressure, just a focused conversation about your goals."
+          currentColor={0}
+          key={"cta[contact_page]"}
+          primaryBtn="Book A call"
+          secondaryBtnState={false}
+        />
       </main>
     </SmoothScroll>
   );
 }
+
+const Cards = () => {
+  return (
+    <>
+      {[
+        {
+          number: "01",
+          icon: Target,
+          title: "We Review Your Message",
+          description:
+            "We’ll take a look at your project, goals, and the digital services you’re looking for.",
+        },
+        {
+          number: "02",
+          icon: Zap,
+          title: "We Get Back to You",
+          description:
+            "We’ll respond with any questions to fully understand your needs.",
+        },
+        {
+          number: "03",
+          icon: Users,
+          title: "We Plan the Next Step",
+          description:
+            "If we’re a good fit, we’ll outline a clear plan  timeline, approach, and how RivoZen can help you grow.",
+        },
+      ].map((item, i) => {
+        const Icon = item.icon;
+
+        return (
+          <RevealItem
+            key={item.number}
+            className={`group rounded-2xl border border-border bg-[${allColorsArray.reverse()[i]?.bgColor}] p-6 transition-colors hover:bg-muted/40 md:p-7`}
+          >
+            <div className="flex items-start justify-between">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10">
+                <Icon className="h-5 w-5 text-black" />
+              </div>
+
+              <span className="text-sm text-muted-foreground">
+                {item.number}
+              </span>
+            </div>
+
+            <h3 className="mt-8 text-xl font-semibold tracking-tight">
+              {item.title}
+            </h3>
+
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              {item.description}
+            </p>
+          </RevealItem>
+        );
+      })}
+    </>
+  );
+};
