@@ -18,6 +18,7 @@ import { Button } from "@/components/ui/button";
 import { Reveal, RevealStagger, RevealItem } from "@/components/custom/reveal";
 import { SmoothScroll } from "@/components/custom/smooth-scroll";
 import CommonHeroSection from "@/components/common/CommonHeroSection";
+import CommonSection from "@/components/common/CommonSection";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -257,171 +258,239 @@ function PriceCards() {
   const [yearly, setYearly] = useState(false);
 
   return (
-    <section
-      id="plans"
-      className="scroll-mt-24 border-y border-border px-4 py-20 md:px-6 md:py-28"
-    >
-      <div className="mx-auto max-w-6xl">
-        <Reveal className="text-center">
-          <p className="text-sm font-medium uppercase tracking-widest text-primary">
-            Plans & pricing
-          </p>
+    <>
+      <CommonSection
+        key={"plans[pricing]"}
+        smallHeading="Plans & pricing"
+        HeadingAlign="center"
+        bigHeading="Choose the Right Digital "
+        bigHeadingItalic="Service Package"
+        paragraph="Simple, flexible pricing. Explore Rivozen’s digital service packages and choose the right fit for your business goals."
+        content={
+          <>
+            {" "}
+            <Reveal className="text-center">
+              <p className="text-sm font-medium uppercase tracking-widest text-primary">
+                Plans & pricing
+              </p>
 
-          <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
-            Choose the right level of{" "}
-            <span className="font-serif italic text-primary">support.</span>
-          </h2>
+              <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
+                Choose the right level of{" "}
+                <span className="font-serif italic text-primary">support.</span>
+              </h2>
 
-          <p className="mx-auto mt-4 max-w-2xl text-pretty leading-relaxed text-muted-foreground">
-            Simple monthly pricing with no complicated contracts. Choose the
-            plan that matches the pace and scale of your creative needs.
-          </p>
+              <p className="mx-auto mt-4 max-w-2xl text-pretty leading-relaxed text-muted-foreground">
+                Simple monthly pricing with no complicated contracts. Choose the
+                plan that matches the pace and scale of your creative needs.
+              </p>
 
-          <div className="mt-8 inline-flex items-center gap-1 rounded-lg border border-border bg-card p-1">
-            <button
-              type="button"
-              onClick={() => setYearly(false)}
-              className={`rounded-lg px-5 py-2 text-sm font-medium transition-colors ${
-                !yearly
-                  ? "bg-primary text-secondary-foreground"
-                  : "text-muted-foreground"
-              }`}
-            >
-              Monthly
-            </button>
+              <div className="mt-8 inline-flex items-center gap-1 rounded-lg border border-border bg-card p-1">
+                <button
+                  type="button"
+                  onClick={() => setYearly(false)}
+                  className={`rounded-lg px-5 py-2 text-sm font-medium transition-colors ${
+                    !yearly
+                      ? "bg-primary text-secondary-foreground"
+                      : "text-muted-foreground"
+                  }`}
+                >
+                  Monthly
+                </button>
 
-            <button
-              type="button"
-              onClick={() => setYearly(true)}
-              className={`rounded-lg px-5 py-2 text-sm font-medium transition-colors ${
-                yearly
-                  ? "bg-primary text-secondary-foreground"
-                  : "text-muted-foreground"
-              }`}
-            >
-              Yearly{" "}
-              <span
-                className={
-                  yearly ? "text-secondary-foreground/80" : "text-primary"
-                }
-              >
-                -15%
-              </span>
-            </button>
-          </div>
-        </Reveal>
-
-        <div className="mt-12 grid grid-cols-1 gap-4 lg:grid-cols-3">
-          {plans.map((plan, i) => (
-            <Reveal
-              key={plan.name}
-              delay={i * 0.08}
-              className={`flex flex-col rounded-2xl border p-7 ${
-                plan.featured
-                  ? "border-primary bg-primary text-secondary-foreground"
-                  : "border-border bg-card"
-              }`}
-            >
-              <div className="flex items-center justify-between gap-3">
-                <h3 className="text-lg font-medium">{plan.name}</h3>
-
-                {plan.featured && (
-                  <span className="rounded-full border border-white/50 bg-primary-foreground/15 px-3 py-1 text-xs font-medium">
-                    Most popular
+                <button
+                  type="button"
+                  onClick={() => setYearly(true)}
+                  className={`rounded-lg px-5 py-2 text-sm font-medium transition-colors ${
+                    yearly
+                      ? "bg-primary text-secondary-foreground"
+                      : "text-muted-foreground"
+                  }`}
+                >
+                  Yearly{" "}
+                  <span
+                    className={
+                      yearly ? "text-secondary-foreground/80" : "text-primary"
+                    }
+                  >
+                    -15%
                   </span>
-                )}
+                </button>
               </div>
+            </Reveal>
+            <div className="mt-12 grid grid-cols-1 gap-4 lg:grid-cols-3">
+              {plans.map((plan, i) => (
+                <Reveal
+                  key={plan.name}
+                  delay={i * 0.08}
+                  className={`flex flex-col rounded-2xl border p-7 ${
+                    plan.featured
+                      ? "border-primary bg-primary text-secondary-foreground"
+                      : "border-border bg-card"
+                  }`}
+                >
+                  <div className="flex items-center justify-between gap-3">
+                    <h3 className="text-lg font-medium">{plan.name}</h3>
 
-              <p
-                className={`mt-2 text-sm leading-relaxed ${
-                  plan.featured
-                    ? "text-secondary-foreground/80"
+                    {plan.featured && (
+                      <span className="rounded-full border border-white/50 bg-primary-foreground/15 px-3 py-1 text-xs font-medium">
+                        Most popular
+                      </span>
+                    )}
+                  </div>
+
+                  <p
+                    className={`mt-2 text-sm leading-relaxed ${
+                      plan.featured
+                        ? "text-secondary-foreground/80"
+                        : "text-muted-foreground"
+                    }`}
+                  >
+                    {plan.desc}
+                  </p>
+
+                  <div className="mt-6">
+                    {plan.monthly ? (
+                      <p className="flex items-baseline gap-1">
+                        <span className="text-4xl font-semibold tracking-tight">
+                          $
+                          {(yearly
+                            ? plan.yearly!
+                            : plan.monthly
+                          ).toLocaleString()}
+                        </span>
+
+                        <span
+                          className={`text-sm ${
+                            plan.featured
+                              ? "text-secondary-foreground/70"
+                              : "text-muted-foreground"
+                          }`}
+                        >
+                          /month
+                        </span>
+                      </p>
+                    ) : (
+                      <p className="text-4xl font-semibold tracking-tight">
+                        Let&apos;s talk
+                      </p>
+                    )}
+                  </div>
+
+                  <Button
+                    type="button"
+                    variant={plan.featured ? "secondary" : "default"}
+                    size="lg"
+                    className="mt-6 w-full"
+                    onClick={() => {
+                      window.location.href = plan.monthly
+                        ? "/contact"
+                        : "/book-a-call";
+                    }}
+                  >
+                    {plan.monthly ? "Get started" : "Book a call"}
+                    <ArrowUpRight className="ml-1 h-4 w-4" />
+                  </Button>
+
+                  <ul className="mt-7 space-y-3">
+                    {plan.features.map((feature) => (
+                      <li
+                        key={feature}
+                        className="flex items-start gap-3 text-sm"
+                      >
+                        <Check
+                          className={`mt-0.5 h-4 w-4 shrink-0 ${
+                            plan.featured
+                              ? "text-secondary-foreground"
+                              : "text-primary"
+                          }`}
+                        />
+
+                        <span
+                          className={
+                            plan.featured ? "text-secondary-foreground/90" : ""
+                          }
+                        >
+                          {feature}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </Reveal>
+              ))}
+            </div>
+            <Reveal className="mt-8 text-center">
+              <p className="text-sm text-muted-foreground">
+                Need something different?{" "}
+                <button
+                  type="button"
+                  onClick={() => {
+                    window.location.href = "/book-a-call";
+                  }}
+                  className="font-medium text-primary underline-offset-4 hover:underline"
+                >
+                  Let&apos;s talk about a custom plan.
+                </button>
+              </p>
+            </Reveal>
+          </>
+        }
+      />
+      {/* <section
+        id="plans"
+        className="scroll-mt-24 border-y border-border px-4 py-20 md:px-6 md:py-28"
+      >
+        <div className="mx-auto max-w-6xl">
+          <Reveal className="text-center">
+            <p className="text-sm font-medium uppercase tracking-widest text-primary">
+              Plans & pricing
+            </p>
+
+            <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
+              Choose the right level of{" "}
+              <span className="font-serif italic text-primary">support.</span>
+            </h2>
+
+            <p className="mx-auto mt-4 max-w-2xl text-pretty leading-relaxed text-muted-foreground">
+              Simple monthly pricing with no complicated contracts. Choose the
+              plan that matches the pace and scale of your creative needs.
+            </p>
+
+            <div className="mt-8 inline-flex items-center gap-1 rounded-lg border border-border bg-card p-1">
+              <button
+                type="button"
+                onClick={() => setYearly(false)}
+                className={`rounded-lg px-5 py-2 text-sm font-medium transition-colors ${
+                  !yearly
+                    ? "bg-primary text-secondary-foreground"
                     : "text-muted-foreground"
                 }`}
               >
-                {plan.desc}
-              </p>
+                Monthly
+              </button>
 
-              <div className="mt-6">
-                {plan.monthly ? (
-                  <p className="flex items-baseline gap-1">
-                    <span className="text-4xl font-semibold tracking-tight">
-                      ${(yearly ? plan.yearly! : plan.monthly).toLocaleString()}
-                    </span>
-
-                    <span
-                      className={`text-sm ${
-                        plan.featured
-                          ? "text-secondary-foreground/70"
-                          : "text-muted-foreground"
-                      }`}
-                    >
-                      /month
-                    </span>
-                  </p>
-                ) : (
-                  <p className="text-4xl font-semibold tracking-tight">
-                    Let&apos;s talk
-                  </p>
-                )}
-              </div>
-
-              <Button
+              <button
                 type="button"
-                variant={plan.featured ? "secondary" : "default"}
-                size="lg"
-                className="mt-6 w-full"
-                onClick={() => {
-                  window.location.href = plan.monthly
-                    ? "/contact"
-                    : "/book-a-call";
-                }}
+                onClick={() => setYearly(true)}
+                className={`rounded-lg px-5 py-2 text-sm font-medium transition-colors ${
+                  yearly
+                    ? "bg-primary text-secondary-foreground"
+                    : "text-muted-foreground"
+                }`}
               >
-                {plan.monthly ? "Get started" : "Book a call"}
-                <ArrowUpRight className="ml-1 h-4 w-4" />
-              </Button>
-
-              <ul className="mt-7 space-y-3">
-                {plan.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3 text-sm">
-                    <Check
-                      className={`mt-0.5 h-4 w-4 shrink-0 ${
-                        plan.featured
-                          ? "text-secondary-foreground"
-                          : "text-primary"
-                      }`}
-                    />
-
-                    <span
-                      className={
-                        plan.featured ? "text-secondary-foreground/90" : ""
-                      }
-                    >
-                      {feature}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </Reveal>
-          ))}
+                Yearly{" "}
+                <span
+                  className={
+                    yearly ? "text-secondary-foreground/80" : "text-primary"
+                  }
+                >
+                  -15%
+                </span>
+              </button>
+            </div>
+          </Reveal>
         </div>
-
-        <Reveal className="mt-8 text-center">
-          <p className="text-sm text-muted-foreground">
-            Need something different?{" "}
-            <button
-              type="button"
-              onClick={() => {
-                window.location.href = "/book-a-call";
-              }}
-              className="font-medium text-primary underline-offset-4 hover:underline"
-            >
-              Let&apos;s talk about a custom plan.
-            </button>
-          </p>
-        </Reveal>
-      </div>
-    </section>
+      </section> */}
+    </>
   );
 }
 
@@ -444,10 +513,10 @@ export default function PricingPage() {
       <main className="overflow-hidden">
         {/* HERO */}
         <CommonHeroSection
-          smallHeading="Pricing"
+          smallHeading="Digital Service Packages"
           bigHeading={["Simple pricing.", "Serious"]}
           bigHeadingItalic="creative work."
-          paragraph="One flat monthly fee for ongoing creative support. No confusing quotes, no surprise fees, and no unnecessary complexity."
+          paragraph="One clear monthly fee for ongoing digital support from Rivozen simple, flexible, and built around your business goals."
           Children={<HeroChildren />}
           primaryBtn="View plans"
           primaryBtnLink="#plans"
