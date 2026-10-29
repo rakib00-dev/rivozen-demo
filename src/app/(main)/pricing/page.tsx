@@ -22,6 +22,7 @@ import { SmoothScroll } from "@/components/custom/smooth-scroll";
 import CommonHeroSection from "@/components/common/CommonHeroSection";
 import CommonSection from "@/components/common/CommonSection";
 import { allColorsArray } from "@/utils/ColorsArray";
+import CommonProcessSection from "@/components/common/CommonProcessSection";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -111,28 +112,24 @@ const included = [
 
 const steps = [
   {
-    number: "01",
-    title: "Choose your plan",
-    description:
-      "Pick the level of creative support that best fits your team's current needs.",
+    title: "Choose Your Package",
+    solution:
+      "Pick the digital service package that fits your business needs and current goals.",
   },
   {
-    number: "02",
-    title: "Send your request",
-    description:
-      "Share your brief, references, goals, and anything else that helps us understand the task.",
+    title: "Share Your Goals",
+    solution:
+      "Tell us what you need, what you want to achieve, and where you need support.",
   },
   {
-    number: "03",
-    title: "We create",
-    description:
-      "Our designer works on your request and keeps the process moving with focused execution.",
+    title: "We Get to Work",
+    solution:
+      "RivoZen puts the right digital services into action with focused execution and clear communication.",
   },
   {
-    number: "04",
-    title: "Review & refine",
-    description:
-      "Give us feedback and we'll make the necessary revisions until the work is ready.",
+    title: "Review & Refine",
+    solution:
+      "Review the work, share your feedback, and we’ll make the necessary adjustments.",
   },
 ];
 
@@ -206,12 +203,12 @@ const comparisons = [
 ];
 
 const oneOffProjects = [
-  "Brand identity",
-  "Website design",
-  "Landing pages",
-  "UI/UX design",
-  "Social media design",
-  "Illustration & motion",
+  "Website Design & Development",
+  "Paid Advertising",
+  "SEO Optimization",
+  "Lead Generation",
+  "Content & Creative",
+  "AI Workflow Automation",
 ];
 
 const faqs = [
@@ -528,68 +525,23 @@ export default function PricingPage() {
         />
 
         {/* HOW IT WORKS */}
-        <section className="border-y border-border bg-muted/20 px-4 py-20 md:px-6 md:py-28">
-          <div className="mx-auto max-w-6xl">
-            <Reveal>
-              <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
-                <div>
-                  <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
-                    How it works
-                  </p>
-
-                  <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
-                    Simple from{" "}
-                    <span className="font-serif italic text-primary">
-                      start to finish.
-                    </span>
-                  </h2>
-
-                  <p className="mt-5 max-w-md leading-relaxed text-muted-foreground">
-                    No complicated onboarding or lengthy approval processes.
-                    Send us what you need and we'll take it from there.
-                  </p>
-                </div>
-
-                <RevealStagger className="grid gap-3">
-                  {steps.map((step) => (
-                    <RevealItem
-                      key={step.number}
-                      className="flex gap-5 rounded-2xl border border-border bg-card p-5 md:p-6"
-                    >
-                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-medium text-primary">
-                        {step.number}
-                      </span>
-
-                      <div>
-                        <h3 className="font-semibold">{step.title}</h3>
-
-                        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                          {step.description}
-                        </p>
-                      </div>
-                    </RevealItem>
-                  ))}
-                </RevealStagger>
-              </div>
-            </Reveal>
-          </div>
-        </section>
+        <CommonProcessSection
+          bigHeading="Simple from start "
+          bigHeadingItalic="to finish. 🏁"
+          paragraph="No complicated onboarding or unnecessary steps. Choose the right digital service package, share your goals, and let Rivozen take it from there."
+          processList={steps}
+        />
 
         {/* COMPARISON */}
-        <section className="px-4 py-20 md:px-6 md:py-28">
-          <div className="mx-auto max-w-6xl">
-            <Reveal className="text-center">
-              <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
-                Compare plans
-              </p>
-
-              <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
-                Find the right{" "}
-                <span className="font-serif italic text-primary">fit.</span>
-              </h2>
-            </Reveal>
-
-            <Reveal className="mt-12 overflow-hidden rounded-2xl border border-border bg-card">
+        <CommonSection
+          smallHeading="Compare plans"
+          bigHeading="Choose the Digital Service Package That"
+          bigHeadingItalic="Fits Your Goals"
+          paragraph=""
+          HeadingAlign="center"
+          contentClass="mt-12 overflow-hidden rounded-2xl border border-border bg-card"
+          content={
+            <>
               <div className="min-w-180">
                 <div className="grid grid-cols-4 border-b border-border bg-muted/40">
                   <div className="p-5 text-sm font-medium">Features</div>
@@ -626,9 +578,9 @@ export default function PricingPage() {
                   </div>
                 ))}
               </div>
-            </Reveal>
-          </div>
-        </section>
+            </>
+          }
+        />
 
         {/* ONE-OFF PROJECTS */}
         <section className="border-y border-border px-4 py-20 md:px-6 md:py-28">
@@ -653,19 +605,24 @@ export default function PricingPage() {
                     </p>
 
                     <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
-                      Not looking for an ongoing{" "}
+                      Not Looking for an{" "}
                       <span className="font-serif italic text-primary">
-                        plan?
+                        Ongoing Plan?
                       </span>
                     </h2>
 
                     <p className="mt-5 max-w-md leading-relaxed text-muted-foreground">
-                      No problem. We also work with clients on individual
-                      projects when a monthly subscription isn't the right fit.
+                      No problem. Rivozen also offers flexible project-based
+                      support when a monthly digital service package isn’t the
+                      right fit.
                     </p>
 
                     <div className="mt-7">
-                      <Button type="button" size="lg" onClick={goToBooking}>
+                      <Button
+                        type="button"
+                        variant={"btn"}
+                        href="/book-a-call#booking"
+                      >
                         Discuss a project
                         <ArrowUpRight className="ml-1 h-4 w-4" />
                       </Button>
@@ -673,13 +630,13 @@ export default function PricingPage() {
                   </div>
 
                   <RevealStagger className="grid gap-3 sm:grid-cols-2">
-                    {oneOffProjects.map((project) => (
+                    {oneOffProjects.map((project, i) => (
                       <RevealItem
                         key={project}
-                        className="flex items-center gap-3 rounded-xl border border-border bg-background/80 p-4 backdrop-blur-sm"
+                        className={`flex items-center gap-3 rounded-xl border border-border bg-[${allColorsArray[i]?.bgColor}] p-4 backdrop-blur-sm`}
                       >
-                        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10">
-                          <Check className="h-4 w-4 text-primary" />
+                        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#000]/20">
+                          <Check className="h-4 w-4 text-black" />
                         </div>
 
                         <span className="text-sm font-medium">{project}</span>
