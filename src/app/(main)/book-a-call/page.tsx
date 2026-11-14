@@ -24,6 +24,7 @@ import CommonSection from "@/components/common/CommonSection";
 import CommonCards from "@/components/common/CommonCards";
 import { ClientsReviewsCards } from "../services/business-growth-strategy/page";
 import CommonFaqSection from "@/components/common/CommonFaqSection";
+import CommonCta from "@/components/common/CommonCta";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -440,53 +441,15 @@ export default function BookCall() {
         {/* ================================================================== */}
         {/* FINAL CTA                                                          */}
         {/* ================================================================== */}
-
-        <section className="px-4 py-20 md:px-6 md:py-28">
-          <div className="mx-auto max-w-6xl">
-            <Reveal>
-              <div className="relative overflow-hidden rounded-3xl border border-border bg-muted/40 px-6 py-16 text-center md:px-10 md:py-24">
-                {/* Background */}
-                <div className="pointer-events-none absolute inset-0">
-                  <Image
-                    src="/bg-gradient.svg"
-                    alt=""
-                    fill
-                    loading="eager"
-                    className="object-cover opacity-60"
-                  />
-
-                  <div className="absolute inset-0 bg-linear-to-br from-primary/10 via-transparent to-transparent" />
-                </div>
-
-                <div className="relative mx-auto max-w-3xl">
-                  <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
-                    Ready when you are
-                  </p>
-
-                  <h2 className="mt-4 text-balance text-4xl font-semibold tracking-tight md:text-6xl">
-                    Have something
-                    <span className="block font-serif italic text-primary">
-                      in mind?
-                    </span>
-                  </h2>
-
-                  <p className="mx-auto mt-5 max-w-xl text-pretty leading-relaxed text-muted-foreground">
-                    Let&apos;s spend 15 minutes talking about it. No pressure,
-                    no complicated process - just a straightforward
-                    conversation.
-                  </p>
-
-                  <div className="mt-8 flex justify-center">
-                    <Button size="lg" type="button" onClick={scrollToBooking}>
-                      Book a call
-                      <ArrowUpRight className="ml-1 h-4 w-4" />
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </Reveal>
-          </div>
-        </section>
+        <CommonCta
+          bigHeading="Ready to Talk About"
+          bigHeadingItalic="Your Growth?"
+          paragraph="In 15 minutes, we will look at your goals and tell you where to focus first, with no pressure and no obligation."
+          primaryBtn="Choose a Time"
+          primaryBtnLink="#booking"
+          currentColor={1}
+          secondaryBtnState={false}
+        />
       </main>
     </SmoothScroll>
   );
