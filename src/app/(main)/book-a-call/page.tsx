@@ -7,6 +7,7 @@ import {
   ArrowUpRight,
   Check,
   ChevronDown,
+  ChevronsRight,
   Clock3,
   MessageCircle,
   Target,
@@ -360,7 +361,7 @@ export default function BookCall() {
                 },
                 {
                   number: "03",
-                  icon: Check,
+                  icon: ChevronsRight,
                   title: "Leave with a clear next step",
                   description:
                     "You will finish with a clear idea of where to focus first. If we are a good fit, we will explain how we could help. If not, we will tell you honestly and point you in a better direction.",
