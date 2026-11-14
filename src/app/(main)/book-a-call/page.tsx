@@ -271,9 +271,9 @@ export default function BookCall() {
 
         <CommonHeroSection
           smallHeading="Book a call"
-          bigHeading={["Let's talk about", "your next"]}
-          bigHeadingItalic="project."
-          paragraph="Tell us what you're working on, where you're stuck, and what you want to achieve. We'll explore how Rivozen can help."
+          bigHeading={["Book a Free Strategy Call and Let’s Plan"]}
+          bigHeadingItalic="Your Next Step"
+          paragraph="Tell us what you are working on, where you are stuck, and what you want to achieve. In 15 minutes, RivoZen will help you see which channel to focus on first, whether that is SEO, ads, content, a new website, or automation."
           Children={
             <motion.div
               initial={{
@@ -303,12 +303,14 @@ export default function BookCall() {
 
               <div className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-4 py-2 text-sm">
                 <Check className="h-4 w-4 text-primary" />
-                No commitment
+                No obligation
               </div>
             </motion.div>
           }
           primaryBtn="Choose a time"
           primaryBtnLink="#booking"
+          secondaryBtn="See Our Services"
+          secondaryBtnLink="/services"
         ></CommonHeroSection>
 
         {/* ================================================================== */}
