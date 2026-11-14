@@ -211,7 +211,7 @@ const faqs = [
   },
 ];
 
-const ClientsReviewsCards = () => {
+export const ClientsReviewsCards = () => {
   const testimonials = [
     {
       quote:
@@ -235,7 +235,6 @@ const ClientsReviewsCards = () => {
 
   return (
     <>
-      {" "}
       {testimonials.map((testimonial, i) => (
         <RevealItem key={testimonial.name}>
           <div

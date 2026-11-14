@@ -22,6 +22,7 @@ import { SmoothScroll } from "@/components/custom/smooth-scroll";
 import CommonHeroSection from "@/components/common/CommonHeroSection";
 import CommonSection from "@/components/common/CommonSection";
 import CommonCards from "@/components/common/CommonCards";
+import { ClientsReviewsCards } from "../services/business-growth-strategy/page";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -374,58 +375,14 @@ export default function BookCall() {
         {/* ================================================================== */}
         {/* TESTIMONIALS                                                       */}
         {/* ================================================================== */}
-
-        <section className="px-4 py-20 md:px-6 md:py-28">
-          <div className="mx-auto max-w-6xl">
-            <Reveal>
-              <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
-                Customer reviews
-              </p>
-
-              <h2 className="mt-3 max-w-2xl text-balance text-4xl font-semibold tracking-tight md:text-5xl">
-                Why teams choose{" "}
-                <span className="font-serif italic text-primary">Rivozen</span>
-              </h2>
-            </Reveal>
-
-            <RevealStagger className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {testimonials.map((testimonial) => (
-                <RevealItem
-                  key={testimonial.name}
-                  className="flex flex-col rounded-2xl border border-border bg-card p-6"
-                >
-                  {/* Stars */}
-                  <div className="flex gap-1">
-                    {Array.from({ length: 5 }).map((_, index) => (
-                      <svg
-                        key={index}
-                        viewBox="0 0 20 20"
-                        className="h-4 w-4 fill-current text-primary"
-                        aria-hidden="true"
-                      >
-                        <path d="M10 1.5l2.63 5.32 5.87.85-4.25 4.14 1 5.85L10 14.9l-5.25 2.76 1-5.85L1.5 7.67l5.87-.85L10 1.5z" />
-                      </svg>
-                    ))}
-                  </div>
-
-                  {/* Quote */}
-                  <p className="mt-4 flex-1 text-pretty leading-relaxed text-foreground/90">
-                    {testimonial.quote}
-                  </p>
-
-                  {/* Author */}
-                  <div className="mt-6 border-t border-border pt-4">
-                    <p className="text-sm font-medium">{testimonial.name}</p>
-
-                    <p className="mt-1 text-sm text-muted-foreground">
-                      {testimonial.role}
-                    </p>
-                  </div>
-                </RevealItem>
-              ))}
-            </RevealStagger>
-          </div>
-        </section>
+        <CommonSection
+          smallHeading="CUSTOMER REVIEWS"
+          bigHeading="What It’s Like to Work"
+          bigHeadingItalic="With RivoZen 👇"
+          paragraph="Ecommerce brands and local businesses come to RivoZen for clear advice, honest communication, and work they can measure. Here is what they say."
+          HeadingAlign="center"
+          content={<ClientsReviewsCards key={"reviews[book-a-call]"} />}
+        />
 
         {/* ================================================================== */}
         {/* FAQ                                                                */}
