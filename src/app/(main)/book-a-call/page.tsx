@@ -23,6 +23,7 @@ import CommonHeroSection from "@/components/common/CommonHeroSection";
 import CommonSection from "@/components/common/CommonSection";
 import CommonCards from "@/components/common/CommonCards";
 import { ClientsReviewsCards } from "../services/business-growth-strategy/page";
+import CommonFaqSection from "@/components/common/CommonFaqSection";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -387,92 +388,54 @@ export default function BookCall() {
         {/* ================================================================== */}
         {/* FAQ                                                                */}
         {/* ================================================================== */}
-
-        <section className="border-y border-border px-4 py-20 md:px-6 md:py-28">
-          <div className="mx-auto max-w-4xl">
-            <Reveal>
-              <div className="text-center">
-                <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
-                  FAQ
-                </p>
-
-                <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
-                  Before we{" "}
-                  <span className="font-serif italic text-primary">talk.</span>
-                </h2>
-
-                <p className="mx-auto mt-4 max-w-xl leading-relaxed text-muted-foreground">
-                  A few quick answers to common questions about the discovery
-                  call.
-                </p>
-              </div>
-            </Reveal>
-
-            <RevealStagger className="mt-12">
-              {faqs.map((faq, index) => {
-                const isOpen = openFaq === index;
-
-                return (
-                  <RevealItem
-                    key={faq.question}
-                    className="border-b border-border"
-                  >
-                    <button
-                      type="button"
-                      onClick={() => setOpenFaq(isOpen ? null : index)}
-                      className="flex w-full items-center justify-between gap-6 py-6 text-left"
-                      aria-expanded={isOpen}
-                    >
-                      <span className="text-base font-medium md:text-lg">
-                        {faq.question}
-                      </span>
-
-                      <motion.span
-                        animate={{
-                          rotate: isOpen ? 180 : 0,
-                        }}
-                        transition={{
-                          duration: 0.2,
-                        }}
-                        className="shrink-0"
-                      >
-                        <ChevronDown className="h-5 w-5 text-muted-foreground" />
-                      </motion.span>
-                    </button>
-
-                    <AnimatePresence initial={false}>
-                      {isOpen && (
-                        <motion.div
-                          initial={{
-                            height: 0,
-                            opacity: 0,
-                          }}
-                          animate={{
-                            height: "auto",
-                            opacity: 1,
-                          }}
-                          exit={{
-                            height: 0,
-                            opacity: 0,
-                          }}
-                          transition={{
-                            duration: 0.25,
-                            ease: "easeInOut",
-                          }}
-                          className="overflow-hidden"
-                        >
-                          <p className="pb-6 pr-10 leading-relaxed text-muted-foreground">
-                            {faq.answer}
-                          </p>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </RevealItem>
-                );
-              })}
-            </RevealStagger>
-          </div>
-        </section>
+        <CommonFaqSection
+          smallHeading="STRATEGY CALL FAQ"
+          bigHeading="Before We"
+          bigHeadingItalic="Talk"
+          paragraph="A few quick answers to common questions about the free strategy call."
+          faqList={[
+            {
+              answer: "How long is the call?",
+              question:
+                "The call is 15 minutes. That is long enough to understand your business and goals, and short enough to fit easily into your day. If we need more time, we can suggest a follow-up call.",
+            },
+            {
+              answer: "What should I prepare before the call?",
+              question:
+                "You do not need to prepare much. It helps to have your website address, a rough idea of your goals, and any marketing you are already running, such as ads, email, or social media. If you have not started anything yet, that is completely fine.",
+            },
+            {
+              answer: "Is the call free?",
+              question:
+                "Yes, the strategy call is free, and there is no obligation to work with us afterward. ",
+            },
+            {
+              answer: "What happens after the call?",
+              question:
+                "After the call, we will send a short summary by email with the next step we discussed. If you want to go ahead, we will suggest a plan and quote. If not, there is no pressure and no follow-up chasing. ",
+            },
+            {
+              answer: "Can I reschedule my call?",
+              question:
+                "Yes. Your booking confirmation email includes a link to reschedule or cancel, and you can do it any time before the call. If something comes up last minute, just let us know. ",
+            },
+            {
+              answer: "Who will I speak with?",
+              question:
+                "You will speak with [a RivoZen strategist / the founder / a senior team member], not a salesperson reading a script.",
+            },
+            {
+              answer: "Do I need to be ready to hire an agency?",
+              question:
+                "No. Many people book a call while they are still researching, and that is fine. We will give you honest advice on where to focus, whether or not you end up working with us.",
+            },
+            {
+              answer: "What if I do not have a website or ad account yet?",
+              question:
+                "That is common for new businesses, and you can still book. We will talk about what to set up first and in what order, so you can start on a solid base. Our web design services and growth strategy can help if you want support.",
+            },
+          ]}
+        />
 
         {/* ================================================================== */}
         {/* FINAL CTA                                                          */}
