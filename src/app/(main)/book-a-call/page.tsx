@@ -371,49 +371,6 @@ export default function BookCall() {
           }
         />
 
-        <section className="border-y border-border px-4 py-20 md:px-6 md:py-28">
-          <div className="mx-auto max-w-6xl">
-            <Reveal>
-              <div className="max-w-2xl">
-                <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
-                  WHAT HAPPENS ON THE CALL
-                </p>
-
-                <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
-                  A simple{" "}
-                  <span className="font-serif italic text-primary">
-                    conversation.
-                  </span>
-                </h2>
-
-                <p className="mt-4 max-w-xl leading-relaxed text-muted-foreground">
-                  No complicated process. Just a short conversation to
-                  understand where you are and where you want to go.
-                </p>
-              </div>
-            </Reveal>
-
-            <RevealStagger className="mt-12 grid gap-4 md:grid-cols-3">
-              {steps.map((step) => (
-                <RevealItem
-                  key={step.number}
-                  className="rounded-2xl border border-border bg-card p-6"
-                >
-                  <p className="text-sm font-medium text-primary">
-                    {step.number}
-                  </p>
-
-                  <h3 className="mt-8 text-xl font-semibold">{step.title}</h3>
-
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                    {step.description}
-                  </p>
-                </RevealItem>
-              ))}
-            </RevealStagger>
-          </div>
-        </section>
-
         {/* ================================================================== */}
         {/* TESTIMONIALS                                                       */}
         {/* ================================================================== */}
