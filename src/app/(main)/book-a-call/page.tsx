@@ -121,17 +121,18 @@ function BookingSection() {
         <Reveal className="flex w-full justify-center text-center">
           <div className="mb-10 max-w-2xl">
             <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
-              Schedule a call
+              PICK A TIME
             </p>
 
             <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
-              Schedule a discovery call
+              Schedule Your Free 15-Minute{" "}
+              <span className="font-serif italic">{"Strategy Call"}</span>
             </h2>
 
             <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
-              Pick a time that works for you. The call takes just 15 minutes and
-              is a simple way to talk through your project and see if Rivozen is
-              the right fit.
+              Pick a time that works for you. In 15 minutes, we will talk
+              through your goals, look at where you are today, and see whether
+              RivoZen is the right fit, with no pressure to buy.
             </p>
           </div>
         </Reveal>
@@ -161,12 +162,12 @@ function BookingSection() {
                   </div>
 
                   <h3 className="mt-6 text-2xl font-semibold tracking-tight">
-                    15-minute discovery call
+                    What happens in your 15 minutes
                   </h3>
 
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                    A quick conversation to understand your project, answer your
-                    questions, and figure out the best way forward.
+                    A short, focused video call to understand your business,
+                    answer your questions, and point you to the best next step.
                   </p>
 
                   {/* Details */}
@@ -178,7 +179,7 @@ function BookingSection() {
                         <p className="text-sm font-medium">15 minutes</p>
 
                         <p className="mt-1 text-sm text-muted-foreground">
-                          Short, focused conversation
+                          Short and focused, so it fits easily into your day
                         </p>
                       </div>
                     </div>
@@ -187,10 +188,12 @@ function BookingSection() {
                       <Video className="mt-0.5 h-5 w-5 shrink-0 text-muted-foreground" />
 
                       <div>
-                        <p className="text-sm font-medium">Online meeting</p>
+                        <p className="text-sm font-medium">
+                          Google Meet video call
+                        </p>
 
                         <p className="mt-1 text-sm text-muted-foreground">
-                          Meet remotely via video call
+                          You will get the meeting link by email once you book
                         </p>
                       </div>
                     </div>
@@ -199,10 +202,10 @@ function BookingSection() {
                       <Check className="mt-0.5 h-5 w-5 shrink-0 text-muted-foreground" />
 
                       <div>
-                        <p className="text-sm font-medium">No commitment</p>
+                        <p className="text-sm font-medium">No obligation</p>
 
                         <p className="mt-1 text-sm text-muted-foreground">
-                          Just an initial conversation
+                          Just an initial conversation, with no sales pressure
                         </p>
                       </div>
                     </div>
@@ -211,13 +214,13 @@ function BookingSection() {
                   {/* Small note */}
                   <div className="mt-10 rounded-2xl bg-muted/50 p-5">
                     <p className="text-sm font-medium">
-                      Not sure if we&apos;re a fit?
+                      Not sure we are the right fit?
                     </p>
 
                     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                      That&apos;s exactly what the discovery call is for. Tell
-                      us what you&apos;re working on and we&apos;ll take it from
-                      there.
+                      That is exactly what this call is for. Tell us what you
+                      are working on, and we will tell you honestly whether we
+                      can help.
                     </p>
                   </div>
                 </div>
