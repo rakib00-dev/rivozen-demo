@@ -571,11 +571,3 @@ export default function BookCall() {
     </SmoothScroll>
   );
 }
-
-// export default function BookACall() {
-//   return (
-//     <>
-//       <BookCalenderSection />
-//     </>
-//   );
-// }
