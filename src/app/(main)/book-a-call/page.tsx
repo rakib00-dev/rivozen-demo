@@ -3,7 +3,15 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { ArrowUpRight, Check, ChevronDown, Clock3, Video } from "lucide-react";
+import {
+  ArrowUpRight,
+  Check,
+  ChevronDown,
+  Clock3,
+  MessageCircle,
+  Target,
+  Video,
+} from "lucide-react";
 
 import Cal from "@calcom/embed-react";
 
@@ -11,6 +19,8 @@ import { Button } from "@/components/ui/button";
 import { Reveal, RevealStagger, RevealItem } from "@/components/custom/reveal";
 import { SmoothScroll } from "@/components/custom/smooth-scroll";
 import CommonHeroSection from "@/components/common/CommonHeroSection";
+import CommonSection from "@/components/common/CommonSection";
+import CommonCards from "@/components/common/CommonCards";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -325,13 +335,47 @@ export default function BookCall() {
         {/* ================================================================== */}
         {/* WHAT HAPPENS                                                       */}
         {/* ================================================================== */}
+        <CommonSection
+          smallHeading="WHAT HAPPENS ON THE CALL"
+          bigHeading="What to Expect From Your "
+          bigHeadingItalic="Strategy Call"
+          paragraph="No complicated process. In 15 minutes, we will learn about your business, talk through your goals, and agree on the best next step, whether that is working with us or not. "
+          HeadingAlign="left"
+          content={
+            <CommonCards
+              cards={[
+                {
+                  number: "01",
+                  icon: MessageCircle,
+                  title: "Tell us about your business",
+                  description:
+                    "When you book, share a quick overview of what you do, what you want to achieve, and where you feel stuck. This helps us come prepared and use your 15 minutes well.",
+                },
+                {
+                  number: "02",
+                  icon: Target,
+                  title: "Talk through your goals",
+                  description:
+                    "On the call, we will discuss your priorities, challenges, and what a successful result looks like for you. We may ask about your website, current marketing, and budget range.",
+                },
+                {
+                  number: "03",
+                  icon: Check,
+                  title: "Leave with a clear next step",
+                  description:
+                    "You will finish with a clear idea of where to focus first. If we are a good fit, we will explain how we could help. If not, we will tell you honestly and point you in a better direction.",
+                },
+              ]}
+            />
+          }
+        />
 
         <section className="border-y border-border px-4 py-20 md:px-6 md:py-28">
           <div className="mx-auto max-w-6xl">
             <Reveal>
               <div className="max-w-2xl">
                 <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
-                  What happens next
+                  WHAT HAPPENS ON THE CALL
                 </p>
 
                 <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
