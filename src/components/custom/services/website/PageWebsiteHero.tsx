@@ -4,12 +4,12 @@ export default function PageWebsiteHero() {
   return (
     <>
       <CommonHeroSection
-        smallHeading="Get in touch"
-        bigHeading={["Have a", "project"]}
-        bigHeadingItalic="in mind?"
-        paragraph="Tell us a little about what you're building, what you need, and where you want to go. We'll take it from there."
-        primaryBtn="Start a conversation"
-        primaryBtnLink="/contact"
+        smallHeading="Web Design"
+        bigHeading={["Web Design & Development", "That Turns Visitors"]}
+        bigHeadingItalic="Into Customers"
+        paragraph="RivoZen is a digital growth agency that designs and builds fast, mobile-first, SEO-ready websites for ecommerce brands and local businesses. From Shopify and WordPress to custom Next.js builds, every site is made to rank on Google and turn visitors into customers."
+        primaryBtn="Get a Free Website Quote"
+        primaryBtnLink="/pricing"
         secondaryBtn="Book A Call"
         secondaryBtnLink="/book-a-call"
       />
