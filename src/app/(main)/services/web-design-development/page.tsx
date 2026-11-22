@@ -143,6 +143,7 @@ export default function WebDesignPage() {
         smallHeading="Customers stories"
         bigHeading="What it's like to work with"
         bigHeadingItalic=" Rivozen 👇"
+        paragraph="Ecommerce brands and local businesses trust RivoZen to design and develop websites that load fast, rank well, and convert. Here is what working with us feels like."
         HeadingAlign="center"
         content={<ClientsReviewsCards />}
       />
@@ -150,7 +151,7 @@ export default function WebDesignPage() {
       <CommonFaqSection
         bigHeading="Common questions you"
         bigHeadingItalic="may ask"
-        paragraph=""
+        paragraph="Quick answers to what business owners ask most before starting a website project with RivoZen."
         faqList={faqs}
       />
       {/* cta */}
@@ -184,29 +185,44 @@ const process = [
 
 const faqs = [
   {
-    question: "What digital services does RivoZen offer?",
-    answer: `Rivozen provides a wide range of digital services, including Website Design & Development, SEO, Paid Advertising, Social Media Marketing, Content & Creative, Email & SMS Marketing, Conversion Rate Optimization, and Business Growth Strategy plus additional support as your business evolves.`,
+    question: "What does a web design and development agency do?",
+    answer: `A web design and development agency plans, designs, and builds websites that look professional, load fast, and help a business get customers. At RivoZen, this includes site structure, UX design, development on Shopify, WordPress, or Next.js, on-page SEO setup, and post-launch optimization.`,
+  },
+  {
+    question: "Do you build websites for ecommerce and local businesses?",
+    answer:
+      "Yes. RivoZen designs and develops online stores for ecommerce brands and lead-generation websites for local businesses such as clinics, restaurants, and service providers. Ecommerce sites focus on product pages and checkout, while local sites focus on enquiries, bookings, and local SEO.",
+  },
+  {
+    question: "Which platforms do you build websites on?",
+    answer:
+      "We build on Shopify for ecommerce, WordPress for content-driven and local business sites, and custom Next.js for brands that need maximum speed and flexibility. We recommend the platform after understanding your goals, budget, and how much you want to manage yourself.",
+  },
+  {
+    question: "How much does a website cost?",
+    answer:
+      "Website cost depends on the number of pages, platform, custom features, and content needs. A simple business website costs far less than a custom ecommerce store. [“RivoZen projects start from $499.”] Book a free call and we will give you a clear quote after understanding your scope.",
+  },
+  {
+    question: "How long does it take to design and build a website?",
+    answer:
+      "Most business websites take around 4 to 8 weeks from kickoff to launch, while larger ecommerce builds can take longer. Timeline depends on page count, features, and how quickly content and feedback are shared.",
+  },
+  {
+    question: "Will my website be fast and SEO-ready?",
+    answer:
+      "Yes. Every RivoZen website is built with clean code, optimized images, proper heading structure, schema markup, and mobile-first design. We aim to meet Google’s Core Web Vitals “good” thresholds: LCP under 2.5 seconds, INP under 200 milliseconds, and CLS under 0.1. For ongoing rankings, our SEO services take over after launch.",
   },
   {
     question:
-      "Do you design and develop websites for ecommerce and local businesses?",
+      "Can you redesign my existing website without losing my Google rankings?",
     answer:
-      " Yes. We build websites ranging from business websites and landing pages to full ecommerce stores  including platforms like Shopify. Every website is designed to be modern, responsive, and user-friendly, tailored to your business, audience, and goals.",
+      "Yes. Before a redesign, we audit your current rankings and URLs, then set up 301 redirects, preserve high-performing content, and keep your metadata and internal links intact. This protects your existing traffic while improving design, speed, and conversions.",
   },
   {
-    question: "Is the initial consultation really free?",
+    question: "Will I own my website, and do you offer support after launch?",
     answer:
-      "Yes. Your first strategy consultation is completely free, with no obligation to move forward.",
-  },
-  {
-    question: "How much does a Digital Service Agency cost?",
-    answer:
-      "Pricing depends on the scope and mix of services your business needs. After understanding your goals, we provide a custom quote based on your specific requirements.",
-  },
-  {
-    question: "How long does it take to see SEO and marketing results?",
-    answer:
-      "Yes Timelines vary depending on your industry, competition, website, and chosen services. SEO typically takes longer to build momentum, while paid advertising can generate data and traffic much sooner.",
+      "Yes, you own your website, content, domain, and hosting accounts, and we hand over full access with documentation. After launch, we offer optional maintenance, speed monitoring, and conversion improvements, so your site keeps performing as your business grows.",
   },
 ];
 
