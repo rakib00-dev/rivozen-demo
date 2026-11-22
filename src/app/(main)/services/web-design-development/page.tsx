@@ -132,9 +132,10 @@ export default function WebDesignPage() {
       </section>
       {/* Process Section */}
       <CommonProcessSection
-        bigHeading="Design made easy, from brief to"
+        smallHeading="OUR WEB DESIGN PROCESS"
+        bigHeading="Design made easy, from brief to "
         bigHeadingItalic=" delivery 🚚"
-        paragraph=""
+        paragraph="A clear four-step process takes your website from first conversation to live launch, with SEO, speed, and conversion built in at every stage."
         processList={process}
       />
       {/* clients reviews */}
@@ -160,24 +161,24 @@ export default function WebDesignPage() {
 
 const process = [
   {
-    title: "Your brand feels inconsistent.",
+    title: "Discovery & Strategy",
     solution:
-      "We build a clear brand identity and visual system so your business looks intentional and professional across every channel - web, social, SEO and ads.",
+      "We learn about your business, audience, competitors, and goals. Then we map your site structure, keywords, and conversion paths so the website is planned around results, not just looks.",
   },
   {
-    title: "Your website isn't converting.",
+    title: "Design & Prototype",
     solution:
-      "We combine web design, development, and CRO to simplify the experience, strengthen your visual hierarchy, and turn more visitors into leads and sales.",
+      "We design mobile-first layouts and clickable prototypes in your brand style. You review and request revisions before a single line of code is written.",
   },
   {
-    title: "Your marketing isn't driving growth.",
+    title: "Development & SEO Setup",
     solution:
-      "We become an extension of your team - running SEO, GEO, AEO, paid advertising, and content & creative campaigns that deliver measurable, sustainable growth.",
+      "We build your site on Shopify, WordPress, or Next.js with clean code, fast load times, schema markup, and on-page SEO configured from the start.",
   },
   {
-    title: "You have a great idea but don't know where to start.",
+    title: "Launch & Optimize",
     solution:
-      "We turn early ideas into a clear business growth strategy and a practical roadmap. aligning design, marketing, and execution from day one. ",
+      "After testing across devices and browsers, we launch your site, connect analytics, and keep improving speed, rankings, and conversion rate with real data.",
   },
 ];
 
