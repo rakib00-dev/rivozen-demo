@@ -25,12 +25,18 @@ export default function WebDesignPage() {
   return (
     <>
       <PageWebsiteHero />
-      <TwoSideCommonSection />
+      <TwoSideCommonSection
+        smallHeading="WEB DESIGN & DEVELOPMENT AGENCY"
+        bigHeading="Web Design & Development That Makes Your First Impression Count"
+        bigHeadingItalic="on Every Screen"
+        paragraph="RivoZen designs and builds fast, mobile-first, SEO-ready websites for ecommerce brands and local businesses. Whether you need a Shopify store, a WordPress site, or a custom Next.js build, we create a digital storefront that looks sharp on every device and turns visitors into customers."
+      />
       {/* cards section */}
       <CommonSection
-        smallHeading="Built For Modern Teams"
-        bigHeading="Designed to do more than "
-        bigHeadingItalic="look good"
+        smallHeading="WHY Rivozen for WEB & technologies"
+        bigHeading="Websites Designed to Do More "
+        bigHeadingItalic="Than Look Good"
+        paragraph="Every website RivoZen builds is mobile-first, fast-loading, and SEO-ready from day one. We combine clean design with technical performance, so your site ranks on Google and turns visitors into customers."
         HeadingAlign="center"
         content={<Cards />}
       />
@@ -262,38 +268,39 @@ const Cards = () => {
   const included = [
     {
       icon: "/services/69c661209face95c278b48d3_⚡.avif",
-      title: "Professional creative work",
+      title: "Mobile-First Responsive Design",
       description:
-        "From brand assets and social content to UI, illustration, and motion.",
+        "Your website is designed for phones first, then scaled up for tablets and desktops, so every customer gets a smooth experience on any screen.",
     },
     {
       icon: "/services/69c66121f3b50821a0163bb8_🏆.avif",
-      title: "Unlimited revisions",
+      title: "Fast-Loading, Core Web Vitals Optimized",
       description:
-        "Keep refining your work until it feels right and meets your goals.",
+        "We optimize images, code, and hosting to meet Google’s Core Web Vitals thresholds, because faster pages rank better and convert more visitors.",
     },
     {
       icon: "/services/69c6612157a7fd9f6e6f8a4c_🎯.avif",
-      title: "Fast turnaround",
+      title: "SEO-Ready from Day One",
       description:
-        "Stay productive with focused delivery times and a streamlined workflow.",
+        "Clean code, proper heading structure, schema markup, meta tags, and URL planning are built in from the start, not added as an afterthought.",
     },
     {
       icon: "/services/69c661211f90401d86869f42_🎛️.avif",
-      title: "Clear communication",
+      title: "Conversion-Focused UX",
       description:
-        "Simple, direct communication without unnecessary meetings or complexity.",
+        "Clear layouts, strong calls to action, and simple checkout or contact flows guide visitors toward buying, booking, or enquiring.",
     },
     {
       icon: "/services/69c661211c98fb7a418c3d59_🛡️.avif",
-      title: "Flexible collaboration",
-      description: "Work with Rivozen as an extension of your existing team.",
+      title: "Built on the Right Platform",
+      description:
+        "We build with Shopify, WordPress, or custom Next.js, depending on your goals, budget, and how much you want to manage yourself.",
     },
     {
       icon: "/services/69c66121ad29b215144e535f_🧩.avif",
-      title: "Source files included",
+      title: "You Own Everything",
       description:
-        "Get the files you need to use, edit, and manage your creative work.",
+        "You get full access to your website files, content, domain, and hosting accounts, with documentation and training so you are never locked in.",
     },
   ];
   return (
