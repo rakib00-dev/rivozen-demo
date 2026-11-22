@@ -155,7 +155,14 @@ export default function WebDesignPage() {
         faqList={faqs}
       />
       {/* cta */}
-      <CommonCta currentColor={0} />{" "}
+      <CommonCta
+        bigHeading="Ready for a Website That Brings "
+        bigHeadingItalic="in Customers?"
+        paragraph="Book a free website consultation with RivoZen. We will review your current site, share quick wins, and map out a design and development plan for your ecommerce store or local business, with no long-term contract required."
+        currentColor={0}
+        secondaryBtn="See Our Work"
+        secondaryBtnLink="/work"
+      />{" "}
     </>
   );
 }
