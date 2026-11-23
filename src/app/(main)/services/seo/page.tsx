@@ -146,9 +146,10 @@ export default function SEO() {
 
       {/* Process Section */}
       <CommonProcessSection
-        bigHeading="Design made easy, from brief to"
-        bigHeadingItalic=" delivery 🚚"
-        paragraph=""
+        smallHeading="Ranking Process"
+        bigHeading="From Audit to Growth, Our SEO Process "
+        bigHeadingItalic="Built for Results 📈"
+        paragraph="Good SEO is a repeating cycle, not a one-time fix. Our four-step process starts with a full audit and keeps improving rankings, traffic, and leads month after month."
         processList={process}
       />
 
@@ -178,24 +179,24 @@ export default function SEO() {
 
 const process = [
   {
-    title: "Your brand feels inconsistent.",
+    title: "SEO Audit & Research",
     solution:
-      "We build a clear brand identity and visual system so your business looks intentional and professional across every channel - web, social, SEO and ads.",
+      "We audit your site’s technical health, content, and backlinks, then research your keywords, competitors, and customer search intent to find the fastest opportunities.",
   },
   {
-    title: "Your website isn't converting.",
+    title: "Strategy & Roadmap",
     solution:
-      "We combine web design, development, and CRO to simplify the experience, strengthen your visual hierarchy, and turn more visitors into leads and sales.",
+      "We build a clear, prioritized SEO roadmap tied to your business goals, covering keyword targets, page plans, local SEO, and AI-search (GEO and AEO) opportunities.",
   },
   {
-    title: "Your marketing isn't driving growth.",
+    title: "Execution & Optimization",
     solution:
-      "We become an extension of your team - running SEO, GEO, AEO, paid advertising, and content & creative campaigns that deliver measurable, sustainable growth.",
+      "We fix technical issues, optimize your pages, publish search-focused content, and strengthen your authority, working step by step through the roadmap.",
   },
   {
-    title: "You have a great idea but don't know where to start.",
+    title: "Tracking & Growth",
     solution:
-      "We turn early ideas into a clear business growth strategy and a practical roadmap. aligning design, marketing, and execution from day one. ",
+      "We track rankings, organic traffic, leads, and revenue, share clear reports, and keep refining the strategy as search results and AI answers change.",
   },
 ];
 
