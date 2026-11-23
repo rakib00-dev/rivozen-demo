@@ -20,11 +20,21 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Stats } from "@/components/custom/stats";
 import CommonCta from "@/components/common/CommonCta";
+import CommonHeroSection from "@/components/common/CommonHeroSection";
 
 export default function SEO() {
   return (
     <>
-      <PageWebsiteHero />
+      <CommonHeroSection
+        smallHeading="Get Rank in Search"
+        bigHeading={["Ready to Rank on ", "Google and"]}
+        bigHeadingItalic="in AI Search?"
+        paragraph="Tell us about your website, your market, and your goals. RivoZen’s SEO team will review where you stand today and show you the fastest opportunities to grow organic traffic and leads. "
+        primaryBtn="Get a Free SEO Audit"
+        primaryBtnLink="/contact"
+        secondaryBtn="Book A Call"
+        secondaryBtnLink="/book-a-call"
+      />
 
       <TwoSideCommonSection />
 
