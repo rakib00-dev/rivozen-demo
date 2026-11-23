@@ -165,15 +165,23 @@ export default function SEO() {
 
       {/* faq section */}
       <CommonFaqSection
-        bigHeading="Common questions you"
-        bigHeadingItalic="may ask"
+        bigHeading="Common questions how "
+        bigHeadingItalic="to get ranked"
         paragraph=""
         faqList={faqs}
       />
 
       {/* cta */}
 
-      <CommonCta currentColor={5} />
+      <CommonCta
+        currentColor={2}
+        bigHeading="Ready to Grow Your Traffic on Google and "
+        bigHeadingItalic="in AI Search?"
+        paragraph="Get a free SEO audit from RivoZen. We will review your site’s technical health, content, and search visibility, then show you the biggest opportunities to grow organic traffic and leads, with no long-term contract required."
+        primaryBtn="Get a Free SEO Audit"
+        secondaryBtn="See Our SEO Works"
+        secondaryBtnLink="/work"
+      />
     </>
   );
 }
@@ -203,29 +211,44 @@ const process = [
 
 const faqs = [
   {
-    question: "What digital services does RivoZen offer?",
-    answer: `Rivozen provides a wide range of digital services, including Website Design & Development, SEO, Paid Advertising, Social Media Marketing, Content & Creative, Email & SMS Marketing, Conversion Rate Optimization, and Business Growth Strategy plus additional support as your business evolves.`,
+    question: "What do SEO services include?",
+    answer: `SEO services include everything that helps your website rank in search results: technical fixes, keyword research, on-page optimization, content, local SEO, link building, and reporting. At RivoZen, we also optimize for AI search so your brand can be understood and cited by tools like ChatGPT and Perplexity.`,
+  },
+  {
+    question: "How long does SEO take to show results?",
+    answer:
+      "SEO usually takes a few months to show meaningful movement, and results keep building over time. Timing depends on your site’s current health, competition, and how much content and optimization is needed. [“most clients see early movement within 3 to 6 months.”] No honest agency can promise a specific ranking or date.",
+  },
+  {
+    question: "How much do SEO services cost?",
+    answer:
+      "SEO cost depends on your website size, competition, and goals. A local business needs a different scope than a large ecommerce store. [“RivoZen SEO plans start from $250 per month.”] Book a free call and we will recommend a plan after reviewing your site.",
+  },
+  {
+    question: "What is the difference between SEO, GEO, and AEO?",
+    answer:
+      "SEO helps your pages rank in traditional search results like Google. AEO (answer engine optimization) structures content to give direct answers for featured snippets and voice search. GEO (generative engine optimization) helps AI tools like ChatGPT, Perplexity, and Google AI Overviews understand and cite your brand. All three rely on the same foundation: clear, trustworthy, well-structured content.",
   },
   {
     question:
-      "Do you design and develop websites for ecommerce and local businesses?",
+      "Can you help my business appear in ChatGPT and AI search results?",
     answer:
-      " Yes. We build websites ranging from business websites and landing pages to full ecommerce stores  including platforms like Shopify. Every website is designed to be modern, responsive, and user-friendly, tailored to your business, audience, and goals.",
+      "We can improve how likely your brand is to be understood and cited by AI tools, but no one can guarantee a mention. We do this by strengthening your content, schema markup, brand entity signals, and mentions across trusted sources. Strong traditional SEO remains the base, because AI tools often draw from the same sources that rank well.",
   },
   {
-    question: "Is the initial consultation really free?",
+    question: "Do you offer local SEO for small businesses?",
     answer:
-      "Yes. Your first strategy consultation is completely free, with no obligation to move forward.",
+      "Yes. Local SEO covers your Google Business Profile, local citations, review strategy, and location pages, so nearby customers find you in Google Maps and local search. It suits clinics, restaurants, home services, and any business that serves customers in a specific area.",
   },
   {
-    question: "How much does a Digital Service Agency cost?",
+    question: "Do you do SEO for ecommerce stores?",
     answer:
-      "Pricing depends on the scope and mix of services your business needs. After understanding your goals, we provide a custom quote based on your specific requirements.",
+      "Yes. Ecommerce SEO covers category and product page optimization, site structure, filters, duplicate content, page speed, and structured data, so your store ranks for what shoppers search before they buy. We work with Shopify, WooCommerce, and custom stores.",
   },
   {
-    question: "How long does it take to see SEO and marketing results?",
+    question: "Should I invest in SEO or paid ads?",
     answer:
-      "Yes Timelines vary depending on your industry, competition, website, and chosen services. SEO typically takes longer to build momentum, while paid advertising can generate data and traffic much sooner.",
+      "SEO builds long-term, compounding traffic, while paid ads bring faster, but ongoing paid, traffic. Many businesses use ads for immediate leads while SEO grows in the background. We can recommend the right mix after reviewing your goals and budget, and you can read about our paid advertising services.",
   },
 ];
 
