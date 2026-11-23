@@ -36,13 +36,19 @@ export default function SEO() {
         secondaryBtnLink="/book-a-call"
       />
 
-      <TwoSideCommonSection />
+      <TwoSideCommonSection
+        smallHeading="SEO, GEO & AEO AGENCY"
+        bigHeading="SEO Services That Get You Found on Google "
+        bigHeadingItalic="and in AI Search"
+        paragraph="RivoZen is an SEO, GEO, AEO agency that helps ecommerce brands and local businesses grow organic traffic, rank on Google, and get recommended by AI tools like ChatGPT, Perplexity, and Google AI Overviews. From technical fixes to content and local SEO, we focus on the traffic that turns into leads and sales."
+      />
 
       {/* cards section */}
       <CommonSection
-        smallHeading="Built For Modern Teams"
-        bigHeading="Designed to do more than "
-        bigHeadingItalic="look good"
+        smallHeading="WHAT'S INCLUDED"
+        bigHeading="SEO Built to Do More Than  "
+        bigHeadingItalic="Chase Rankings"
+        paragraph="SEO services are the work that helps your website show up when customers search on Google, Bing, and now AI tools like ChatGPT and Perplexity. RivoZen covers the technical fixes, content, local presence, and AI-search optimization that bring in qualified traffic, leads, and sales, not just higher positions."
         HeadingAlign="center"
         content={<Cards />}
       />
@@ -280,38 +286,39 @@ const Cards = () => {
   const included = [
     {
       icon: "/services/69c661209face95c278b48d3_⚡.avif",
-      title: "Professional creative work",
+      title: "Technical SEO Foundation",
       description:
-        "From brand assets and social content to UI, illustration, and motion.",
+        "We audit and fix crawlability, indexing, site speed, Core Web Vitals, and structured data, so search engines can find, understand, and trust your pages.",
     },
     {
       icon: "/services/69c66121f3b50821a0163bb8_🏆.avif",
-      title: "Unlimited revisions",
+      title: "Ecommerce SEO",
       description:
-        "Keep refining your work until it feels right and meets your goals.",
+        "Category pages, product pages, filters, and duplicate-content issues are optimized so your store ranks for what shoppers actually search before buying.",
     },
     {
       icon: "/services/69c6612157a7fd9f6e6f8a4c_🎯.avif",
-      title: "Fast turnaround",
+      title: "Local SEO",
       description:
-        "Stay productive with focused delivery times and a streamlined workflow.",
+        "We optimize your Google Business Profile, local citations, reviews, and location pages, so nearby customers find you in Maps and local results.",
     },
     {
       icon: "/services/69c661211f90401d86869f42_🎛️.avif",
-      title: "Clear communication",
+      title: "Content That Ranks and Converts",
       description:
-        "Simple, direct communication without unnecessary meetings or complexity.",
+        "Keyword research and search-intent-led content, from service pages to blog posts, written to answer real customer questions and lead to action.",
     },
     {
       icon: "/services/69c661211c98fb7a418c3d59_🛡️.avif",
-      title: "Flexible collaboration",
-      description: "Work with Rivozen as an extension of your existing team.",
+      title: "GEO & AEO for AI Search",
+      description:
+        "We structure your content with clear answers, strong entity signals, and schema markup, so AI tools and answer engines can understand and cite your brand.",
     },
     {
       icon: "/services/69c66121ad29b215144e535f_🧩.avif",
-      title: "Source files included",
+      title: "Transparent Reporting",
       description:
-        "Get the files you need to use, edit, and manage your creative work.",
+        "You see what is working through clear reports on organic traffic, rankings, leads, and revenue, tied to your business goals instead of vanity metrics.",
     },
   ];
   return (
