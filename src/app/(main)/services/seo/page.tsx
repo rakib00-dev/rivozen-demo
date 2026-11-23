@@ -156,8 +156,9 @@ export default function SEO() {
       {/* clients reviews */}
       <CommonSection
         smallHeading="Customers stories"
-        bigHeading="What it's like to work with"
-        bigHeadingItalic=" Rivozen 👇"
+        bigHeading="What It’s Like to Grow with "
+        bigHeadingItalic="RivoZen SEO 👇"
+        paragraph="Ecommerce brands and local businesses work with RivoZen to rank higher, earn more organic traffic, and turn searches into customers. Here is what the experience looks like."
         HeadingAlign="center"
         content={<ClientsReviewsCards />}
       />
