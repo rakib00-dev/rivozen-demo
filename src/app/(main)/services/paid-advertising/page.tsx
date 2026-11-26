@@ -1,4 +1,3 @@
-import PageWebsiteHero from "@/components/custom/services/website/PageWebsiteHero";
 import CommonSection from "@/components/common/CommonSection";
 import TwoSideCommonSection from "@/components/common/TwoSideCommonSection";
 import { Reveal, RevealItem, RevealStagger } from "@/components/custom/reveal";
@@ -20,11 +19,21 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Stats } from "@/components/custom/stats";
 import CommonCta from "@/components/common/CommonCta";
+import CommonHeroSection from "@/components/common/CommonHeroSection";
 
 export default function PaidAdvertising() {
   return (
     <>
-      <PageWebsiteHero />
+      <CommonHeroSection
+        smallHeading="Web Design"
+        bigHeading={["Ready to Turn Ad Spend "]}
+        bigHeadingItalic="Into Customers?"
+        paragraph="Tell us about your business, your current ads, and your goals. RivoZen’s paid advertising team will review your campaigns and show you where your budget can work harder."
+        primaryBtn="Get a Ads Audit Quote"
+        primaryBtnLink="/contact"
+        secondaryBtn="Book A Call"
+        secondaryBtnLink="/book-a-call"
+      />
 
       <TwoSideCommonSection />
 
