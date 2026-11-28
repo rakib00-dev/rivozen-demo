@@ -46,9 +46,9 @@ export default function ContentCreative() {
       {/* cards section */}
       <CommonSection
         smallHeading="WHAT'S INCLUDED in Content and creative"
-        bigHeading="From Research to Publish, Our Content Process "
-        bigHeadingItalic="Built to Perform"
-        paragraph="Great content starts with research, not guesswork. Our four-step process plans, creates, and publishes content around your audience and goals, then measures what works."
+        bigHeading="Content Built to Do More "
+        bigHeadingItalic="Than Look Good"
+        paragraph="Content marketing means creating useful articles, videos, images, and copy that attract the right audience and move them toward buying. RivoZen plans and produces content and creative assets that rank on Google, get cited in AI search, and turn visitors into customers, not just fill your feed."
         HeadingAlign="center"
         content={<Cards />}
       />
