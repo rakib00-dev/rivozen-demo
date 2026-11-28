@@ -173,7 +173,16 @@ export default function ContentCreative() {
 
       {/* cta */}
 
-      <CommonCta currentColor={2} />
+      <CommonCta
+        currentColor={2}
+        bigHeading="Ready for Content That Works as Hard "
+        bigHeadingItalic="as You Do?"
+        paragraph="Get a free content audit from RivoZen. We will review your existing content, brand voice, and search visibility, then show you what to create next to attract and convert more customers, with no long-term contract required."
+        primaryBtn="Get a Free Content Audit"
+        primaryBtnLink="/book-a-call"
+        secondaryBtn="See Our Content Work"
+        secondaryBtnLink="/work"
+      />
     </>
   );
 }
