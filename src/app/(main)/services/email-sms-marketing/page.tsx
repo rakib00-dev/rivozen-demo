@@ -25,12 +25,12 @@ export default function EmailSmsMarketing() {
   return (
     <>
       <CommonHeroSection
-        smallHeading="Web Design"
-        bigHeading={["Web Design & Development", "That Turns Visitors"]}
-        bigHeadingItalic="Into Customers"
-        paragraph="RivoZen is a digital growth agency that designs and builds fast, mobile-first, SEO-ready websites for ecommerce brands and local businesses. From Shopify and WordPress to custom Next.js builds, every site is made to rank on Google and turn visitors into customers."
-        primaryBtn="Get a Free Website Quote"
-        primaryBtnLink="/pricing"
+        smallHeading="Email & SMS Marketing"
+        bigHeading={["Ready to Turn", " One-Time Buyers Into"]}
+        bigHeadingItalic="Repeat Customers?"
+        paragraph="Tell us about your store or business, your current customer list, and your goals. RivoZen’s email and SMS team will review what you have today and show you where automated messages can bring more repeat sales."
+        primaryBtn="Get a Free Email & SMS Audit"
+        primaryBtnLink="/contact"
         secondaryBtn="Book A Call"
         secondaryBtnLink="/book-a-call"
       />
