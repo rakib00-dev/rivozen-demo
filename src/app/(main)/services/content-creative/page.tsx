@@ -45,9 +45,10 @@ export default function ContentCreative() {
 
       {/* cards section */}
       <CommonSection
-        smallHeading="Built For Modern Teams"
-        bigHeading="Designed to do more than "
-        bigHeadingItalic="look good"
+        smallHeading="WHAT'S INCLUDED in Content and creative"
+        bigHeading="From Research to Publish, Our Content Process "
+        bigHeadingItalic="Built to Perform"
+        paragraph="Great content starts with research, not guesswork. Our four-step process plans, creates, and publishes content around your audience and goals, then measures what works."
         HeadingAlign="center"
         content={<Cards />}
       />
@@ -285,38 +286,39 @@ const Cards = () => {
   const included = [
     {
       icon: "/services/69c661209face95c278b48d3_⚡.avif",
-      title: "Professional creative work",
+      title: "SEO Content & Blog Writing",
       description:
-        "From brand assets and social content to UI, illustration, and motion.",
+        "Search-led articles and service pages built around real customer questions, structured to rank on Google and be quoted by AI tools.",
     },
     {
       icon: "/services/69c66121f3b50821a0163bb8_🏆.avif",
-      title: "Unlimited revisions",
+      title: "Product & Ecommerce Content",
       description:
-        "Keep refining your work until it feels right and meets your goals.",
+        "Product descriptions, category copy, and buying guides that help shoppers decide and help your store rank for what they search.",
     },
     {
       icon: "/services/69c6612157a7fd9f6e6f8a4c_🎯.avif",
-      title: "Fast turnaround",
+      title: "Video & Motion Content",
       description:
-        "Stay productive with focused delivery times and a streamlined workflow.",
+        "Short-form videos, product demos, and motion graphics that grab attention on social, ads, and your website.",
     },
     {
       icon: "/services/69c661211f90401d86869f42_🎛️.avif",
-      title: "Clear communication",
+      title: "Ad Creative & Social Content",
       description:
-        "Simple, direct communication without unnecessary meetings or complexity.",
+        "Scroll-stopping images, videos, and copy for Google, Meta, and social channels, designed from the start to perform in ads.",
     },
     {
       icon: "/services/69c661211c98fb7a418c3d59_🛡️.avif",
-      title: "Flexible collaboration",
-      description: "Work with Rivozen as an extension of your existing team.",
+      title: "Brand Storytelling & Messaging",
+      description:
+        "Clear brand voice, messaging, and visual direction, so every piece of content feels consistent and builds trust across every channel.",
     },
     {
       icon: "/services/69c66121ad29b215144e535f_🧩.avif",
-      title: "Source files included",
+      title: "Content Strategy & Calendar",
       description:
-        "Get the files you need to use, edit, and manage your creative work.",
+        "A planned content roadmap tied to your goals and keywords, so every piece has a purpose instead of random posting.",
     },
   ];
   return (
