@@ -156,17 +156,18 @@ export default function ContentCreative() {
       {/* clients reviews */}
       <CommonSection
         smallHeading="Customers stories"
-        bigHeading="What it's like to work with"
-        bigHeadingItalic=" Rivozen 👇"
+        bigHeading="What It’s Like to Create Content"
+        bigHeadingItalic=" with RivoZen 👇"
+        paragraph="Ecommerce brands and local businesses work with RivoZen to publish content that gets found, builds trust, and turns readers into customers. Here is what the experience looks like."
         HeadingAlign="center"
         content={<ClientsReviewsCards />}
       />
 
       {/* faq section */}
       <CommonFaqSection
-        bigHeading="Common questions you"
-        bigHeadingItalic="may ask"
-        paragraph=""
+        bigHeading="Content & Creative Questions, "
+        bigHeadingItalic="Answered"
+        paragraph="Straight answers to what business owners ask most before working with RivoZen on content and creative."
         faqList={faqs}
       />
 
@@ -202,29 +203,43 @@ const process = [
 
 const faqs = [
   {
-    question: "What digital services does RivoZen offer?",
-    answer: `Rivozen provides a wide range of digital services, including Website Design & Development, SEO, Paid Advertising, Social Media Marketing, Content & Creative, Email & SMS Marketing, Conversion Rate Optimization, and Business Growth Strategy plus additional support as your business evolves.`,
+    question: "What do content and creative services include?",
+    answer: `Content and creative services include planning and producing the written, visual, and video assets your business uses to attract and convert customers. At RivoZen, this covers SEO articles, product and ecommerce content, video, ad creative, brand messaging, and a content strategy that ties it all together.`,
   },
   {
-    question:
-      "Do you design and develop websites for ecommerce and local businesses?",
+    question: "How much does content marketing cost?",
     answer:
-      " Yes. We build websites ranging from business websites and landing pages to full ecommerce stores  including platforms like Shopify. Every website is designed to be modern, responsive, and user-friendly, tailored to your business, audience, and goals.",
+      "Cost depends on content type, volume, and quality. A few blog posts cost far less than a monthly program with articles, video, and ad creative. Book a free call and we will recommend a plan after reviewing your goals.",
   },
   {
-    question: "Is the initial consultation really free?",
+    question: "How long does it take for content to show results?",
     answer:
-      "Yes. Your first strategy consultation is completely free, with no obligation to move forward.",
+      "Content usually takes a few months to build traffic and rankings, while paid or social content can show engagement much faster. Results compound over time as you publish and update more. No honest agency can promise a fixed result in a fixed time.",
   },
   {
-    question: "How much does a Digital Service Agency cost?",
+    question: "How often should I publish content?",
     answer:
-      "Pricing depends on the scope and mix of services your business needs. After understanding your goals, we provide a custom quote based on your specific requirements.",
+      "Consistency matters more than volume. For most small businesses, a steady schedule you can maintain, such as a few quality articles per month, beats occasional bursts. We set a realistic publishing plan based on your goals, budget, and competition.",
   },
   {
-    question: "How long does it take to see SEO and marketing results?",
+    question: "Do you write content that ranks on Google and in AI search?",
     answer:
-      "Yes Timelines vary depending on your industry, competition, website, and chosen services. SEO typically takes longer to build momentum, while paid advertising can generate data and traffic much sooner.",
+      "Yes, we create content built to rank and to be understood by AI tools like ChatGPT and Perplexity. That means clear structure, direct answers, strong entity signals, and proper schema markup. No one can guarantee rankings or AI citations, but this approach gives your content the best chance. See our SEO services.",
+  },
+  {
+    question: "Will the content match my brand voice?",
+    answer:
+      "Yes. We start with a brand voice and messaging guide, then write and design to match it. You review drafts before anything is published, and we refine until it sounds like your business.",
+  },
+  {
+    question: "Do you create video and ad creative too?",
+    answer:
+      "Yes. Besides written content, we produce short-form video, motion graphics, and ad creative for Google, Meta, and social platforms. This lets your content, ads, and social channels share one consistent look and message. See our paid advertising services.",
+  },
+  {
+    question: "Who owns the content you create?",
+    answer:
+      "You do. Once a project is paid for, you own the content and creative assets we produce for you, and we hand over final files for your use.",
   },
 ];
 
