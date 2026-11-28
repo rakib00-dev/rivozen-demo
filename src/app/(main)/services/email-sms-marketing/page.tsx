@@ -155,8 +155,9 @@ export default function EmailSmsMarketing() {
       {/* clients reviews */}
       <CommonSection
         smallHeading="Customers stories"
-        bigHeading="What it's like to work with"
-        bigHeadingItalic=" Rivozen 👇"
+        bigHeading="What It’s Like to Grow Repeat Sales "
+        bigHeadingItalic="with RivoZen 👇"
+        paragraph="Ecommerce brands and local businesses work with RivoZen to bring customers back, recover lost sales, and build lasting relationships through email and SMS. Here is what the experience looks like."
         HeadingAlign="center"
         content={<ClientsReviewsCards />}
       />
