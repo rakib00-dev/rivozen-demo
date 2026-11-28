@@ -35,13 +35,19 @@ export default function PaidAdvertising() {
         secondaryBtnLink="/book-a-call"
       />
 
-      <TwoSideCommonSection />
+      <TwoSideCommonSection
+        smallHeading="GOOGLE & META ADS AGENCY"
+        bigHeading="Paid Advertising Services That Turn Clicks"
+        bigHeadingItalic="Into Customers"
+        paragraph="RivoZen is a paid advertising agency that plans, launches, and optimizes Google Ads and Meta Ads for ecommerce brands and local businesses. We focus on the right audience, strong creative, and clear tracking, so every dollar of your ad budget works toward leads and sales."
+      />
 
       {/* cards section */}
       <CommonSection
-        smallHeading="Built For Modern Teams"
-        bigHeading="Designed to do more than "
-        bigHeadingItalic="look good"
+        smallHeading="What is included"
+        bigHeading="Paid Ads Built to Do More "
+        bigHeadingItalic="Than Get Clicks"
+        paragraph="Paid advertising means paying to show your ads to the right people on platforms like Google and Meta, and only paying for the attention you get. RivoZen plans, launches, and optimizes these campaigns so your budget brings in qualified leads and sales, not just traffic."
         HeadingAlign="center"
         content={<Cards />}
       />
@@ -139,84 +145,109 @@ export default function PaidAdvertising() {
 
       {/* Process Section */}
       <CommonProcessSection
-        bigHeading="Design made easy, from brief to"
-        bigHeadingItalic=" delivery 🚚"
-        paragraph=""
+        smallHeading="Ads Process"
+        bigHeading="From Audit to Optimization, Our Ad Process "
+        bigHeadingItalic="Built for ROI 🚚"
+        paragraph="Good paid advertising is tested and refined, not set and forgotten. Our four-step process starts with tracking and strategy, then keeps improving results week after week."
         processList={process}
       />
 
       {/* clients reviews */}
       <CommonSection
         smallHeading="Customers stories"
-        bigHeading="What it's like to work with"
-        bigHeadingItalic=" Rivozen 👇"
+        bigHeading="What It’s Like to Run Ads with "
+        bigHeadingItalic="RivoZen Paid 👇"
         HeadingAlign="center"
+        paragraph="Ecommerce brands and local businesses work with RivoZen to run smarter Google and Meta campaigns, track what matters, and turn ad spend into leads and sales. Here is what the experience looks like."
         content={<ClientsReviewsCards />}
       />
 
       {/* faq section */}
       <CommonFaqSection
-        bigHeading="Common questions you"
-        bigHeadingItalic="may ask"
-        paragraph=""
+        bigHeading="Paid Advertising Questions,"
+        bigHeadingItalic=" Answered"
+        paragraph="Straight answers to what business owners ask most before running Google Ads and Meta Ads with RivoZen."
         faqList={faqs}
       />
 
       {/* cta */}
 
-      <CommonCta currentColor={4} />
+      <CommonCta
+        currentColor={4}
+        bigHeading="Ready to Make Every Ad Dollar"
+        bigHeadingItalic=" Work Harder?"
+        paragraph="Get a free ad audit from RivoZen. We will review your current campaigns, tracking, and targeting, then show you where your budget is being wasted and where it can grow, with no long-term contract required."
+        primaryBtn="Get a Free Ad Audit"
+        primaryBtnLink="/book-a-call"
+        secondaryBtn="See Our Ad Results"
+        secondaryBtnLink="/work"
+      />
     </>
   );
 }
 
 const process = [
   {
-    title: "Your brand feels inconsistent.",
+    title: "Audit & Goal Setting",
     solution:
-      "We build a clear brand identity and visual system so your business looks intentional and professional across every channel - web, social, SEO and ads.",
+      "We review your current ad accounts, website, and tracking, then define clear goals like cost per lead, sales, or return on ad spend (ROAS), so we know what success looks like.",
   },
   {
-    title: "Your website isn't converting.",
+    title: "Strategy & Campaign Setup",
     solution:
-      "We combine web design, development, and CRO to simplify the experience, strengthen your visual hierarchy, and turn more visitors into leads and sales.",
+      "We choose the right platforms and campaign types, build your audiences and keywords, create ad copy and creative, and set up accurate conversion tracking before spending your budget.",
   },
   {
-    title: "Your marketing isn't driving growth.",
+    title: "Launch & Testing",
     solution:
-      "We become an extension of your team - running SEO, GEO, AEO, paid advertising, and content & creative campaigns that deliver measurable, sustainable growth.",
+      "We launch your campaigns and test ad variations, audiences, and landing pages, so we quickly learn what works instead of guessing.",
   },
   {
-    title: "You have a great idea but don't know where to start.",
+    title: "Optimize & Scale",
     solution:
-      "We turn early ideas into a clear business growth strategy and a practical roadmap. aligning design, marketing, and execution from day one. ",
+      "We cut waste, shift budget to your best-performing campaigns, and scale what works, with regular reports on spend, leads, sales, and ROAS.",
   },
 ];
 
 const faqs = [
   {
-    question: "What digital services does RivoZen offer?",
-    answer: `Rivozen provides a wide range of digital services, including Website Design & Development, SEO, Paid Advertising, Social Media Marketing, Content & Creative, Email & SMS Marketing, Conversion Rate Optimization, and Business Growth Strategy plus additional support as your business evolves.`,
+    question: "What do paid advertising services include?",
+    answer: `Paid advertising services include planning, launching, and managing ad campaigns on platforms like Google and Meta. This covers audience and keyword research, ad copy and creative, conversion tracking, budget management, testing, and regular reporting. RivoZen handles all of it, so you focus on running your business.`,
   },
   {
-    question:
-      "Do you design and develop websites for ecommerce and local businesses?",
+    question: "How much does paid advertising management cost?",
     answer:
-      " Yes. We build websites ranging from business websites and landing pages to full ecommerce stores  including platforms like Shopify. Every website is designed to be modern, responsive, and user-friendly, tailored to your business, audience, and goals.",
+      "Cost has two parts: your ad spend (paid to Google or Meta) and the agency’s management fee. The right budget depends on your industry, competition, and goals. Book a free call and we will recommend a budget after reviewing your goals.",
   },
   {
-    question: "Is the initial consultation really free?",
+    question: "How much should I spend on ads?",
     answer:
-      "Yes. Your first strategy consultation is completely free, with no obligation to move forward.",
+      "Start with a budget large enough to gather real data, usually several weeks of consistent spend, then scale what works. The right amount depends on your product price, profit margin, and target cost per lead or sale. We help you set a realistic starting budget rather than guess.",
   },
   {
-    question: "How much does a Digital Service Agency cost?",
+    question: "How long does it take for paid ads to work?",
     answer:
-      "Pricing depends on the scope and mix of services your business needs. After understanding your goals, we provide a custom quote based on your specific requirements.",
+      "Paid ads can start bringing traffic within days of launch, but they usually need a few weeks of testing and optimization before results stabilize. Unlike SEO, ads stop when the budget stops. No honest agency can promise a fixed result in a fixed time.",
   },
   {
-    question: "How long does it take to see SEO and marketing results?",
+    question: "Google Ads or Meta Ads: which is better for my business?",
     answer:
-      "Yes Timelines vary depending on your industry, competition, website, and chosen services. SEO typically takes longer to build momentum, while paid advertising can generate data and traffic much sooner.",
+      "Google Ads reaches people actively searching for what you sell, so it suits high-intent leads and purchases. Meta Ads (Facebook and Instagram) reaches people while they browse, so it suits discovery, brand awareness, and visual products. Many businesses use both together, and we recommend the mix after reviewing your goals and budget.",
+  },
+  {
+    question: "Do I own my ad accounts and data?",
+    answer:
+      "Yes. Your ad accounts, pixels, and data stay in your name, and we work inside them as managers. If you ever leave, you keep full access to your campaigns, audiences, and history.",
+  },
+  {
+    question: "How do you measure ad performance?",
+    answer:
+      "We track the metrics that tie to your business: leads, sales, cost per lead, cost per acquisition, and return on ad spend (ROAS). We set up conversion tracking before launch, so reports show real results instead of clicks and impressions alone.",
+  },
+  {
+    question: "Should I invest in paid ads or SEO?",
+    answer:
+      "Paid ads bring faster results but stop when you stop paying, while SEO builds slower, compounding traffic over time. Many businesses use ads for immediate leads while SEO grows in the background. If you want long-term organic growth too, see our SEO services.",
   },
 ];
 
@@ -279,38 +310,39 @@ const Cards = () => {
   const included = [
     {
       icon: "/services/69c661209face95c278b48d3_⚡.avif",
-      title: "Professional creative work",
+      title: "Google Ads Management",
       description:
-        "From brand assets and social content to UI, illustration, and motion.",
+        "Search, Shopping, and Performance Max campaigns that reach people already searching for what you sell, with keywords, bids, and ad copy refined by real data.",
     },
     {
       icon: "/services/69c66121f3b50821a0163bb8_🏆.avif",
-      title: "Unlimited revisions",
+      title: "Meta Ads (Facebook & Instagram)",
       description:
-        "Keep refining your work until it feels right and meets your goals.",
+        "Targeted campaigns that put your brand in front of the right audiences on Facebook and Instagram, with creative built to stop the scroll and drive action.",
     },
     {
       icon: "/services/69c6612157a7fd9f6e6f8a4c_🎯.avif",
-      title: "Fast turnaround",
+      title: "Remarketing & Retargeting",
       description:
-        "Stay productive with focused delivery times and a streamlined workflow.",
+        "We bring back visitors who viewed your products or services but did not buy, using tailored ads at the moments they are most likely to convert.",
     },
     {
       icon: "/services/69c661211f90401d86869f42_🎛️.avif",
-      title: "Clear communication",
+      title: "Ecommerce & Local Campaigns",
       description:
-        "Simple, direct communication without unnecessary meetings or complexity.",
+        "Product feed and shopping campaigns for online stores, and location-based campaigns for local businesses, so your budget reaches customers who can actually buy from you.",
     },
     {
       icon: "/services/69c661211c98fb7a418c3d59_🛡️.avif",
-      title: "Flexible collaboration",
-      description: "Work with Rivozen as an extension of your existing team.",
+      title: "Conversion Tracking & Analytics",
+      description:
+        "We set up accurate tracking for purchases, calls, and form leads, so every campaign decision is based on real results instead of guesses.",
     },
     {
       icon: "/services/69c66121ad29b215144e535f_🧩.avif",
-      title: "Source files included",
+      title: "Transparent Reporting & Ownership",
       description:
-        "Get the files you need to use, edit, and manage your creative work.",
+        "You own your ad accounts and data, and see clear reports on spend, leads, sales, and ROAS, with no hidden fees or locked-in access.",
     },
   ];
   return (
