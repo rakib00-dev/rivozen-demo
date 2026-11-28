@@ -146,9 +146,10 @@ export default function ContentCreative() {
 
       {/* Process Section */}
       <CommonProcessSection
-        bigHeading="Design made easy, from brief to"
-        bigHeadingItalic=" delivery 🚚"
-        paragraph=""
+        smallHeading="OUR CONTENT PROCESS"
+        bigHeading="From Research to Publish, Our Content Process"
+        bigHeadingItalic=" Built to Perform 🚚"
+        paragraph="Great content starts with research, not guesswork. Our four-step process plans, creates, and publishes content around your audience and goals, then measures what works."
         processList={process}
       />
 
@@ -178,24 +179,24 @@ export default function ContentCreative() {
 
 const process = [
   {
-    title: "Your brand feels inconsistent.",
+    title: "Research & Audience Insight",
     solution:
-      "We build a clear brand identity and visual system so your business looks intentional and professional across every channel - web, social, SEO and ads.",
+      "We study your audience, competitors, keywords, and existing content to find what your customers are searching for and where the biggest content gaps are.",
   },
   {
-    title: "Your website isn't converting.",
+    title: "Strategy & Content Plan",
     solution:
-      "We combine web design, development, and CRO to simplify the experience, strengthen your visual hierarchy, and turn more visitors into leads and sales.",
+      "We build a clear content roadmap with topics, formats, and a publishing calendar, each piece tied to a goal like ranking, leads, or sales.",
   },
   {
-    title: "Your marketing isn't driving growth.",
+    title: "Creation & Review",
     solution:
-      "We become an extension of your team - running SEO, GEO, AEO, paid advertising, and content & creative campaigns that deliver measurable, sustainable growth.",
+      "Our team writes, designs, and produces your content, then shares drafts for your feedback. We refine until it matches your brand voice and goals.",
   },
   {
-    title: "You have a great idea but don't know where to start.",
+    title: "Publish, Measure & Improve",
     solution:
-      "We turn early ideas into a clear business growth strategy and a practical roadmap. aligning design, marketing, and execution from day one. ",
+      "We publish across your website and channels, track performance, and update what works and what does not, so your content keeps growing in value.",
   },
 ];
 
