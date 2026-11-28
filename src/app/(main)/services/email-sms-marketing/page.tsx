@@ -145,9 +145,10 @@ export default function EmailSmsMarketing() {
 
       {/* Process Section */}
       <CommonProcessSection
-        bigHeading="Design made easy, from brief to"
-        bigHeadingItalic=" delivery 🚚"
-        paragraph=""
+        smallHeading="OUR EMAIL & SMS PROCESS"
+        bigHeading="From Audit to Automation, Our Email & SMS Process Built to "
+        bigHeadingItalic=" Bring Customers Back 🤖"
+        paragraph="Great email and SMS marketing is built once and improved forever. Our four-step process sets up the right foundation, launches automated flows, and keeps refining them with real data."
         processList={process}
       />
 
@@ -177,24 +178,24 @@ export default function EmailSmsMarketing() {
 
 const process = [
   {
-    title: "Your brand feels inconsistent.",
+    title: "Audit & Setup",
     solution:
-      "We build a clear brand identity and visual system so your business looks intentional and professional across every channel - web, social, SEO and ads.",
+      "We review your current email and SMS accounts, list health, and deliverability, then set up proper tracking, sender authentication, and consent so messages reach the inbox and follow the rules.",
   },
   {
-    title: "Your website isn't converting.",
+    title: "Strategy & Segmentation",
     solution:
-      "We combine web design, development, and CRO to simplify the experience, strengthen your visual hierarchy, and turn more visitors into leads and sales.",
+      "We map your customer journey and build a plan for flows and campaigns, with segments based on behavior like new subscribers, first-time buyers, and lapsed customers.",
   },
   {
-    title: "Your marketing isn't driving growth.",
+    title: "Build & Launch",
     solution:
-      "We become an extension of your team - running SEO, GEO, AEO, paid advertising, and content & creative campaigns that deliver measurable, sustainable growth.",
+      "We write, design, and launch your welcome, abandoned cart, post-purchase, and win-back flows, plus campaigns for offers and launches, after your review and approval.",
   },
   {
-    title: "You have a great idea but don't know where to start.",
+    title: "Test, Measure & Optimize",
     solution:
-      "We turn early ideas into a clear business growth strategy and a practical roadmap. aligning design, marketing, and execution from day one. ",
+      "We test subject lines, timing, and offers, track opens, clicks, and revenue, and keep improving your flows so they earn more over time.",
   },
 ];
 
