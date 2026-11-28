@@ -164,9 +164,9 @@ export default function EmailSmsMarketing() {
 
       {/* faq section */}
       <CommonFaqSection
-        bigHeading="Common questions you"
-        bigHeadingItalic="may ask"
-        paragraph=""
+        bigHeading="Email & SMS Marketing Questions, "
+        bigHeadingItalic="Answered"
+        paragraph="Straight answers to what business owners ask most before starting email and SMS marketing with RivoZen."
         faqList={faqs}
       />
 
@@ -202,29 +202,43 @@ const process = [
 
 const faqs = [
   {
-    question: "What digital services does RivoZen offer?",
-    answer: `Rivozen provides a wide range of digital services, including Website Design & Development, SEO, Paid Advertising, Social Media Marketing, Content & Creative, Email & SMS Marketing, Conversion Rate Optimization, and Business Growth Strategy plus additional support as your business evolves.`,
+    question: "What do email and SMS marketing services include?",
+    answer: `Email and SMS marketing services include planning, building, and managing the messages you send to customers who have opted in. This covers automated flows (welcome, abandoned cart, post-purchase, win-back), campaigns, list growth, segmentation, deliverability setup, and reporting.`,
   },
   {
-    question:
-      "Do you design and develop websites for ecommerce and local businesses?",
+    question: "How much do email and SMS marketing services cost?",
     answer:
-      " Yes. We build websites ranging from business websites and landing pages to full ecommerce stores  including platforms like Shopify. Every website is designed to be modern, responsive, and user-friendly, tailored to your business, audience, and goals.",
+      "Cost has two parts: your platform fees (such as Klaviyo or Mailchimp, usually based on list size) and the agency’s management fee. The right scope depends on your list size, number of flows, and campaign volume. Book a free call and we will recommend a plan after reviewing your setup.",
   },
   {
-    question: "Is the initial consultation really free?",
+    question: "Do I need both email and SMS?",
     answer:
-      "Yes. Your first strategy consultation is completely free, with no obligation to move forward.",
+      "Not always. Email suits longer, detailed messages like newsletters, product stories, and receipts, while SMS suits short, time-sensitive messages like reminders and flash offers. Many businesses start with email and add SMS once their list and consent process are in place. We recommend the right mix after reviewing your goals and audience.",
   },
   {
-    question: "How much does a Digital Service Agency cost?",
+    question: "How long does it take to see results?",
     answer:
-      "Pricing depends on the scope and mix of services your business needs. After understanding your goals, we provide a custom quote based on your specific requirements.",
+      "utomated flows can start generating revenue soon after launch, since they reach people who are already interested. Bigger gains usually build over a few months as your list grows and tests improve your messages. No honest agency can promise a fixed result in a fixed time.",
   },
   {
-    question: "How long does it take to see SEO and marketing results?",
+    question: "What email flows should an ecommerce store have?",
     answer:
-      "Yes Timelines vary depending on your industry, competition, website, and chosen services. SEO typically takes longer to build momentum, while paid advertising can generate data and traffic much sooner.",
+      "Most ecommerce stores should start with five core flows: a welcome series, abandoned cart, browse abandonment, post-purchase follow-up, and a win-back flow for lapsed customers. These run automatically and reach customers at the moments they are most likely to act. We add more, like back-in-stock or birthday flows, as your list grows.",
+  },
+  {
+    question: "How do you stop my emails from going to spam?",
+    answer:
+      "We set up sender authentication (SPF, DKIM, and DMARC), clean inactive contacts from your list, send only to people who opted in, and monitor engagement. These steps protect your sender reputation, which is the main factor in inbox placement. No one can guarantee inbox delivery, but good setup and list hygiene make a major difference.",
+  },
+  {
+    question: "Is SMS marketing legal, and how do you handle consent?",
+    answer:
+      "SMS marketing is legal in most places when you have clear consent and offer an easy opt-out, but rules differ by country. We collect consent through clear signup language, include opt-out instructions in messages, and respect unsubscribe requests right away. This is general information, not legal advice, so check the rules in your own market.",
+  },
+  {
+    question: "Do I own my subscriber list and accounts?",
+    answer:
+      "Yes. Your subscriber list, platform account, and customer data stay in your name, and we work inside them as managers. If you ever leave, you keep full access to your list, flows, and history.",
   },
 ];
 
