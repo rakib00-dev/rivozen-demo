@@ -35,7 +35,12 @@ export default function EmailSmsMarketing() {
         secondaryBtnLink="/book-a-call"
       />
 
-      <TwoSideCommonSection />
+      <TwoSideCommonSection
+        smallHeading="EMAIL & SMS MARKETING AGENCY"
+        bigHeading="Email & SMS Marketing Services That Turn"
+        bigHeadingItalic="Customers Into Repeat Buyers"
+        paragraph="RivoZen is an email and SMS marketing agency that builds automated flows and campaigns for ecommerce brands and local businesses. From welcome series and abandoned cart messages to win-back campaigns, we help you earn more from the customers and subscribers you already have, with consent and deliverability built in."
+      />
 
       {/* cards section */}
       <CommonSection
