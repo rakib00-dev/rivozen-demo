@@ -20,13 +20,28 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Stats } from "@/components/custom/stats";
 import CommonCta from "@/components/common/CommonCta";
+import CommonHeroSection from "@/components/common/CommonHeroSection";
 
 export default function ContentCreative() {
   return (
     <>
-      <PageWebsiteHero />
+      <CommonHeroSection
+        smallHeading="Content & Creative"
+        bigHeading={["Ready for Content", "That Actually Brings "]}
+        bigHeadingItalic="in Customers?"
+        paragraph="Tell us about your brand, your audience, and the content you need. RivoZen’s content and creative team will review what you have today and show you what to create next to attract, convince, and convert more customers."
+        primaryBtn="Get a Free Content Audit"
+        primaryBtnLink="/contact"
+        secondaryBtn="Book A Call"
+        secondaryBtnLink="/book-a-call"
+      />
 
-      <TwoSideCommonSection />
+      <TwoSideCommonSection
+        smallHeading="Your CONTENT & CREATIVE AGENCY"
+        bigHeading="Content & Creative Services That Attract, "
+        bigHeadingItalic="Convince, and Convert"
+        paragraph="RivoZen is a content and creative agency that produces SEO-driven articles, product content, video, and ad creative for ecommerce brands and local businesses. Every piece is planned around a goal, whether that is ranking on Google, getting cited in AI search, or turning visitors into customers."
+      />
 
       {/* cards section */}
       <CommonSection
