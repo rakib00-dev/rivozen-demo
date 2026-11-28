@@ -44,9 +44,10 @@ export default function EmailSmsMarketing() {
 
       {/* cards section */}
       <CommonSection
-        smallHeading="Built For Modern Teams"
-        bigHeading="Designed to do more than "
-        bigHeadingItalic="look good"
+        smallHeading="What you got"
+        bigHeading="Email and SMS Built to Do More Than Fill Inboxes, "
+        bigHeadingItalic="They Bring Customers Back"
+        paragraph="Email and SMS marketing means sending permission-based messages directly to your customers’ inboxes and phones, such as promotions, reminders, and follow-ups. RivoZen builds the automated flows and campaigns that turn first-time buyers into repeat customers, and keeps your sender reputation healthy while doing it."
         HeadingAlign="center"
         content={<Cards />}
       />
@@ -284,38 +285,39 @@ const Cards = () => {
   const included = [
     {
       icon: "/services/69c661209face95c278b48d3_⚡.avif",
-      title: "Professional creative work",
+      title: "Welcome & Onboarding Flows",
       description:
-        "From brand assets and social content to UI, illustration, and motion.",
+        "A timed series of messages that introduces your brand to new subscribers and guides them toward their first purchase.",
     },
     {
       icon: "/services/69c66121f3b50821a0163bb8_🏆.avif",
-      title: "Unlimited revisions",
+      title: "Abandoned Cart & Browse Recovery",
       description:
-        "Keep refining your work until it feels right and meets your goals.",
+        "Automated reminders that bring back shoppers who left items behind or viewed products without buying.",
     },
     {
       icon: "/services/69c6612157a7fd9f6e6f8a4c_🎯.avif",
-      title: "Fast turnaround",
+      title: "Post-Purchase & Win-Back Flows",
       description:
-        "Stay productive with focused delivery times and a streamlined workflow.",
+        "Follow-ups that thank customers, ask for reviews, suggest what to buy next, and re-engage people who have gone quiet.",
     },
     {
       icon: "/services/69c661211f90401d86869f42_🎛️.avif",
-      title: "Clear communication",
+      title: "Campaigns & SMS Marketing",
       description:
-        "Simple, direct communication without unnecessary meetings or complexity.",
+        "Targeted email and SMS campaigns for launches, offers, and seasonal events, sent to the right segment at the right time",
     },
     {
       icon: "/services/69c661211c98fb7a418c3d59_🛡️.avif",
-      title: "Flexible collaboration",
-      description: "Work with Rivozen as an extension of your existing team.",
+      title: "List Growth & Segmentation",
+      description:
+        "Signup forms, popups, and smart segments that grow your subscriber list with consent and make every message more relevant.",
     },
     {
       icon: "/services/69c66121ad29b215144e535f_🧩.avif",
-      title: "Source files included",
+      title: "Deliverability & Compliance",
       description:
-        "Get the files you need to use, edit, and manage your creative work.",
+        "Authentication setup (SPF, DKIM, DMARC), list hygiene, and clear opt-in and unsubscribe handling, so your messages reach the inbox and respect the rules.",
     },
   ];
   return (
